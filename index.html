@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Radar de clips</title>
+<style>
+  :root {
+    --fondo: #f6f6f7;
+    --tarjeta: #ffffff;
+    --borde: #e3e3e6;
+    --texto: #1a1a1c;
+    --tenue: #6b6b73;
+    --acento: #7b3fe4;
+    --acento-suave: #f0e9fd;
+    --peligro: #b3261e;
+    --sombra: 0 1px 2px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #131316;
+      --tarjeta: #1c1c20;
+      --borde: #2e2e34;
+      --texto: #ececef;
+      --tenue: #9a9aa4;
+      --acento: #a97bff;
+      --acento-suave: #2a2040;
+      --peligro: #ff6b6b;
+      --sombra: 0 1px 2px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.2);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .envoltorio { max-width: 1240px; margin: 0 auto; padding: 28px 20px 64px; }
+
+  header { margin-bottom: 24px; }
+  h1 { font-size: 22px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .sub { color: var(--tenue); font-size: 13.5px; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  .sub button {
+    background: none; border: none; padding: 0; font: inherit;
+    color: var(--acento); cursor: pointer; text-decoration: underline;
+  }
+  .punto { width: 7px; height: 7px; border-radius: 50%; background: #2ea043; display: inline-block; }
+
+  .rejilla {
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+
+  .tarjeta {
+    background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px;
+    overflow: hidden; box-shadow: var(--sombra);
+    display: flex; flex-direction: column;
+    animation: entrar .22s ease both;
+  }
+  @keyframes entrar { from { opacity: 0; transform: translateY(6px); } }
+  .tarjeta.saliendo { opacity: 0; transform: scale(.96); transition: .18s ease; }
+
+  .lienzo { position: relative; aspect-ratio: 16 / 9; background: var(--acento-suave); }
+  .lienzo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .puesto {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(0,0,0,.72); color: #fff; backdrop-filter: blur(4px);
+    font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 6px;
+  }
+  .velocidad {
+    position: absolute; bottom: 10px; left: 10px;
+    background: rgba(0,0,0,.72); color: #fff; backdrop-filter: blur(4px);
+    padding: 5px 10px; border-radius: 8px;
+    font-size: 14px; font-weight: 700; letter-spacing: -.01em;
+    display: flex; align-items: center; gap: 6px;
+  }
+  /* La velocidad estimada es mas ruidosa que la medida entre dos rondas.
+     Se marca en la web igual que se marca en el aviso de Telegram. */
+  .velocidad .matiz { font-size: 10.5px; font-weight: 500; opacity: .8; text-transform: uppercase; letter-spacing: .04em; }
+  .velocidad.estimada { background: rgba(0,0,0,.55); }
+
+  .cuerpo { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .canal { font-size: 12.5px; font-weight: 600; color: var(--acento); }
+  .titulo {
+    font-size: 14px; font-weight: 500; margin: 0; line-height: 1.35;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; min-height: 2.7em;
+  }
+  .meta { font-size: 12px; color: var(--tenue); display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: auto; }
+
+  .acciones { display: flex; gap: 8px; padding-top: 4px; }
+  .acciones a, .acciones button {
+    text-align: center; padding: 8px 10px; border-radius: 8px;
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--borde); text-decoration: none;
+  }
+  .abrir { flex: 1; background: var(--acento); border-color: var(--acento); color: #fff; }
+  .abrir:hover { filter: brightness(1.08); }
+  .borrar { background: transparent; color: var(--tenue); flex: 0 0 auto; padding: 8px 12px; }
+  .borrar:hover { color: var(--peligro); border-color: var(--peligro); }
+
+  .aviso { text-align: center; padding: 72px 20px; color: var(--tenue); }
+  .aviso h2 { color: var(--texto); font-size: 17px; margin: 0 0 8px; }
+  .aviso code { background: var(--acento-suave); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="envoltorio">
+  <header>
+    <h1>Radar de clips</h1>
+    <div class="sub" id="sub"><span>Cargando...</span></div>
+  </header>
+  <main id="salida"><div class="aviso">Cargando...</div></main>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  const CLAVE = "clipper.borrados";
+  const TTL_POR_DEFECTO = 24;           // solo si el JSON no trae ttl_horas
+  const REFRESCO_DATOS = 5 * 60 * 1000; // el radar publica una vez por ronda
+  const REFRESCO_RELOJ = 60 * 1000;     // para que caduquen sin recargar
+
+  let feed = { clips: [], actualizado_en: null, ttl_horas: TTL_POR_DEFECTO };
+
+  // --- Borrados (solo en este navegador) ---------------------------------
+  // No hay servidor donde guardar esto: la web es estatica. Vive en
+  // localStorage, asi que no viaja entre el PC y el movil. Como todo caduca
+  // a las 24h, la divergencia nunca se acumula.
+  const leerBorrados = () => {
+    try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; }
+    catch (e) { return {}; }
+  };
+  const guardarBorrados = (b) => {
+    try { localStorage.setItem(CLAVE, JSON.stringify(b)); } catch (e) {}
+  };
+  // Se podan a las 48h: pasado el TTL del feed el clip ya no existe, y
+  // recordar que lo borraste deja de servir para nada.
+  const podarBorrados = () => {
+    const b = leerBorrados(), corte = Date.now() - 48 * 3600e3;
+    let cambio = false;
+    for (const id of Object.keys(b)) {
+      if (!(Date.parse(b[id]) >= corte)) { delete b[id]; cambio = true; }
+    }
+    if (cambio) guardarBorrados(b);
+    return b;
+  };
+
+  // --- Formato -----------------------------------------------------------
+  const miles = (n) => n.toLocaleString("es-ES");
+  const duracion = (ms) => {
+    const m = Math.max(0, Math.round(ms / 60000));
+    if (m < 60) return m + " min";
+    const h = Math.floor(m / 60);
+    return h + "h" + (m % 60 ? " " + (m % 60) + "m" : "");
+  };
+  const esc = (s) => {
+    const d = document.createElement("div");
+    d.textContent = s == null ? "" : String(s);
+    return d.innerHTML;
+  };
+
+  // --- Pintado -----------------------------------------------------------
+  function tarjeta(c, puesto) {
+    const ahora = Date.now();
+    const estimada = c.fuente === "nuevo";
+    const caducaEn = Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 - ahora;
+    const edad = ahora - Date.parse(c.creado_en);
+
+    const el = document.createElement("article");
+    el.className = "tarjeta";
+    el.dataset.id = c.id;
+    el.innerHTML = [
+      '<div class="lienzo">',
+        c.miniatura ? '<img src="' + esc(c.miniatura) + '" alt="" loading="lazy" onerror="this.remove()">' : '',
+        '<span class="puesto">#' + puesto + '</span>',
+        '<span class="velocidad ' + (estimada ? 'estimada' : '') + '">',
+          (estimada ? '~' : '') + miles(Math.round(c.velocidad)) + ' v/h',
+          '<span class="matiz">' + (estimada ? 'estimada' : 'medida') + '</span>',
+        '</span>',
+      '</div>',
+      '<div class="cuerpo">',
+        '<div class="canal">' + esc(c.canal) + '</div>',
+        '<p class="titulo">' + esc(c.titulo) + '</p>',
+        '<div class="meta">',
+          '<span>' + miles(c.vistas) + ' vistas</span>',
+          '<span>clip de hace ' + duracion(edad) + '</span>',
+          '<span>caduca en ' + duracion(caducaEn) + '</span>',
+        '</div>',
+        '<div class="acciones">',
+          '<a class="abrir" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Abrir clip</a>',
+          '<button class="borrar" title="Quitar de la web">Borrar</button>',
+        '</div>',
+      '</div>'
+    ].join('');
+
+    el.querySelector(".borrar").addEventListener("click", () => {
+      const b = leerBorrados();
+      b[c.id] = new Date().toISOString();
+      guardarBorrados(b);
+      el.classList.add("saliendo");
+      setTimeout(pintar, 180);
+    });
+    return el;
+  }
+
+  function pintar() {
+    const salida = document.getElementById("salida");
+    const sub = document.getElementById("sub");
+    const borrados = podarBorrados();
+    const ahora = Date.now();
+
+    // Doble filtro de caducidad: el radar poda el JSON en cada ronda, pero
+    // una pestana abierta desde ayer tiene que caducarlos por su cuenta.
+    const vivos = feed.clips
+      .filter((c) => Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 > ahora)
+      .sort((a, b) => b.velocidad - a.velocidad);
+    const visibles = vivos.filter((c) => !borrados[c.id]);
+    const ocultos = vivos.length - visibles.length;
+
+    sub.innerHTML = '<span><span class="punto"></span> ' + visibles.length + ' clips</span>' +
+      (feed.actualizado_en
+        ? '<span>ultima ronda hace ' + duracion(ahora - Date.parse(feed.actualizado_en)) + '</span>'
+        : '');
+    if (ocultos) {
+      const b = document.createElement("button");
+      b.textContent = "restaurar " + ocultos + " borrado" + (ocultos > 1 ? "s" : "");
+      b.addEventListener("click", () => { guardarBorrados({}); pintar(); });
+      sub.appendChild(b);
+    }
+
+    salida.innerHTML = "";
+    if (!visibles.length) {
+      salida.innerHTML = vivos.length
+        ? '<div class="aviso"><h2>Los has borrado todos</h2><p>Vuelve tras la proxima ronda, o restaura los borrados ahi arriba.</p></div>'
+        : '<div class="aviso"><h2>Todavia no hay clips</h2><p>La web se llena cuando el radar termina una ronda.</p></div>';
+      return;
+    }
+    const rejilla = document.createElement("div");
+    rejilla.className = "rejilla";
+    visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1)));
+    salida.appendChild(rejilla);
+  }
+
+  // --- Datos -------------------------------------------------------------
+  async function cargar() {
+    try {
+      // Pages cachea con ganas; sin romper la cache verias la ronda de ayer.
+      const r = await fetch("clips.json?t=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const d = await r.json();
+      feed = {
+        clips: Array.isArray(d.clips) ? d.clips : [],
+        actualizado_en: d.actualizado_en || null,
+        ttl_horas: d.ttl_horas || TTL_POR_DEFECTO,
+      };
+      pintar();
+    } catch (e) {
+      document.getElementById("sub").innerHTML = "";
+      document.getElementById("salida").innerHTML =
+        '<div class="aviso"><h2>No se pudo leer <code>clips.json</code></h2>' +
+        '<p>Si el radar aun no ha publicado ninguna ronda, es lo esperado.</p></div>';
+    }
+  }
+
+  cargar();
+  setInterval(cargar, REFRESCO_DATOS);
+  setInterval(pintar, REFRESCO_RELOJ);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
+})();
+</script>
+</body>
+</html>
