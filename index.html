@@ -18,6 +18,7 @@
     --acento: #7b3fe4;
     --acento-suave: #f0e9fd;
     --peligro: #b3261e;
+    --hecho: #1a7f37;
     --sombra: 0 1px 2px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.04);
   }
   @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
       --acento: #a97bff;
       --acento-suave: #2a2040;
       --peligro: #ff6b6b;
+      --hecho: #3fb950;
       --sombra: 0 1px 2px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.2);
     }
   }
@@ -72,6 +74,10 @@
   }
   @keyframes entrar { from { opacity: 0; transform: translateY(6px); } }
   .tarjeta.saliendo { opacity: 0; transform: scale(.96); transition: .18s ease; }
+  /* Un clip ya subido no se esconde: se apaga y se va al final. Esconderlo
+     seria peor, porque lo que quieres saber de un vistazo es que ya lo usaste. */
+  .tarjeta.publicada { opacity: .5; }
+  .tarjeta.publicada:active, .tarjeta.publicada:focus-within { opacity: 1; }
 
   /* La miniatura entera es un enlace al clip: en el movil es el blanco mas
      facil de acertar con el pulgar, mucho mas que un boton de 13px. */
@@ -87,6 +93,11 @@
     -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
     font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 6px;
   }
+  .sello {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--hecho); color: #fff;
+    font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+  }
   .velocidad {
     position: absolute; bottom: 10px; left: 10px;
     background: rgba(0,0,0,.72); color: #fff;
@@ -99,9 +110,19 @@
      Se marca en la web igual que se marca en el aviso de Telegram. */
   .velocidad .matiz { font-size: 10.5px; font-weight: 500; opacity: .8; text-transform: uppercase; letter-spacing: .04em; }
   .velocidad.estimada { background: rgba(0,0,0,.55); }
+  /* La duracion es la que decide si el clip cabe en un Short/Reel/TikTok, asi
+     que va en la miniatura y no enterrada entre la letra pequena. */
+  .duracion {
+    position: absolute; bottom: 10px; right: 10px;
+    background: rgba(0,0,0,.72); color: #fff;
+    -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+    font-size: 12px; font-weight: 600; padding: 3px 7px; border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+  }
 
   .cuerpo { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .canal { font-size: 12.5px; font-weight: 600; color: var(--acento); }
+  .canal { font-size: 12.5px; font-weight: 600; color: var(--acento); display: flex; flex-wrap: wrap; gap: 4px 8px; }
+  .canal .juego { color: var(--tenue); font-weight: 500; }
   .titulo {
     font-size: 14px; font-weight: 500; margin: 0; line-height: 1.35;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
@@ -118,21 +139,25 @@
     text-align: center; padding: 8px 10px; border-radius: 8px;
     font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
     border: 1px solid var(--borde); text-decoration: none;
-    min-height: 40px;
+    min-height: 40px; white-space: nowrap;
     /* Quita el retardo de 300ms que el movil deja para el doble toque. */
     touch-action: manipulation;
   }
   .abrir { flex: 1; background: var(--acento); border-color: var(--acento); color: #fff; }
-  .borrar { background: transparent; color: var(--tenue); flex: 0 0 auto; padding: 8px 14px; }
+  .subido { background: transparent; color: var(--tenue); flex: 0 0 auto; padding: 8px 12px; }
+  .subido[aria-pressed="true"] { color: var(--hecho); border-color: var(--hecho); }
+  .borrar { background: transparent; color: var(--tenue); flex: 0 0 auto; padding: 8px 12px; }
 
   /* :hover solo donde hay raton de verdad. En una pantalla tactil el estado
      se queda pegado despues de tocar, y un "Borrar" en rojo fijo asusta. */
   @media (hover: hover) {
     .abrir:hover { filter: brightness(1.08); }
+    .subido:hover { color: var(--hecho); border-color: var(--hecho); }
     .borrar:hover { color: var(--peligro); border-color: var(--peligro); }
   }
   /* El equivalente tactil: respuesta inmediata al dedo. */
   .abrir:active { filter: brightness(.93); }
+  .subido:active { color: var(--hecho); border-color: var(--hecho); }
   .borrar:active { color: var(--peligro); border-color: var(--peligro); }
   .lienzo:active img { opacity: .88; }
 
@@ -163,11 +188,11 @@
     .meta { font-size: 12.5px; }
 
     /* 46px de alto: por encima del minimo recomendado para el pulgar. Y mas
-       separacion entre Abrir y Borrar, que estaban a 8px y Borrar no es algo
-       que quieras tocar por error. */
-    .acciones { gap: 12px; }
+       separacion entre los botones, que Borrar no es algo que quieras tocar
+       por error. Con tres botones el hueco baja a 10px para que quepan. */
+    .acciones { gap: 10px; }
     .acciones a, .acciones button { min-height: 46px; font-size: 14px; }
-    .borrar { padding: 8px 18px; }
+    .subido, .borrar { padding: 8px 14px; }
 
     .aviso { padding: 56px 16px; }
   }
@@ -187,37 +212,61 @@
   "use strict";
 
   const CLAVE = "clipper.borrados";
+  const CLAVE_PUB = "clipper.publicados";
   const TTL_POR_DEFECTO = 24;           // solo si el JSON no trae ttl_horas
+  const PENALIZACION_DEFECTO = 0.5;     // idem con penalizacion_estimada
   const REFRESCO_DATOS = 5 * 60 * 1000; // el radar publica una vez por ronda
   const REFRESCO_RELOJ = 60 * 1000;     // para que caduquen sin recargar
+  const DIAS_REGISTRO = 90;             // cuanto se guarda lo que ya subiste
 
-  let feed = { clips: [], actualizado_en: null, ttl_horas: TTL_POR_DEFECTO };
+  let feed = {
+    clips: [], actualizado_en: null,
+    ttl_horas: TTL_POR_DEFECTO, penalizacion: PENALIZACION_DEFECTO,
+  };
 
-  // --- Borrados (solo en este navegador) ---------------------------------
-  // No hay servidor donde guardar esto: la web es estatica. Vive en
-  // localStorage, asi que no viaja entre el PC y el movil. Como todo caduca
-  // a las 24h, la divergencia nunca se acumula.
-  const leerBorrados = () => {
-    try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; }
+  // --- Almacen local -----------------------------------------------------
+  // No hay servidor donde guardar nada: la web es estatica. Todo esto vive en
+  // localStorage, asi que no viaja entre el PC y el movil.
+  const leer = (clave) => {
+    try { return JSON.parse(localStorage.getItem(clave)) || {}; }
     catch (e) { return {}; }
   };
-  const guardarBorrados = (b) => {
-    try { localStorage.setItem(CLAVE, JSON.stringify(b)); } catch (e) {}
+  const guardar = (clave, v) => {
+    try { localStorage.setItem(clave, JSON.stringify(v)); } catch (e) {}
   };
-  // Se podan a las 48h: pasado el TTL del feed el clip ya no existe, y
-  // recordar que lo borraste deja de servir para nada.
+
+  // Los borrados se podan a las 48h: pasado el TTL del feed el clip ya no
+  // existe, y recordar que lo borraste deja de servir para nada.
   const podarBorrados = () => {
-    const b = leerBorrados(), corte = Date.now() - 48 * 3600e3;
+    const b = leer(CLAVE), corte = Date.now() - 48 * 3600e3;
     let cambio = false;
     for (const id of Object.keys(b)) {
       if (!(Date.parse(b[id]) >= corte)) { delete b[id]; cambio = true; }
     }
-    if (cambio) guardarBorrados(b);
+    if (cambio) guardar(CLAVE, b);
     return b;
   };
 
+  // El registro de publicados es distinto: no guarda solo el id, guarda la
+  // FILA ENTERA. Tiene que sobrevivir a que el clip caduque del feed a las
+  // 24h, porque si no el CSV se quedaria siempre vacio.
+  const podarPublicados = () => {
+    const p = leer(CLAVE_PUB), corte = Date.now() - DIAS_REGISTRO * 24 * 3600e3;
+    let cambio = false;
+    for (const id of Object.keys(p)) {
+      // El `p[id] &&` no sobra: si el localStorage trae basura de una version
+      // anterior, sin el la pagina entera se cae con un TypeError.
+      if (!(p[id] && Date.parse(p[id].publicado_en) >= corte)) {
+        delete p[id];
+        cambio = true;
+      }
+    }
+    if (cambio) guardar(CLAVE_PUB, p);
+    return p;
+  };
+
   // --- Formato -----------------------------------------------------------
-  const miles = (n) => n.toLocaleString("es-ES");
+  const miles = (n) => Number(n || 0).toLocaleString("es-ES");
   const duracion = (ms) => {
     const m = Math.max(0, Math.round(ms / 60000));
     if (m < 60) return m + " min";
@@ -229,16 +278,22 @@
     d.textContent = s == null ? "" : String(s);
     return d.innerHTML;
   };
+  // Mismo criterio que digest.puntuacion en el radar: la velocidad estimada
+  // no es comparable con la medida, asi que para ORDENAR va penalizada. El
+  // numero que se enseña sigue siendo el de verdad.
+  const puntuacion = (c) =>
+    (c.velocidad || 0) * (c.fuente === "nuevo" ? feed.penalizacion : 1);
 
   // --- Pintado -----------------------------------------------------------
-  function tarjeta(c, puesto) {
+  function tarjeta(c, puesto, publicados) {
     const ahora = Date.now();
     const estimada = c.fuente === "nuevo";
+    const publicada = !!publicados[c.id];
     const caducaEn = Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 - ahora;
     const edad = ahora - Date.parse(c.creado_en);
 
     const el = document.createElement("article");
-    el.className = "tarjeta";
+    el.className = "tarjeta" + (publicada ? " publicada" : "");
     el.dataset.id = c.id;
     el.innerHTML = [
       // La miniatura es el enlace principal: en movil se acierta con el pulgar
@@ -247,13 +302,17 @@
         ' aria-label="Abrir el clip de ' + esc(c.canal) + '">',
         c.miniatura ? '<img src="' + esc(c.miniatura) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '',
         '<span class="puesto">#' + puesto + '</span>',
+        publicada ? '<span class="sello">subido</span>' : '',
         '<span class="velocidad ' + (estimada ? 'estimada' : '') + '">',
           (estimada ? '~' : '') + miles(Math.round(c.velocidad)) + ' v/h',
           '<span class="matiz">' + (estimada ? 'estimada' : 'medida') + '</span>',
         '</span>',
+        c.duracion ? '<span class="duracion">' + Math.round(c.duracion) + 's</span>' : '',
       '</a>',
       '<div class="cuerpo">',
-        '<div class="canal">' + esc(c.canal) + '</div>',
+        '<div class="canal"><span>' + esc(c.canal) + '</span>',
+          c.juego ? '<span class="juego">' + esc(c.juego) + '</span>' : '',
+        '</div>',
         '<p class="titulo">' + esc(c.titulo) + '</p>',
         '<div class="meta">',
           '<span>' + miles(c.vistas) + ' vistas</span>',
@@ -262,44 +321,119 @@
         '</div>',
         '<div class="acciones">',
           '<a class="abrir" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Abrir clip</a>',
+          '<button class="subido" aria-pressed="' + publicada + '" title="Marcar como ya subido a ClipperoTV">',
+            (publicada ? 'Subido' : 'Marcar'),
+          '</button>',
           '<button class="borrar" title="Quitar de la web">Borrar</button>',
         '</div>',
       '</div>'
     ].join('');
 
     el.querySelector(".borrar").addEventListener("click", () => {
-      const b = leerBorrados();
+      const b = leer(CLAVE);
       b[c.id] = new Date().toISOString();
-      guardarBorrados(b);
+      guardar(CLAVE, b);
       el.classList.add("saliendo");
       setTimeout(pintar, 180);
     });
+
+    el.querySelector(".subido").addEventListener("click", () => {
+      const p = leer(CLAVE_PUB);
+      if (p[c.id]) {
+        delete p[c.id];
+      } else {
+        // Se copia la fila entera, no el id: es lo que hace que el registro
+        // siga existiendo cuando el clip ya haya caducado del feed.
+        p[c.id] = {
+          publicado_en: new Date().toISOString(),
+          canal: c.canal, juego: c.juego || "", titulo: c.titulo, url: c.url,
+          duracion: c.duracion || 0, vistas: c.vistas,
+          velocidad: c.velocidad, fuente: c.fuente, creado_en: c.creado_en,
+        };
+      }
+      guardar(CLAVE_PUB, p);
+      pintar();
+    });
     return el;
+  }
+
+  // --- El registro, en CSV -----------------------------------------------
+  // El radar elige los clips por vistas/hora EN TWITCH. Que eso prediga algo
+  // en TikTok o en X no lo sabe nadie todavia. Las cuatro columnas vacias del
+  // final son justo para eso: rellenalas a mano y en un mes sabras si la
+  // metrica es la correcta o si lo que funciona es otra cosa.
+  const COLUMNAS = [
+    "publicado_en", "canal", "juego", "duracion_s", "titulo", "url",
+    "vistas_twitch", "velocidad_vh", "fuente", "creado_en",
+    "views_tiktok", "views_reels", "views_shorts", "views_x",
+  ];
+
+  function descargarRegistro() {
+    const p = podarPublicados();
+    const filas = Object.values(p)
+      .sort((a, b) => Date.parse(b.publicado_en) - Date.parse(a.publicado_en))
+      .map((r) => [
+        r.publicado_en, r.canal, r.juego, r.duracion, r.titulo, r.url,
+        r.vistas, r.velocidad, r.fuente, r.creado_en, "", "", "", "",
+      ]);
+    const celda = (v) => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+    const csv = [COLUMNAS, ...filas].map((f) => f.map(celda).join(",")).join("\r\n");
+
+    // El BOM es para Excel: sin el, abre el CSV en la codificacion del sistema
+    // y los acentos salen rotos.
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "clippero-registro-" + new Date().toISOString().slice(0, 10) + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  function enlaceSub(texto, alPulsar) {
+    const b = document.createElement("button");
+    b.textContent = texto;
+    b.addEventListener("click", alPulsar);
+    return b;
   }
 
   function pintar() {
     const salida = document.getElementById("salida");
     const sub = document.getElementById("sub");
     const borrados = podarBorrados();
+    const publicados = podarPublicados();
     const ahora = Date.now();
 
     // Doble filtro de caducidad: el radar poda el JSON en cada ronda, pero
     // una pestana abierta desde ayer tiene que caducarlos por su cuenta.
     const vivos = feed.clips
       .filter((c) => Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 > ahora)
-      .sort((a, b) => b.velocidad - a.velocidad);
+      // Los ya subidos al final, y dentro de cada grupo por velocidad.
+      .sort((a, b) => {
+        const pa = publicados[a.id] ? 1 : 0, pb = publicados[b.id] ? 1 : 0;
+        return pa - pb || puntuacion(b) - puntuacion(a);
+      });
     const visibles = vivos.filter((c) => !borrados[c.id]);
     const ocultos = vivos.length - visibles.length;
+    const pendientes = visibles.filter((c) => !publicados[c.id]).length;
+    const enRegistro = Object.keys(publicados).length;
 
-    sub.innerHTML = '<span><span class="punto"></span> ' + visibles.length + ' clips</span>' +
+    sub.innerHTML = '<span><span class="punto"></span> ' + pendientes + ' sin subir' +
+      (visibles.length - pendientes ? ' de ' + visibles.length : '') + '</span>' +
       (feed.actualizado_en
         ? '<span>ultima ronda hace ' + duracion(ahora - Date.parse(feed.actualizado_en)) + '</span>'
         : '');
     if (ocultos) {
-      const b = document.createElement("button");
-      b.textContent = "restaurar " + ocultos + " borrado" + (ocultos > 1 ? "s" : "");
-      b.addEventListener("click", () => { guardarBorrados({}); pintar(); });
-      sub.appendChild(b);
+      sub.appendChild(enlaceSub(
+        "restaurar " + ocultos + " borrado" + (ocultos > 1 ? "s" : ""),
+        () => { guardar(CLAVE, {}); pintar(); }
+      ));
+    }
+    if (enRegistro) {
+      sub.appendChild(enlaceSub(
+        "descargar registro (" + enRegistro + ")", descargarRegistro
+      ));
     }
 
     salida.innerHTML = "";
@@ -311,7 +445,7 @@
     }
     const rejilla = document.createElement("div");
     rejilla.className = "rejilla";
-    visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1)));
+    visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1, publicados)));
     salida.appendChild(rejilla);
   }
 
@@ -326,6 +460,7 @@
         clips: Array.isArray(d.clips) ? d.clips : [],
         actualizado_en: d.actualizado_en || null,
         ttl_horas: d.ttl_horas || TTL_POR_DEFECTO,
+        penalizacion: d.penalizacion_estimada || PENALIZACION_DEFECTO,
       };
       pintar();
     } catch (e) {

@@ -1,7 +1,8 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-12T09:00:59.053311+00:00",
+"actualizado_en": "2026-09-12T12:47:26.758373+00:00",
 "ttl_horas": 24,
+"penalizacion_estimada": 0.5,
 "clips": [
 {
 "id": "SavageScaryDragonPastaThat-_P5jlufOtmf6dASV",
@@ -9,25 +10,14 @@
 "titulo": "y le suelta un te amo por la cara",
 "canal": "elcalvolol",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/66fcbdec-b5a2-4483-ac10-d2cc53e50055/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 224,
-"velocidad": 304.1,
-"fuente": "nuevo",
+"vistas": 500,
+"velocidad": 48.0,
+"fuente": "ventana",
+"duracion": 21.9,
+"juego": "IRL",
 "creado_en": "2026-09-11T23:19:28Z",
 "anadido_en": "2026-09-12T00:03:40.102250+00:00",
-"actualizado_en": "2026-09-12T00:03:40.102250+00:00"
-},
-{
-"id": "DepressedKathishPandaCmonBruh-qk6pkfuRY0kDLMv5",
-"url": "https://www.twitch.tv/ibai/clip/DepressedKathishPandaCmonBruh-qk6pkfuRY0kDLMv5",
-"titulo": "asdjjsdjdsjsdjsdjsdjsdjasdds",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0cd2ba61-4df0-4c14-ac0c-d70e815e1cfb/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 263,
-"velocidad": 38.4,
-"fuente": "ventana",
-"creado_en": "2026-09-11T17:46:51Z",
-"anadido_en": "2026-09-12T00:03:40.102250+00:00",
-"actualizado_en": "2026-09-12T00:03:40.102250+00:00"
+"actualizado_en": "2026-09-12T12:47:26.758373+00:00"
 },
 {
 "id": "SmoggyLovelyAdminKAPOW-PmsuWo7h-qiO_Ow0",
@@ -35,12 +25,14 @@
 "titulo": "se le pira (se referia a paulaguti)",
 "canal": "elcalvolol",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6f0234fe-b39f-4d52-81b5-ef0e78c6dfda/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 238,
-"velocidad": 28.1,
-"fuente": "nuevo",
+"vistas": 354,
+"velocidad": 30.7,
+"fuente": "ventana",
+"duracion": 16.1,
+"juego": "Just Chatting",
 "creado_en": "2026-09-12T00:32:50Z",
 "anadido_en": "2026-09-12T09:00:59.053311+00:00",
-"actualizado_en": "2026-09-12T09:00:59.053311+00:00"
+"actualizado_en": "2026-09-12T12:47:26.758373+00:00"
 },
 {
 "id": "OptimisticSpicyPidgeonBrokeBack-fh4Wi-TxQ5ZwKFCe",
@@ -56,17 +48,19 @@
 "actualizado_en": "2026-09-12T00:03:40.102250+00:00"
 },
 {
-"id": "FurtiveQuaintFlamingoKevinTurtle--EEPPzFBvcqVmoqa",
-"url": "https://www.twitch.tv/marinaifx/clip/FurtiveQuaintFlamingoKevinTurtle--EEPPzFBvcqVmoqa",
-"titulo": "marina….?",
-"canal": "marinaifx",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e472b00f-8d14-4bd0-b716-b53f4376a96b/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 288,
-"velocidad": 10.2,
-"fuente": "nuevo",
-"creado_en": "2026-09-10T19:49:02Z",
+"id": "DepressedKathishPandaCmonBruh-qk6pkfuRY0kDLMv5",
+"url": "https://www.twitch.tv/ibai/clip/DepressedKathishPandaCmonBruh-qk6pkfuRY0kDLMv5",
+"titulo": "asdjjsdjdsjsdjsdjsdjsdjasdds",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0cd2ba61-4df0-4c14-ac0c-d70e815e1cfb/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 437,
+"velocidad": 13.8,
+"fuente": "ventana",
+"duracion": 35.0,
+"juego": "League of Legends",
+"creado_en": "2026-09-11T17:46:51Z",
 "anadido_en": "2026-09-12T00:03:40.102250+00:00",
-"actualizado_en": "2026-09-12T00:03:40.102250+00:00"
+"actualizado_en": "2026-09-12T12:47:26.758373+00:00"
 },
 {
 "id": "EmpathicRelatedOysterBudBlast-DXy3gS5Ljgha0kWe",
@@ -78,6 +72,19 @@
 "velocidad": 9.1,
 "fuente": "ventana",
 "creado_en": "2026-09-11T00:20:14Z",
+"anadido_en": "2026-09-12T00:03:40.102250+00:00",
+"actualizado_en": "2026-09-12T00:03:40.102250+00:00"
+},
+{
+"id": "FurtiveQuaintFlamingoKevinTurtle--EEPPzFBvcqVmoqa",
+"url": "https://www.twitch.tv/marinaifx/clip/FurtiveQuaintFlamingoKevinTurtle--EEPPzFBvcqVmoqa",
+"titulo": "marina….?",
+"canal": "marinaifx",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e472b00f-8d14-4bd0-b716-b53f4376a96b/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 288,
+"velocidad": 10.2,
+"fuente": "nuevo",
+"creado_en": "2026-09-10T19:49:02Z",
 "anadido_en": "2026-09-12T00:03:40.102250+00:00",
 "actualizado_en": "2026-09-12T00:03:40.102250+00:00"
 },
