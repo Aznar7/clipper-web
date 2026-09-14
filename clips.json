@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-14T10:09:59.335796+00:00",
+"actualizado_en": "2026-09-14T16:39:43.550844+00:00",
 "ttl_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
@@ -18,6 +18,21 @@
 "creado_en": "2026-09-13T23:26:30Z",
 "anadido_en": "2026-09-13T23:43:13.358608+00:00",
 "actualizado_en": "2026-09-13T23:43:13.358608+00:00"
+},
+{
+"id": "AthleticOptimisticStarlingDancingBaby-0_bqbtZsItyg1Ppc",
+"url": "https://www.twitch.tv/jcorko_/clip/AthleticOptimisticStarlingDancingBaby-0_bqbtZsItyg1Ppc",
+"titulo": "CORKO TE AMA",
+"canal": "jcorko_",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e1c6cb36-a4ab-468a-a6b5-31ee79e1c5cd/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1042,
+"velocidad": 993.8,
+"fuente": "nuevo",
+"duracion": 30.0,
+"juego": "IRL",
+"creado_en": "2026-09-14T15:36:49Z",
+"anadido_en": "2026-09-14T16:39:43.550844+00:00",
+"actualizado_en": "2026-09-14T16:39:43.550844+00:00"
 },
 {
 "id": "RudePolishedMangoDancingBanana-rPTjx4EYHCsIYk4x",
@@ -93,6 +108,21 @@
 "creado_en": "2026-09-09T09:16:52Z",
 "anadido_en": "2026-09-13T19:56:24.421834+00:00",
 "actualizado_en": "2026-09-13T23:43:13.358608+00:00"
+},
+{
+"id": "ReliableSuperPelicanEleGiggle-BgQy2EecbW_zxJX-",
+"url": "https://www.twitch.tv/jcorko_/clip/ReliableSuperPelicanEleGiggle-BgQy2EecbW_zxJX-",
+"titulo": "no quiere llevar a calvicie",
+"canal": "jcorko_",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ca3843f1-1d31-447e-a94c-68f848d59f3a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 206,
+"velocidad": 160.5,
+"fuente": "nuevo",
+"duracion": 40.4,
+"juego": "IRL",
+"creado_en": "2026-09-14T15:22:42Z",
+"anadido_en": "2026-09-14T16:39:43.550844+00:00",
+"actualizado_en": "2026-09-14T16:39:43.550844+00:00"
 },
 {
 "id": "PlainComfortableEggplantUWot-fxHLG-7DYd2EIPpi",
@@ -362,21 +392,6 @@
 "juego": "Just Chatting",
 "creado_en": "2026-09-12T00:32:50Z",
 "anadido_en": "2026-09-13T17:10:31.504311+00:00",
-"actualizado_en": "2026-09-13T23:43:13.358608+00:00"
-},
-{
-"id": "FilthyViscousMomNerfBlueBlaster-8vo0m482_Hr7xCKR",
-"url": "https://www.twitch.tv/lolitofdez/clip/FilthyViscousMomNerfBlueBlaster-8vo0m482_Hr7xCKR",
-"titulo": "ya raideo yo cristofer",
-"canal": "LOLITOFDEZ",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/cca1b678-7ad2-4a6d-8982-4c214347bd86/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 3784,
-"velocidad": 17.6,
-"fuente": "ventana",
-"duracion": 38.5,
-"juego": "Rust",
-"creado_en": "2026-09-10T21:34:55Z",
-"anadido_en": "2026-09-13T13:57:18.007587+00:00",
 "actualizado_en": "2026-09-13T23:43:13.358608+00:00"
 },
 {
