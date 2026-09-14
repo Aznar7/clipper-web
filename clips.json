@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-13T23:43:13.358608+00:00",
+"actualizado_en": "2026-09-14T10:09:59.335796+00:00",
 "ttl_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
@@ -303,6 +303,21 @@
 "creado_en": "2026-09-10T13:08:40Z",
 "anadido_en": "2026-09-13T19:56:24.421834+00:00",
 "actualizado_en": "2026-09-13T23:43:13.358608+00:00"
+},
+{
+"id": "RacyWittyHareTinyFace-FK8SbW5_giwCsBUX",
+"url": "https://www.twitch.tv/juansguarnizo/clip/RacyWittyHareTinyFace-FK8SbW5_giwCsBUX",
+"titulo": "ns",
+"canal": "juansguarnizo",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ca43e4c7-d06a-45b4-844a-55792044830d/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 337,
+"velocidad": 43.4,
+"fuente": "nuevo",
+"duracion": 29.9,
+"juego": "Kings League",
+"creado_en": "2026-09-14T02:23:37Z",
+"anadido_en": "2026-09-14T10:09:59.335796+00:00",
+"actualizado_en": "2026-09-14T10:09:59.335796+00:00"
 },
 {
 "id": "EvilAmorphousHorseradishPMSTwin-i6nQrP6J0Utif8TQ",
