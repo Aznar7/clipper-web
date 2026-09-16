@@ -1,24 +1,54 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-16T18:30:48.150937+00:00",
+"actualizado_en": "2026-09-16T19:56:46.746854+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
+"url": "https://www.twitch.tv/elchiringuitotv/clip/FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
+"titulo": "1-0",
+"canal": "ElChiringuitoTV",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3cbf3384-bb02-40ca-88d5-103e8a71dd04/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 528,
+"velocidad": 212.7,
+"fuente": "nuevo",
+"duracion": 49.5,
+"juego": "Sports",
+"creado_en": "2026-09-16T17:27:50Z",
+"anadido_en": "2026-09-16T19:56:46.746854+00:00",
+"actualizado_en": "2026-09-16T19:56:46.746854+00:00"
+},
+{
+"id": "AffluentTenderCake4Head-sMWP6j9xsfKBOH-V",
+"url": "https://www.twitch.tv/auronplay/clip/AffluentTenderCake4Head-sMWP6j9xsfKBOH-V",
+"titulo": "CHISMEEE",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/7f89c836-f04d-46db-b023-01859e5d375f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 215,
+"velocidad": 205.8,
+"fuente": "nuevo",
+"duracion": 23.1,
+"juego": "Just Chatting",
+"creado_en": "2026-09-16T18:54:05Z",
+"anadido_en": "2026-09-16T19:56:46.746854+00:00",
+"actualizado_en": "2026-09-16T19:56:46.746854+00:00"
+},
 {
 "id": "SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "url": "https://www.twitch.tv/illojuan/clip/SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "titulo": "TIMING",
 "canal": "IlloJuan",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/823fb4a9-f2b8-4096-875d-b8562dd517c8/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1270,
-"velocidad": 49.0,
+"vistas": 1343,
+"velocidad": 50.9,
 "fuente": "ventana",
 "duracion": 23.8,
 "juego": "Marvel's Wolverine",
 "creado_en": "2026-09-15T20:17:01Z",
 "anadido_en": "2026-09-15T21:48:31.005716+00:00",
-"actualizado_en": "2026-09-16T18:30:48.150937+00:00"
+"actualizado_en": "2026-09-16T19:56:46.746854+00:00"
 },
 {
 "id": "HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
@@ -26,14 +56,14 @@
 "titulo": "2",
 "canal": "mumusiraneitor",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/142ba018-5a55-4dd3-b407-19a4dbcb81f9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 373,
-"velocidad": 31.2,
+"vistas": 412,
+"velocidad": 27.2,
 "fuente": "ventana",
 "duracion": 59.9,
 "juego": "Just Chatting",
 "creado_en": "2026-09-16T05:37:23Z",
 "anadido_en": "2026-09-16T12:37:02.628472+00:00",
-"actualizado_en": "2026-09-16T18:30:48.150937+00:00"
+"actualizado_en": "2026-09-16T19:56:46.746854+00:00"
 },
 {
 "id": "PiliableTenuousMonkeyMcaT-k3ckK7LpCzQHoSNC",
