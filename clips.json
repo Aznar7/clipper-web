@@ -1,39 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-16T17:36:52.627017+00:00",
+"actualizado_en": "2026-09-16T18:30:48.150937+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
-"url": "https://www.twitch.tv/mumusiraneitor/clip/HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
-"titulo": "2",
-"canal": "mumusiraneitor",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/142ba018-5a55-4dd3-b407-19a4dbcb81f9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 316,
-"velocidad": 36.7,
-"fuente": "ventana",
-"duracion": 59.9,
-"juego": "Just Chatting",
-"creado_en": "2026-09-16T05:37:23Z",
-"anadido_en": "2026-09-16T12:37:02.628472+00:00",
-"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
-},
 {
 "id": "SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "url": "https://www.twitch.tv/illojuan/clip/SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "titulo": "TIMING",
 "canal": "IlloJuan",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/823fb4a9-f2b8-4096-875d-b8562dd517c8/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1226,
-"velocidad": 20.3,
+"vistas": 1270,
+"velocidad": 49.0,
 "fuente": "ventana",
 "duracion": 23.8,
 "juego": "Marvel's Wolverine",
 "creado_en": "2026-09-15T20:17:01Z",
 "anadido_en": "2026-09-15T21:48:31.005716+00:00",
-"actualizado_en": "2026-09-16T17:36:52.627017+00:00"
+"actualizado_en": "2026-09-16T18:30:48.150937+00:00"
+},
+{
+"id": "HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
+"url": "https://www.twitch.tv/mumusiraneitor/clip/HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
+"titulo": "2",
+"canal": "mumusiraneitor",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/142ba018-5a55-4dd3-b407-19a4dbcb81f9/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 373,
+"velocidad": 31.2,
+"fuente": "ventana",
+"duracion": 59.9,
+"juego": "Just Chatting",
+"creado_en": "2026-09-16T05:37:23Z",
+"anadido_en": "2026-09-16T12:37:02.628472+00:00",
+"actualizado_en": "2026-09-16T18:30:48.150937+00:00"
 },
 {
 "id": "PiliableTenuousMonkeyMcaT-k3ckK7LpCzQHoSNC",
@@ -41,14 +41,14 @@
 "titulo": "“idiotizados”",
 "canal": "IlloJuan",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/91d7bb58-ab2c-47fb-8c02-e3d08770fbd2/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 283,
-"velocidad": 15.0,
+"vistas": 311,
+"velocidad": 18.9,
 "fuente": "ventana",
 "duracion": 30.0,
 "juego": "Marvel's Wolverine",
 "creado_en": "2026-09-15T20:18:11Z",
 "anadido_en": "2026-09-16T14:25:01.476389+00:00",
-"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
+"actualizado_en": "2026-09-16T18:30:48.150937+00:00"
 }
 ]
 }
