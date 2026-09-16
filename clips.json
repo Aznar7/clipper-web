@@ -1,25 +1,10 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-16T12:37:02.628472+00:00",
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "ColdGlutenFreeBatCeilingCat-OihDV4bzj3e3tnAw",
-"url": "https://www.twitch.tv/elcalvolol/clip/ColdGlutenFreeBatCeilingCat-OihDV4bzj3e3tnAw",
-"titulo": "calvolol cobra 25k de twitch",
-"canal": "elcalvolol",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9fed4a3b-0c6c-4630-a953-c13462457c88/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 670,
-"velocidad": 275.3,
-"fuente": "nuevo",
-"duracion": 59.9,
-"juego": "IRL",
-"creado_en": "2026-09-15T16:06:52Z",
-"anadido_en": "2026-09-15T18:32:52.056675+00:00",
-"actualizado_en": "2026-09-15T18:32:52.056675+00:00"
-},
 {
 "id": "DifficultFrozenCurryRiPepperonis-9P20Jp9mTDlWlVrr",
 "url": "https://www.twitch.tv/elcalvolol/clip/DifficultFrozenCurryRiPepperonis-9P20Jp9mTDlWlVrr",
@@ -36,34 +21,19 @@
 "actualizado_en": "2026-09-15T18:32:52.056675+00:00"
 },
 {
-"id": "PoisedAcceptableWasabiNomNom-w45UnigXneUjBAYv",
-"url": "https://www.twitch.tv/knekro/clip/PoisedAcceptableWasabiNomNom-w45UnigXneUjBAYv",
-"titulo": "26 trozo mierda xdd",
-"canal": "knekro",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0d19b369-25e1-4d8f-a6e1-0bbaa887af8f/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 242,
-"velocidad": 91.4,
-"fuente": "nuevo",
-"duracion": 13.1,
-"juego": "Just Chatting",
-"creado_en": "2026-09-15T15:54:01Z",
-"anadido_en": "2026-09-15T18:32:52.056675+00:00",
-"actualizado_en": "2026-09-15T18:32:52.056675+00:00"
-},
-{
 "id": "SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "url": "https://www.twitch.tv/illojuan/clip/SpeedyObliviousSushiNotATK-exWYWRoC7-KeX76X",
 "titulo": "TIMING",
 "canal": "IlloJuan",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/823fb4a9-f2b8-4096-875d-b8562dd517c8/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1084,
-"velocidad": 27.9,
+"vistas": 1161,
+"velocidad": 42.8,
 "fuente": "ventana",
 "duracion": 23.8,
 "juego": "Marvel's Wolverine",
 "creado_en": "2026-09-15T20:17:01Z",
 "anadido_en": "2026-09-15T21:48:31.005716+00:00",
-"actualizado_en": "2026-09-16T12:37:02.628472+00:00"
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
 },
 {
 "id": "HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
@@ -71,14 +41,14 @@
 "titulo": "2",
 "canal": "mumusiraneitor",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/142ba018-5a55-4dd3-b407-19a4dbcb81f9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 250,
-"velocidad": 27.5,
+"vistas": 316,
+"velocidad": 36.7,
 "fuente": "ventana",
 "duracion": 59.9,
 "juego": "Just Chatting",
 "creado_en": "2026-09-16T05:37:23Z",
 "anadido_en": "2026-09-16T12:37:02.628472+00:00",
-"actualizado_en": "2026-09-16T12:37:02.628472+00:00"
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
 },
 {
 "id": "CloudyFrigidChimpanzeeEleGiggle-XQZctcZVtgh5evDQ",
@@ -86,14 +56,74 @@
 "titulo": "ibai sobre illojuan GTA VI",
 "canal": "ibai",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fdd9fafe-a1b5-46b0-aed1-05f27b161246/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 610,
-"velocidad": 13.4,
+"vistas": 649,
+"velocidad": 21.7,
 "fuente": "ventana",
 "duracion": 25.2,
 "juego": "Just Chatting",
 "creado_en": "2026-09-15T14:26:41Z",
 "anadido_en": "2026-09-15T21:48:31.005716+00:00",
-"actualizado_en": "2026-09-16T12:37:02.628472+00:00"
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
+},
+{
+"id": "PoisedAcceptableWasabiNomNom-w45UnigXneUjBAYv",
+"url": "https://www.twitch.tv/knekro/clip/PoisedAcceptableWasabiNomNom-w45UnigXneUjBAYv",
+"titulo": "26 trozo mierda xdd",
+"canal": "knekro",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0d19b369-25e1-4d8f-a6e1-0bbaa887af8f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 463,
+"velocidad": 15.0,
+"fuente": "ventana",
+"duracion": 13.1,
+"juego": "Just Chatting",
+"creado_en": "2026-09-15T15:54:01Z",
+"anadido_en": "2026-09-15T18:32:52.056675+00:00",
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
+},
+{
+"id": "PiliableTenuousMonkeyMcaT-k3ckK7LpCzQHoSNC",
+"url": "https://www.twitch.tv/illojuan/clip/PiliableTenuousMonkeyMcaT-k3ckK7LpCzQHoSNC",
+"titulo": "“idiotizados”",
+"canal": "IlloJuan",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/91d7bb58-ab2c-47fb-8c02-e3d08770fbd2/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 283,
+"velocidad": 15.0,
+"fuente": "ventana",
+"duracion": 30.0,
+"juego": "Marvel's Wolverine",
+"creado_en": "2026-09-15T20:18:11Z",
+"anadido_en": "2026-09-16T14:25:01.476389+00:00",
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
+},
+{
+"id": "DelightfulDarkCrabHoneyBadger-o7xTZa_7bu6F-WDt",
+"url": "https://www.twitch.tv/illojuan/clip/DelightfulDarkCrabHoneyBadger-o7xTZa_7bu6F-WDt",
+"titulo": "woof woof",
+"canal": "IlloJuan",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/a36f50de-7970-496e-92a2-7f8ac2b73211/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 342,
+"velocidad": 13.3,
+"fuente": "ventana",
+"duracion": 20.9,
+"juego": "Just Chatting",
+"creado_en": "2026-09-15T15:05:41Z",
+"anadido_en": "2026-09-16T14:25:01.476389+00:00",
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
+},
+{
+"id": "ColdGlutenFreeBatCeilingCat-OihDV4bzj3e3tnAw",
+"url": "https://www.twitch.tv/elcalvolol/clip/ColdGlutenFreeBatCeilingCat-OihDV4bzj3e3tnAw",
+"titulo": "calvolol cobra 25k de twitch",
+"canal": "elcalvolol",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9fed4a3b-0c6c-4630-a953-c13462457c88/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 785,
+"velocidad": 11.7,
+"fuente": "ventana",
+"duracion": 59.9,
+"juego": "IRL",
+"creado_en": "2026-09-15T16:06:52Z",
+"anadido_en": "2026-09-15T18:32:52.056675+00:00",
+"actualizado_en": "2026-09-16T14:25:01.476389+00:00"
 }
 ]
 }
