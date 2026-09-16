@@ -214,6 +214,7 @@
   const CLAVE = "clipper.borrados";
   const CLAVE_PUB = "clipper.publicados";
   const TTL_POR_DEFECTO = 24;           // solo si el JSON no trae ttl_horas
+  const EDAD_MAX_DEFECTO = 24;          // idem con edad_max_horas
   const PENALIZACION_DEFECTO = 0.5;     // idem con penalizacion_estimada
   const REFRESCO_DATOS = 5 * 60 * 1000; // el radar publica una vez por ronda
   const REFRESCO_RELOJ = 60 * 1000;     // para que caduquen sin recargar
@@ -221,8 +222,18 @@
 
   let feed = {
     clips: [], actualizado_en: null,
-    ttl_horas: TTL_POR_DEFECTO, penalizacion: PENALIZACION_DEFECTO,
+    ttl_horas: TTL_POR_DEFECTO, edad_max_horas: EDAD_MAX_DEFECTO,
+    penalizacion: PENALIZACION_DEFECTO,
   };
+
+  // Los dos relojes de un clip, en milisegundos: cuando se le acaba el rato en
+  // la web y cuando cumple la edad maxima. Manda el que venza antes, igual que
+  // en web_feed._vigente. El de la edad es el que evita que un clip que entro
+  // con 20 h de vida siga aqui con casi dos dias encima.
+  const caduca = (c) => Math.min(
+    Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3,
+    Date.parse(c.creado_en) + feed.edad_max_horas * 3600e3
+  );
 
   // --- Almacen local -----------------------------------------------------
   // No hay servidor donde guardar nada: la web es estatica. Todo esto vive en
@@ -289,7 +300,7 @@
     const ahora = Date.now();
     const estimada = c.fuente === "nuevo";
     const publicada = !!publicados[c.id];
-    const caducaEn = Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 - ahora;
+    const caducaEn = caduca(c) - ahora;
     const edad = ahora - Date.parse(c.creado_en);
 
     const el = document.createElement("article");
@@ -408,7 +419,7 @@
     // Doble filtro de caducidad: el radar poda el JSON en cada ronda, pero
     // una pestana abierta desde ayer tiene que caducarlos por su cuenta.
     const vivos = feed.clips
-      .filter((c) => Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3 > ahora)
+      .filter((c) => caduca(c) > ahora)
       // Los ya subidos al final, y dentro de cada grupo por velocidad.
       .sort((a, b) => {
         const pa = publicados[a.id] ? 1 : 0, pb = publicados[b.id] ? 1 : 0;
@@ -460,6 +471,7 @@
         clips: Array.isArray(d.clips) ? d.clips : [],
         actualizado_en: d.actualizado_en || null,
         ttl_horas: d.ttl_horas || TTL_POR_DEFECTO,
+        edad_max_horas: d.edad_max_horas || EDAD_MAX_DEFECTO,
         penalizacion: d.penalizacion_estimada || PENALIZACION_DEFECTO,
       };
       pintar();
