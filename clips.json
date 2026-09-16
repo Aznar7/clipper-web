@@ -1,39 +1,69 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-16T21:46:45.297951+00:00",
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
-"url": "https://www.twitch.tv/elchiringuitotv/clip/FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
-"titulo": "1-0",
-"canal": "ElChiringuitoTV",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3cbf3384-bb02-40ca-88d5-103e8a71dd04/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 954,
-"velocidad": 232.4,
-"fuente": "ventana",
-"duracion": 49.5,
-"juego": "Sports",
-"creado_en": "2026-09-16T17:27:50Z",
-"anadido_en": "2026-09-16T19:56:46.746854+00:00",
-"actualizado_en": "2026-09-16T21:46:45.297951+00:00"
-},
 {
 "id": "AffluentTenderCake4Head-sMWP6j9xsfKBOH-V",
 "url": "https://www.twitch.tv/auronplay/clip/AffluentTenderCake4Head-sMWP6j9xsfKBOH-V",
 "titulo": "CHISMEEE",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/7f89c836-f04d-46db-b023-01859e5d375f/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 376,
-"velocidad": 87.8,
+"vistas": 1479,
+"velocidad": 512.1,
 "fuente": "ventana",
 "duracion": 23.1,
 "juego": "Just Chatting",
 "creado_en": "2026-09-16T18:54:05Z",
 "anadido_en": "2026-09-16T19:56:46.746854+00:00",
-"actualizado_en": "2026-09-16T21:46:45.297951+00:00"
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00"
+},
+{
+"id": "FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
+"url": "https://www.twitch.tv/elchiringuitotv/clip/FurryGeniusEmuDxAbomb-2i6bwtM1Ki74Cttf",
+"titulo": "1-0",
+"canal": "ElChiringuitoTV",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3cbf3384-bb02-40ca-88d5-103e8a71dd04/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1419,
+"velocidad": 215.9,
+"fuente": "ventana",
+"duracion": 49.5,
+"juego": "Sports",
+"creado_en": "2026-09-16T17:27:50Z",
+"anadido_en": "2026-09-16T19:56:46.746854+00:00",
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00"
+},
+{
+"id": "BelovedRudeMooseOptimizePrime--9hcfgk2-t3gvAG-",
+"url": "https://www.twitch.tv/auronplay/clip/BelovedRudeMooseOptimizePrime--9hcfgk2-t3gvAG-",
+"titulo": "?? JAJAJAJAJAJA",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5b2fd88c-679d-4a16-a2ff-807ffe21530a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 407,
+"velocidad": 111.4,
+"fuente": "ventana",
+"duracion": 22.2,
+"juego": "Just Chatting",
+"creado_en": "2026-09-16T19:16:52Z",
+"anadido_en": "2026-09-16T23:55:58.834663+00:00",
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00"
+},
+{
+"id": "RamshackleAssiduousOwlCurseLit-WioXU0x6B-VS29rx",
+"url": "https://www.twitch.tv/auronplay/clip/RamshackleAssiduousOwlCurseLit-WioXU0x6B-VS29rx",
+"titulo": "No me la creooo",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/07072811-8ee0-4491-9409-67039060fe4f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 220,
+"velocidad": 60.4,
+"fuente": "ventana",
+"duracion": 57.9,
+"juego": "Just Chatting",
+"creado_en": "2026-09-16T18:55:47Z",
+"anadido_en": "2026-09-16T23:55:58.834663+00:00",
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00"
 },
 {
 "id": "HonestYawningDelicataKappaWealth-HUO2P2tAvYOk9URK",
@@ -41,14 +71,14 @@
 "titulo": "2",
 "canal": "mumusiraneitor",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/142ba018-5a55-4dd3-b407-19a4dbcb81f9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 471,
-"velocidad": 32.2,
+"vistas": 515,
+"velocidad": 20.4,
 "fuente": "ventana",
 "duracion": 59.9,
 "juego": "Just Chatting",
 "creado_en": "2026-09-16T05:37:23Z",
 "anadido_en": "2026-09-16T12:37:02.628472+00:00",
-"actualizado_en": "2026-09-16T21:46:45.297951+00:00"
+"actualizado_en": "2026-09-16T23:55:58.834663+00:00"
 }
 ]
 }
