@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-18T09:15:52.811985+00:00",
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,29 +11,14 @@
 "titulo": "FOG/NO FOG",
 "canal": "elxokas",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/55c70755-89e4-4df1-9a87-ef842a8fb31b/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 2382,
-"velocidad": 2373.2,
-"fuente": "nuevo",
+"vistas": 4196,
+"velocidad": 80.0,
+"fuente": "ventana",
 "duracion": 30.0,
 "juego": "World of Warcraft",
 "creado_en": "2026-09-17T22:45:42Z",
 "anadido_en": "2026-09-17T23:45:55.308973+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
-},
-{
-"id": "FunEntertainingCheeseNomNom-XpiRE50mu3wdrR9W",
-"url": "https://www.twitch.tv/auronplay/clip/FunEntertainingCheeseNomNom-XpiRE50mu3wdrR9W",
-"titulo": "TROLL",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/408ca877-757a-44c8-96a6-cb31b9da92e9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 808,
-"velocidad": 82.9,
-"fuente": "ventana",
-"duracion": 30.0,
-"juego": "Minecraft",
-"creado_en": "2026-09-17T19:52:35Z",
-"anadido_en": "2026-09-17T21:49:26.645345+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
 },
 {
 "id": "ColorfulSweetZucchiniTBTacoLeft-AqX3zWQddUW4C0GQ",
@@ -56,14 +41,14 @@
 "titulo": "Xokas xD",
 "canal": "Rubius",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/93b30dc2-d2ff-4c3a-b4ee-672cac6cd0f5/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 3007,
-"velocidad": 50.5,
+"vistas": 4206,
+"velocidad": 55.1,
 "fuente": "ventana",
 "duracion": 60.0,
 "juego": "World of Warcraft",
 "creado_en": "2026-09-17T18:40:05Z",
 "anadido_en": "2026-09-17T21:49:26.645345+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
 },
 {
 "id": "BoredBlightedWrenTakeNRG-XarGZFqu6g5FijPR",
@@ -78,21 +63,6 @@
 "juego": "Minecraft",
 "creado_en": "2026-09-17T18:38:15Z",
 "anadido_en": "2026-09-17T23:45:55.308973+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
-},
-{
-"id": "BraveCrackyDadPermaSmug-jVOYPt62vu-kAKT_",
-"url": "https://www.twitch.tv/elxokas/clip/BraveCrackyDadPermaSmug-jVOYPt62vu-kAKT_",
-"titulo": "mi primera vez",
-"canal": "elxokas",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fb7df9d4-5d42-42ff-af8d-4f5817e0a5d9/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 301,
-"velocidad": 22.2,
-"fuente": "ventana",
-"duracion": 39.4,
-"juego": "World of Warcraft",
-"creado_en": "2026-09-17T19:24:22Z",
-"anadido_en": "2026-09-17T21:49:26.645345+00:00",
 "actualizado_en": "2026-09-17T23:45:55.308973+00:00"
 },
 {
@@ -116,14 +86,29 @@
 "titulo": "BEEF FRAN BEUVE",
 "canal": "JoseNogales1",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/bd40eb76-2814-40ee-aaf0-dd87d0d6cb4f/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 202,
-"velocidad": 13.9,
+"vistas": 324,
+"velocidad": 17.3,
 "fuente": "ventana",
 "duracion": 60.0,
 "juego": "IRL",
 "creado_en": "2026-09-17T19:07:07Z",
 "anadido_en": "2026-09-17T23:45:55.308973+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
+},
+{
+"id": "FunEntertainingCheeseNomNom-XpiRE50mu3wdrR9W",
+"url": "https://www.twitch.tv/auronplay/clip/FunEntertainingCheeseNomNom-XpiRE50mu3wdrR9W",
+"titulo": "TROLL",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/408ca877-757a-44c8-96a6-cb31b9da92e9/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1182,
+"velocidad": 16.4,
+"fuente": "ventana",
+"duracion": 30.0,
+"juego": "Minecraft",
+"creado_en": "2026-09-17T19:52:35Z",
+"anadido_en": "2026-09-17T21:49:26.645345+00:00",
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
 },
 {
 "id": "OutstandingGiftedStarlingNerfBlueBlaster-g_XS0fhaybTvRC43",
@@ -131,14 +116,29 @@
 "titulo": "rubius dice ke se pierde la amistad",
 "canal": "Rubius",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c1937563-ea12-4d78-ae8e-6d1fb38e5e65/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 554,
-"velocidad": 10.3,
+"vistas": 777,
+"velocidad": 13.4,
 "fuente": "ventana",
 "duracion": 30.0,
 "juego": "World of Warcraft",
 "creado_en": "2026-09-17T18:53:15Z",
 "anadido_en": "2026-09-17T21:49:26.645345+00:00",
-"actualizado_en": "2026-09-17T23:45:55.308973+00:00"
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
+},
+{
+"id": "BraveCrackyDadPermaSmug-jVOYPt62vu-kAKT_",
+"url": "https://www.twitch.tv/elxokas/clip/BraveCrackyDadPermaSmug-jVOYPt62vu-kAKT_",
+"titulo": "mi primera vez",
+"canal": "elxokas",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fb7df9d4-5d42-42ff-af8d-4f5817e0a5d9/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 444,
+"velocidad": 11.7,
+"fuente": "ventana",
+"duracion": 39.4,
+"juego": "World of Warcraft",
+"creado_en": "2026-09-17T19:24:22Z",
+"anadido_en": "2026-09-17T21:49:26.645345+00:00",
+"actualizado_en": "2026-09-18T13:57:03.951130+00:00"
 }
 ]
 }
