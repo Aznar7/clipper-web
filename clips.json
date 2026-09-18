@@ -1,24 +1,24 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-18T20:03:24.570280+00:00",
+"actualizado_en": "2026-09-18T22:53:32.182877+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
 {
-"id": "CulturedEnticingMacaroniRitzMitz-6dLkSG82fvWnsosr",
-"url": "https://www.twitch.tv/elxokas/clip/CulturedEnticingMacaroniRitzMitz-6dLkSG82fvWnsosr",
-"titulo": "FOG/NO FOG",
-"canal": "elxokas",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/55c70755-89e4-4df1-9a87-ef842a8fb31b/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 4634,
-"velocidad": 54.1,
-"fuente": "ventana",
-"duracion": 30.0,
+"id": "GorgeousPatientWolfKappaRoss--XBjMuvTyvguUm6v",
+"url": "https://www.twitch.tv/hawnktv/clip/GorgeousPatientWolfKappaRoss--XBjMuvTyvguUm6v",
+"titulo": "SE LIA EL PVP",
+"canal": "HawnkTV",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/822d7823-095f-4628-bf14-1b16d4d98f77/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 232,
+"velocidad": 118.0,
+"fuente": "nuevo",
+"duracion": 44.7,
 "juego": "World of Warcraft",
-"creado_en": "2026-09-17T22:45:42Z",
-"anadido_en": "2026-09-17T23:45:55.308973+00:00",
-"actualizado_en": "2026-09-18T20:03:24.570280+00:00"
+"creado_en": "2026-09-18T20:55:34Z",
+"anadido_en": "2026-09-18T22:53:32.182877+00:00",
+"actualizado_en": "2026-09-18T22:53:32.182877+00:00"
 }
 ]
 }
