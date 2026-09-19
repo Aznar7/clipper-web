@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-19T13:31:19.375435+00:00",
+"actualizado_en": "2026-09-19T16:51:11.285042+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -19,6 +19,21 @@
 "creado_en": "2026-09-18T20:55:34Z",
 "anadido_en": "2026-09-18T22:53:32.182877+00:00",
 "actualizado_en": "2026-09-18T22:53:32.182877+00:00"
+},
+{
+"id": "DeterminedExquisiteToadThunBeast-w2BaqDrPlYtcu96n",
+"url": "https://www.twitch.tv/revenant/clip/DeterminedExquisiteToadThunBeast-w2BaqDrPlYtcu96n",
+"titulo": "Aristoteles:",
+"canal": "REVENANT",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/79f49b26-f45c-42e9-b393-5de568db89db/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 226,
+"velocidad": 98.0,
+"fuente": "nuevo",
+"duracion": 18.5,
+"juego": "Just Chatting",
+"creado_en": "2026-09-19T14:32:53Z",
+"anadido_en": "2026-09-19T16:51:11.285042+00:00",
+"actualizado_en": "2026-09-19T16:51:11.285042+00:00"
 }
 ]
 }
