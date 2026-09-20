@@ -1,25 +1,10 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-20T09:29:37.541050+00:00",
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "EnjoyableEntertainingHareOMGScoots-luYTVV5yvVYlgn3n",
-"url": "https://www.twitch.tv/auronplay/clip/EnjoyableEntertainingHareOMGScoots-luYTVV5yvVYlgn3n",
-"titulo": "Abduzcan",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ed59fd12-d5db-4a93-bb19-11514b45113e/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1475,
-"velocidad": 117.3,
-"fuente": "ventana",
-"duracion": 7.4,
-"juego": "Mimic Party",
-"creado_en": "2026-09-19T17:53:24Z",
-"anadido_en": "2026-09-19T19:01:10.499467+00:00",
-"actualizado_en": "2026-09-19T23:42:20.021623+00:00"
-},
 {
 "id": "SmellyWealthyOryxWOOP-k8e0X1peCigV6Ble",
 "url": "https://www.twitch.tv/ibai/clip/SmellyWealthyOryxWOOP-k8e0X1peCigV6Ble",
@@ -66,34 +51,34 @@
 "actualizado_en": "2026-09-19T16:51:11.285042+00:00"
 },
 {
-"id": "EndearingKitschyWaspCoolCat-lxjycwi8jWyvkd5A",
-"url": "https://www.twitch.tv/ikiimartin/clip/EndearingKitschyWaspCoolCat-lxjycwi8jWyvkd5A",
-"titulo": "TRADERS",
-"canal": "ikiimartin",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/63b1f437-99a7-4fd7-96ff-64ab6d6de1da/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 234,
-"velocidad": 46.6,
+"id": "EnjoyableEntertainingHareOMGScoots-luYTVV5yvVYlgn3n",
+"url": "https://www.twitch.tv/auronplay/clip/EnjoyableEntertainingHareOMGScoots-luYTVV5yvVYlgn3n",
+"titulo": "Abduzcan",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ed59fd12-d5db-4a93-bb19-11514b45113e/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 2028,
+"velocidad": 36.7,
 "fuente": "ventana",
-"duracion": 60.0,
-"juego": "EA Sports FC 27",
-"creado_en": "2026-09-19T18:51:28Z",
-"anadido_en": "2026-09-19T23:42:20.021623+00:00",
-"actualizado_en": "2026-09-19T23:42:20.021623+00:00"
+"duracion": 7.4,
+"juego": "Mimic Party",
+"creado_en": "2026-09-19T17:53:24Z",
+"anadido_en": "2026-09-19T19:01:10.499467+00:00",
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00"
 },
 {
-"id": "DignifiedBloodyOtterLeeroyJenkins-5LiFIWORQmtYNn6v",
-"url": "https://www.twitch.tv/auronplay/clip/DignifiedBloodyOtterLeeroyJenkins-5LiFIWORQmtYNn6v",
-"titulo": "Auron dice abduscan",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/17fe2d90-5aa0-4297-9eb0-d12bcf0b36ae/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 403,
-"velocidad": 37.0,
+"id": "FairSpeedyHamPlanking-nWml-6r6LIquv59F",
+"url": "https://www.twitch.tv/rubius/clip/FairSpeedyHamPlanking-nWml-6r6LIquv59F",
+"titulo": "deja el vapeh",
+"canal": "Rubius",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8dfda565-2f26-4a43-9fa5-00efc9743654/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1422,
+"velocidad": 27.1,
 "fuente": "ventana",
-"duracion": 40.2,
-"juego": "Mimic Party",
-"creado_en": "2026-09-19T17:53:05Z",
+"duracion": 23.7,
+"juego": "Minecraft",
+"creado_en": "2026-09-19T18:20:40Z",
 "anadido_en": "2026-09-19T21:50:17.806459+00:00",
-"actualizado_en": "2026-09-19T23:42:20.021623+00:00"
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00"
 },
 {
 "id": "SmoothWiseTruffleANELE-UwqyYY3ff3IFDfI_",
@@ -111,21 +96,6 @@
 "actualizado_en": "2026-09-19T23:42:20.021623+00:00"
 },
 {
-"id": "FairSpeedyHamPlanking-nWml-6r6LIquv59F",
-"url": "https://www.twitch.tv/rubius/clip/FairSpeedyHamPlanking-nWml-6r6LIquv59F",
-"titulo": "deja el vapeh",
-"canal": "Rubius",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8dfda565-2f26-4a43-9fa5-00efc9743654/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 420,
-"velocidad": 18.7,
-"fuente": "ventana",
-"duracion": 23.7,
-"juego": "Minecraft",
-"creado_en": "2026-09-19T18:20:40Z",
-"anadido_en": "2026-09-19T21:50:17.806459+00:00",
-"actualizado_en": "2026-09-19T23:42:20.021623+00:00"
-},
-{
 "id": "SpikyGiantPigeon4Head-JJ99xwygQTZd_UhS",
 "url": "https://www.twitch.tv/auronplay/clip/SpikyGiantPigeon4Head-JJ99xwygQTZd_UhS",
 "titulo": "xd",
@@ -138,21 +108,6 @@
 "juego": "Mimic Party",
 "creado_en": "2026-09-19T16:14:23Z",
 "anadido_en": "2026-09-19T23:42:20.021623+00:00",
-"actualizado_en": "2026-09-19T23:42:20.021623+00:00"
-},
-{
-"id": "PlainColdbloodedHorseBigBrother-p0QgM3QAj6NqmrOK",
-"url": "https://www.twitch.tv/rubius/clip/PlainColdbloodedHorseBigBrother-p0QgM3QAj6NqmrOK",
-"titulo": "JU",
-"canal": "Rubius",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3e228448-cb3f-4a33-a6b0-8de5d68bba1a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 341,
-"velocidad": 18.2,
-"fuente": "ventana",
-"duracion": 30.0,
-"juego": "Minecraft",
-"creado_en": "2026-09-19T18:11:39Z",
-"anadido_en": "2026-09-19T19:01:10.499467+00:00",
 "actualizado_en": "2026-09-19T23:42:20.021623+00:00"
 },
 {
@@ -186,6 +141,36 @@
 "actualizado_en": "2026-09-19T23:42:20.021623+00:00"
 },
 {
+"id": "DignifiedBloodyOtterLeeroyJenkins-5LiFIWORQmtYNn6v",
+"url": "https://www.twitch.tv/auronplay/clip/DignifiedBloodyOtterLeeroyJenkins-5LiFIWORQmtYNn6v",
+"titulo": "Auron dice abduscan",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/17fe2d90-5aa0-4297-9eb0-d12bcf0b36ae/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 581,
+"velocidad": 12.4,
+"fuente": "ventana",
+"duracion": 40.2,
+"juego": "Mimic Party",
+"creado_en": "2026-09-19T17:53:05Z",
+"anadido_en": "2026-09-19T21:50:17.806459+00:00",
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00"
+},
+{
+"id": "EndearingKitschyWaspCoolCat-lxjycwi8jWyvkd5A",
+"url": "https://www.twitch.tv/ikiimartin/clip/EndearingKitschyWaspCoolCat-lxjycwi8jWyvkd5A",
+"titulo": "TRADERS",
+"canal": "ikiimartin",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/63b1f437-99a7-4fd7-96ff-64ab6d6de1da/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 391,
+"velocidad": 11.7,
+"fuente": "ventana",
+"duracion": 60.0,
+"juego": "EA Sports FC 27",
+"creado_en": "2026-09-19T18:51:28Z",
+"anadido_en": "2026-09-19T23:42:20.021623+00:00",
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00"
+},
+{
 "id": "DeafVainEndivePlanking-PtppzBNWuwbOhqKh",
 "url": "https://www.twitch.tv/ibai/clip/DeafVainEndivePlanking-PtppzBNWuwbOhqKh",
 "titulo": "JOJOPYUN GOD",
@@ -199,6 +184,21 @@
 "creado_en": "2026-09-19T16:01:01Z",
 "anadido_en": "2026-09-19T19:01:10.499467+00:00",
 "actualizado_en": "2026-09-19T21:50:17.806459+00:00"
+},
+{
+"id": "PlainColdbloodedHorseBigBrother-p0QgM3QAj6NqmrOK",
+"url": "https://www.twitch.tv/rubius/clip/PlainColdbloodedHorseBigBrother-p0QgM3QAj6NqmrOK",
+"titulo": "JU",
+"canal": "Rubius",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3e228448-cb3f-4a33-a6b0-8de5d68bba1a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 589,
+"velocidad": 10.5,
+"fuente": "ventana",
+"duracion": 30.0,
+"juego": "Minecraft",
+"creado_en": "2026-09-19T18:11:39Z",
+"anadido_en": "2026-09-19T19:01:10.499467+00:00",
+"actualizado_en": "2026-09-20T13:46:12.472497+00:00"
 }
 ]
 }
