@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-20T23:48:09.862417+00:00",
+"actualizado_en": "2026-09-21T10:15:36.211247+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -49,6 +49,21 @@
 "creado_en": "2026-09-20T14:25:49Z",
 "anadido_en": "2026-09-20T19:53:08.232568+00:00",
 "actualizado_en": "2026-09-20T19:53:08.232568+00:00"
+},
+{
+"id": "TangentialDistinctGrasshopperPRChase-ZzvQvUpplzLRbjLA",
+"url": "https://www.twitch.tv/juansguarnizo/clip/TangentialDistinctGrasshopperPRChase-ZzvQvUpplzLRbjLA",
+"titulo": "ANIQUIS 🆚 PARCEROS / MAÑANA EMPIEZA DEDSAFIOOO 3PM 😭❤️",
+"canal": "juansguarnizo",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5202d1b9-0abe-4f2b-b7ff-a69d300e11f9/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 555,
+"velocidad": 49.5,
+"fuente": "nuevo",
+"duracion": 30.0,
+"juego": "Just Chatting",
+"creado_en": "2026-09-20T23:02:15Z",
+"anadido_en": "2026-09-21T10:15:36.211247+00:00",
+"actualizado_en": "2026-09-21T10:15:36.211247+00:00"
 }
 ]
 }
