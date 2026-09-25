@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-25T17:56:12.241605+00:00",
+"actualizado_en": "2026-09-25T18:58:56.125785+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,14 +11,14 @@
 "titulo": "Estar con la QUE?",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/af592840-c412-4321-b15b-9e7bb81408b1/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 946,
-"velocidad": 153.9,
+"vistas": 1134,
+"velocidad": 179.8,
 "fuente": "ventana",
 "duracion": 16.9,
 "juego": "Don't Drop The Cake",
 "creado_en": "2026-09-25T03:04:58Z",
 "anadido_en": "2026-09-25T14:49:07.373853+00:00",
-"actualizado_en": "2026-09-25T17:56:12.241605+00:00"
+"actualizado_en": "2026-09-25T18:58:56.125785+00:00"
 },
 {
 "id": "ThoughtfulAgileGoatStrawBeary-93ZkngjhKGz8-YSK",
@@ -41,29 +41,14 @@
 "titulo": "Aldo reacción qsmp",
 "canal": "juansguarnizo",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fbd60bce-5bfc-4662-973a-c730b2681da2/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 332,
-"velocidad": 18.0,
+"vistas": 350,
+"velocidad": 17.2,
 "fuente": "ventana",
 "duracion": 60.0,
 "juego": "Minecraft",
 "creado_en": "2026-09-24T22:24:20Z",
 "anadido_en": "2026-09-25T14:49:07.373853+00:00",
-"actualizado_en": "2026-09-25T17:56:12.241605+00:00"
-},
-{
-"id": "OilyExuberantLatteOSfrog-P_qGxEwfBpgPOdfk",
-"url": "https://www.twitch.tv/auronplay/clip/OilyExuberantLatteOSfrog-P_qGxEwfBpgPOdfk",
-"titulo": "Auron deice que tu cadena es una cadena de mierda",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/cebd4c0b-794c-4f20-910b-57d2fd0af18f/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 437,
-"velocidad": 11.2,
-"fuente": "ventana",
-"duracion": 11.3,
-"juego": "Just Chatting",
-"creado_en": "2026-09-24T18:14:46Z",
-"anadido_en": "2026-09-24T18:43:18.023555+00:00",
-"actualizado_en": "2026-09-25T17:56:12.241605+00:00"
+"actualizado_en": "2026-09-25T18:58:56.125785+00:00"
 }
 ]
 }
