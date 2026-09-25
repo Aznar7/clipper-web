@@ -1,39 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-25T09:53:11.155745+00:00",
+"actualizado_en": "2026-09-25T14:49:07.373853+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "MistyHonorableBeefCoolCat-ygD6y_DQ7jO86JKm",
+"url": "https://www.twitch.tv/auronplay/clip/MistyHonorableBeefCoolCat-ygD6y_DQ7jO86JKm",
+"titulo": "Estar con la QUE?",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/af592840-c412-4321-b15b-9e7bb81408b1/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 466,
+"velocidad": 44.2,
+"fuente": "ventana",
+"duracion": 16.9,
+"juego": "Don't Drop The Cake",
+"creado_en": "2026-09-25T03:04:58Z",
+"anadido_en": "2026-09-25T14:49:07.373853+00:00",
+"actualizado_en": "2026-09-25T14:49:07.373853+00:00"
+},
 {
 "id": "ImportantMoistPigeonWOOP-zDrjfmlZysm7HqUp",
 "url": "https://www.twitch.tv/auronplay/clip/ImportantMoistPigeonWOOP-zDrjfmlZysm7HqUp",
 "titulo": "🔥  DROPS ACTIVOS 🔥 PROBAMOS LA NUEVA TEMPORADA EN @RocketLeague 🔥 #EpicPartner #RocketLeague",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/7bd805eb-3de5-4a15-ab29-868bf537f936/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1323,
-"velocidad": 224.8,
+"vistas": 1961,
+"velocidad": 24.9,
 "fuente": "ventana",
 "duracion": 30.0,
 "juego": "Just Chatting",
 "creado_en": "2026-09-24T17:48:10Z",
 "anadido_en": "2026-09-24T18:43:18.023555+00:00",
-"actualizado_en": "2026-09-24T21:52:14.906227+00:00"
-},
-{
-"id": "ArtisticPiercingBeeMingLee-v-dPR1e2jU8G7WYm",
-"url": "https://www.twitch.tv/peereira7/clip/ArtisticPiercingBeeMingLee-v-dPR1e2jU8G7WYm",
-"titulo": "se les cae",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/71c424fb-8a12-410d-ba85-9030d98e7518/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 462,
-"velocidad": 72.7,
-"fuente": "ventana",
-"duracion": 41.4,
-"juego": "EA Sports FC 27",
-"creado_en": "2026-09-24T16:26:47Z",
-"anadido_en": "2026-09-24T18:43:18.023555+00:00",
-"actualizado_en": "2026-09-24T21:52:14.906227+00:00"
+"actualizado_en": "2026-09-25T14:49:07.373853+00:00"
 },
 {
 "id": "OilyExuberantLatteOSfrog-P_qGxEwfBpgPOdfk",
@@ -51,6 +51,21 @@
 "actualizado_en": "2026-09-24T21:52:14.906227+00:00"
 },
 {
+"id": "ArtisticPiercingBeeMingLee-v-dPR1e2jU8G7WYm",
+"url": "https://www.twitch.tv/peereira7/clip/ArtisticPiercingBeeMingLee-v-dPR1e2jU8G7WYm",
+"titulo": "se les cae",
+"canal": "Peereira7",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/71c424fb-8a12-410d-ba85-9030d98e7518/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 681,
+"velocidad": 15.6,
+"fuente": "ventana",
+"duracion": 41.4,
+"juego": "EA Sports FC 27",
+"creado_en": "2026-09-24T16:26:47Z",
+"anadido_en": "2026-09-24T18:43:18.023555+00:00",
+"actualizado_en": "2026-09-25T14:49:07.373853+00:00"
+},
+{
 "id": "DreamyIcyButterFailFish-dzSgv_3MTgR_Ff-9",
 "url": "https://www.twitch.tv/peereira7/clip/DreamyIcyButterFailFish-dzSgv_3MTgR_Ff-9",
 "titulo": "GUTI GUANTE DE ORO",
@@ -64,6 +79,21 @@
 "creado_en": "2026-09-24T16:42:27Z",
 "anadido_en": "2026-09-24T18:43:18.023555+00:00",
 "actualizado_en": "2026-09-24T21:52:14.906227+00:00"
+},
+{
+"id": "ClearSuaveLemurImGlitch-3-dsz0pqglReh32X",
+"url": "https://www.twitch.tv/juansguarnizo/clip/ClearSuaveLemurImGlitch-3-dsz0pqglReh32X",
+"titulo": "Aldo reacción qsmp",
+"canal": "juansguarnizo",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fbd60bce-5bfc-4662-973a-c730b2681da2/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 276,
+"velocidad": 11.4,
+"fuente": "ventana",
+"duracion": 60.0,
+"juego": "Minecraft",
+"creado_en": "2026-09-24T22:24:20Z",
+"anadido_en": "2026-09-25T14:49:07.373853+00:00",
+"actualizado_en": "2026-09-25T14:49:07.373853+00:00"
 }
 ]
 }
