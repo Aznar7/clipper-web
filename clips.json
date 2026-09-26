@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-26T17:27:10.382390+00:00",
+"actualizado_en": "2026-09-26T20:15:59.969442+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,29 +11,14 @@
 "titulo": "RANDU Y GRX WIN",
 "canal": "gorilon",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/7b23f1e7-41b1-4717-99b5-4b8f52485c0d/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1532,
-"velocidad": 1929.5,
-"fuente": "nuevo",
+"vistas": 1701,
+"velocidad": 60.1,
+"fuente": "ventana",
 "duracion": 60.0,
 "juego": "Fortnite",
 "creado_en": "2026-09-26T16:39:32Z",
 "anadido_en": "2026-09-26T17:27:10.382390+00:00",
-"actualizado_en": "2026-09-26T17:27:10.382390+00:00"
-},
-{
-"id": "GleamingHomelyTortoiseCurseLit-U8vmoVLRueOQ-9XD",
-"url": "https://www.twitch.tv/gorilon/clip/GleamingHomelyTortoiseCurseLit-U8vmoVLRueOQ-9XD",
-"titulo": "dydy....",
-"canal": "gorilon",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/90161242-819d-4e57-88e7-382f20580abe/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 266,
-"velocidad": 244.1,
-"fuente": "nuevo",
-"duracion": 32.3,
-"juego": "Fortnite",
-"creado_en": "2026-09-26T16:21:47Z",
-"anadido_en": "2026-09-26T17:27:10.382390+00:00",
-"actualizado_en": "2026-09-26T17:27:10.382390+00:00"
+"actualizado_en": "2026-09-26T20:15:59.969442+00:00"
 },
 {
 "id": "AbstemiousVainYamSwiftRage-R1jv7mSh86f16EZE",
@@ -41,14 +26,29 @@
 "titulo": "NUTRIGGA",
 "canal": "juansguarnizo",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5fe62b96-b669-46b0-8834-79427bf740bf/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 319,
-"velocidad": 18.4,
+"vistas": 379,
+"velocidad": 21.3,
 "fuente": "ventana",
 "duracion": 11.8,
 "juego": "Minecraft",
 "creado_en": "2026-09-26T00:01:24Z",
 "anadido_en": "2026-09-26T17:27:10.382390+00:00",
-"actualizado_en": "2026-09-26T17:27:10.382390+00:00"
+"actualizado_en": "2026-09-26T20:15:59.969442+00:00"
+},
+{
+"id": "GleamingHomelyTortoiseCurseLit-U8vmoVLRueOQ-9XD",
+"url": "https://www.twitch.tv/gorilon/clip/GleamingHomelyTortoiseCurseLit-U8vmoVLRueOQ-9XD",
+"titulo": "dydy....",
+"canal": "gorilon",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/90161242-819d-4e57-88e7-382f20580abe/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 307,
+"velocidad": 14.6,
+"fuente": "ventana",
+"duracion": 32.3,
+"juego": "Fortnite",
+"creado_en": "2026-09-26T16:21:47Z",
+"anadido_en": "2026-09-26T17:27:10.382390+00:00",
+"actualizado_en": "2026-09-26T20:15:59.969442+00:00"
 }
 ]
 }
