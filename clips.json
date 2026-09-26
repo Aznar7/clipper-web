@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-26T08:37:16.006928+00:00",
+"actualizado_en": "2026-09-26T09:35:58.301799+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,14 +11,14 @@
 "titulo": "pepe es maliiiisimo y se china",
 "canal": "Peereira7",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8838a1ac-a718-451c-9ff7-659fbe6f1953/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 485,
-"velocidad": 77.9,
+"vistas": 774,
+"velocidad": 33.7,
 "fuente": "ventana",
 "duracion": 17.6,
 "juego": "Grand Theft Auto V",
 "creado_en": "2026-09-25T16:35:33Z",
 "anadido_en": "2026-09-25T17:56:12.241605+00:00",
-"actualizado_en": "2026-09-25T21:58:21.505954+00:00"
+"actualizado_en": "2026-09-26T09:35:58.301799+00:00"
 },
 {
 "id": "BovineSavageMeatloafSaltBae-S8QqL5n2e4vlXYVQ",
@@ -26,14 +26,14 @@
 "titulo": "GOLAZOOOO",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c0ba962f-9f0b-4d25-b0a2-5c636bfb7c34/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 665,
-"velocidad": 124.4,
-"fuente": "nuevo",
+"vistas": 982,
+"velocidad": 14.3,
+"fuente": "ventana",
 "duracion": 21.4,
 "juego": "Rocket League",
 "creado_en": "2026-09-25T16:37:31Z",
 "anadido_en": "2026-09-25T21:58:21.505954+00:00",
-"actualizado_en": "2026-09-25T21:58:21.505954+00:00"
+"actualizado_en": "2026-09-26T09:35:58.301799+00:00"
 }
 ]
 }
