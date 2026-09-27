@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-26T23:13:09.801018+00:00",
+"actualizado_en": "2026-09-27T10:15:04.547982+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -47,21 +47,6 @@
 "duracion": 60.0,
 "juego": "Fortnite",
 "creado_en": "2026-09-26T16:39:32Z",
-"anadido_en": "2026-09-26T17:27:10.382390+00:00",
-"actualizado_en": "2026-09-26T23:13:09.801018+00:00"
-},
-{
-"id": "AbstemiousVainYamSwiftRage-R1jv7mSh86f16EZE",
-"url": "https://www.twitch.tv/juansguarnizo/clip/AbstemiousVainYamSwiftRage-R1jv7mSh86f16EZE",
-"titulo": "NUTRIGGA",
-"canal": "juansguarnizo",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5fe62b96-b669-46b0-8834-79427bf740bf/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 456,
-"velocidad": 26.1,
-"fuente": "ventana",
-"duracion": 11.8,
-"juego": "Minecraft",
-"creado_en": "2026-09-26T00:01:24Z",
 "anadido_en": "2026-09-26T17:27:10.382390+00:00",
 "actualizado_en": "2026-09-26T23:13:09.801018+00:00"
 },
