@@ -1,25 +1,10 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-28T18:49:54.163921+00:00",
+"actualizado_en": "2026-09-28T23:35:13.236243+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "StrongObliqueClipzKlappa-WDm2venEgWtIsWTa",
-"url": "https://www.twitch.tv/auronplay/clip/StrongObliqueClipzKlappa-WDm2venEgWtIsWTa",
-"titulo": "auron play se pasa",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5275f44a-4359-45d4-ad86-48d7861c8b32/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1259,
-"velocidad": 340.2,
-"fuente": "ventana",
-"duracion": 35.4,
-"juego": "Just Chatting",
-"creado_en": "2026-09-28T16:56:49Z",
-"anadido_en": "2026-09-28T17:44:39.246231+00:00",
-"actualizado_en": "2026-09-28T18:49:54.163921+00:00"
-},
 {
 "id": "TangentialInterestingLapwingKappaPride-MIrN-SdVmqJbVF8Y",
 "url": "https://www.twitch.tv/auronplay/clip/TangentialInterestingLapwingKappaPride-MIrN-SdVmqJbVF8Y",
@@ -96,19 +81,19 @@
 "actualizado_en": "2026-09-28T17:44:39.246231+00:00"
 },
 {
-"id": "KathishAcceptableSharkBlargNaut-xxHDK7ug2bP6fciy",
-"url": "https://www.twitch.tv/ibai/clip/KathishAcceptableSharkBlargNaut-xxHDK7ug2bP6fciy",
-"titulo": "ibai hablando de pache",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/003a8446-1538-45d1-9369-f840c9298c34/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 2901,
-"velocidad": 42.3,
+"id": "StrongObliqueClipzKlappa-WDm2venEgWtIsWTa",
+"url": "https://www.twitch.tv/auronplay/clip/StrongObliqueClipzKlappa-WDm2venEgWtIsWTa",
+"titulo": "auron play se pasa",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5275f44a-4359-45d4-ad86-48d7861c8b32/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1359,
+"velocidad": 21.0,
 "fuente": "ventana",
-"duracion": 18.8,
-"juego": "Among Us",
-"creado_en": "2026-09-27T19:26:54Z",
-"anadido_en": "2026-09-27T22:37:29.790713+00:00",
-"actualizado_en": "2026-09-28T18:49:54.163921+00:00"
+"duracion": 35.4,
+"juego": "Just Chatting",
+"creado_en": "2026-09-28T16:56:49Z",
+"anadido_en": "2026-09-28T17:44:39.246231+00:00",
+"actualizado_en": "2026-09-28T23:35:13.236243+00:00"
 },
 {
 "id": "ManlySpikyHerbsTTours-e2o7dcVPaXG_vtCa",
