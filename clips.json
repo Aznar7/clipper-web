@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-09-30T10:47:13.407599+00:00",
+"actualizado_en": "2026-09-30T16:32:10.367759+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -21,6 +21,21 @@
 "actualizado_en": "2026-09-29T21:06:40.088667+00:00"
 },
 {
+"id": "FineBlatantMagePhilosoraptor-I6WO2GG-cuNZcEMv",
+"url": "https://www.twitch.tv/knekro/clip/FineBlatantMagePhilosoraptor-I6WO2GG-cuNZcEMv",
+"titulo": "BOOBA xdd",
+"canal": "knekro",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/473993a0-1347-4646-99eb-6a86fc2b312c/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 934,
+"velocidad": 461.4,
+"fuente": "nuevo",
+"duracion": 12.8,
+"juego": "AION 2",
+"creado_en": "2026-09-30T14:30:43Z",
+"anadido_en": "2026-09-30T16:32:10.367759+00:00",
+"actualizado_en": "2026-09-30T16:32:10.367759+00:00"
+},
+{
 "id": "DeliciousTsundereCormorantPupper-t6Rb9WasyLYta9xL",
 "url": "https://www.twitch.tv/auronplay/clip/DeliciousTsundereCormorantPupper-t6Rb9WasyLYta9xL",
 "titulo": "Pereira muerto",
@@ -33,36 +48,6 @@
 "juego": "Minecraft",
 "creado_en": "2026-09-29T18:55:58Z",
 "anadido_en": "2026-09-29T21:06:40.088667+00:00",
-"actualizado_en": "2026-09-29T21:06:40.088667+00:00"
-},
-{
-"id": "InexpensiveExcitedHerdPunchTrees-zc7zuuyNDLZkQfTe",
-"url": "https://www.twitch.tv/angelysaras/clip/InexpensiveExcitedHerdPunchTrees-zc7zuuyNDLZkQfTe",
-"titulo": "instant",
-"canal": "angelysaras",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0ec4396a-057f-405a-af3d-48e70887a704/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1311,
-"velocidad": 183.5,
-"fuente": "ventana",
-"duracion": 24.0,
-"juego": "The Witcher 3: Wild Hunt Remastered",
-"creado_en": "2026-09-29T13:45:40Z",
-"anadido_en": "2026-09-29T16:42:52.142659+00:00",
-"actualizado_en": "2026-09-29T21:06:40.088667+00:00"
-},
-{
-"id": "PrettiestMiniatureHummingbirdBuddhaBar-oT1Zgg8OQKoRHrZu",
-"url": "https://www.twitch.tv/hawnktv/clip/PrettiestMiniatureHummingbirdBuddhaBar-oT1Zgg8OQKoRHrZu",
-"titulo": "La pinza en Westfall",
-"canal": "HawnkTV",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/61cc4e32-ed41-4702-9145-3fb14d93f522/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 957,
-"velocidad": 126.9,
-"fuente": "ventana",
-"duracion": 60.0,
-"juego": "World of Warcraft",
-"creado_en": "2026-09-29T12:55:37Z",
-"anadido_en": "2026-09-29T16:42:52.142659+00:00",
 "actualizado_en": "2026-09-29T21:06:40.088667+00:00"
 },
 {
@@ -93,21 +78,6 @@
 "juego": "Just Chatting",
 "creado_en": "2026-09-29T16:46:22Z",
 "anadido_en": "2026-09-29T21:06:40.088667+00:00",
-"actualizado_en": "2026-09-29T21:06:40.088667+00:00"
-},
-{
-"id": "CorrectAdventurousClipsdadSeemsGood-JhUs4vF0Cx_RV-MP",
-"url": "https://www.twitch.tv/knekro/clip/CorrectAdventurousClipsdadSeemsGood-JhUs4vF0Cx_RV-MP",
-"titulo": "riko",
-"canal": "knekro",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/a17f1a9f-10bf-4498-9f08-bae47ff6148b/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 303,
-"velocidad": 14.6,
-"fuente": "ventana",
-"duracion": 8.1,
-"juego": "Just Chatting",
-"creado_en": "2026-09-29T15:22:26Z",
-"anadido_en": "2026-09-29T16:42:52.142659+00:00",
 "actualizado_en": "2026-09-29T21:06:40.088667+00:00"
 }
 ]
