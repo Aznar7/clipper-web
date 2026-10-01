@@ -1,10 +1,25 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-01T11:13:33.601150+00:00",
+"actualizado_en": "2026-10-01T17:35:20.600256+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "WiseBelovedGarageDatSheffy-hyeS9lTNzBn5L62q",
+"url": "https://www.twitch.tv/peereira7/clip/WiseBelovedGarageDatSheffy-hyeS9lTNzBn5L62q",
+"titulo": "piños en la camara",
+"canal": "Peereira7",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/074a858e-dacb-4d08-84da-964f7e99a235/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 215,
+"velocidad": 297.7,
+"fuente": "nuevo",
+"duracion": 30.0,
+"juego": "EA Sports FC 27",
+"creado_en": "2026-10-01T16:52:01Z",
+"anadido_en": "2026-10-01T17:35:20.600256+00:00",
+"actualizado_en": "2026-10-01T17:35:20.600256+00:00"
+},
 {
 "id": "TenaciousSilkyWormRitzMitz-79pOuYFkEsviYClS",
 "url": "https://www.twitch.tv/rubius/clip/TenaciousSilkyWormRitzMitz-79pOuYFkEsviYClS",
@@ -18,21 +33,6 @@
 "juego": "AION 2",
 "creado_en": "2026-09-30T19:23:16Z",
 "anadido_en": "2026-09-30T21:04:35.432960+00:00",
-"actualizado_en": "2026-09-30T21:04:35.432960+00:00"
-},
-{
-"id": "FineBlatantMagePhilosoraptor-I6WO2GG-cuNZcEMv",
-"url": "https://www.twitch.tv/knekro/clip/FineBlatantMagePhilosoraptor-I6WO2GG-cuNZcEMv",
-"titulo": "BOOBA xdd",
-"canal": "knekro",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/473993a0-1347-4646-99eb-6a86fc2b312c/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1340,
-"velocidad": 89.4,
-"fuente": "ventana",
-"duracion": 12.8,
-"juego": "AION 2",
-"creado_en": "2026-09-30T14:30:43Z",
-"anadido_en": "2026-09-30T16:32:10.367759+00:00",
 "actualizado_en": "2026-09-30T21:04:35.432960+00:00"
 },
 {
