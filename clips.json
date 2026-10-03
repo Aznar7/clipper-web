@@ -1,24 +1,8 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-03T18:30:30.511417+00:00",
+"actualizado_en": "2026-10-03T21:52:03.049819+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": [
-{
-"id": "HumbleNaivePeachSoonerLater-qO1m_nkkiAUPVQUj",
-"url": "https://www.twitch.tv/knekro/clip/HumbleNaivePeachSoonerLater-qO1m_nkkiAUPVQUj",
-"titulo": "texturas ?? xddd",
-"canal": "knekro",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2fd0a6e5-fc8b-496d-a5c5-f7a12bc92688/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 308,
-"velocidad": 334.0,
-"fuente": "nuevo",
-"duracion": 10.1,
-"juego": "Gears of War: E-Day",
-"creado_en": "2026-10-02T20:09:01Z",
-"anadido_en": "2026-10-02T21:04:21.250533+00:00",
-"actualizado_en": "2026-10-02T21:04:21.250533+00:00"
-}
-]
+"clips": []
 }
