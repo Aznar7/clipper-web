@@ -1,8 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-04T15:32:18.203540+00:00",
+"actualizado_en": "2026-10-04T18:51:22.374791+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": []
+"clips": [
+{
+"id": "RoundZealousCocoaDAESuppy-KFA9NlxJKXXQ-ANZ",
+"url": "https://www.twitch.tv/auronplay/clip/RoundZealousCocoaDAESuppy-KFA9NlxJKXXQ-ANZ",
+"titulo": "DjMario",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/d6221157-2ed8-498c-8cfc-95ee256744d8/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 504,
+"velocidad": 371.0,
+"fuente": "nuevo",
+"duracion": 43.1,
+"juego": "Just Chatting",
+"creado_en": "2026-10-04T17:29:52Z",
+"anadido_en": "2026-10-04T18:51:22.374791+00:00",
+"actualizado_en": "2026-10-04T18:51:22.374791+00:00"
+},
+{
+"id": "TemperedLachrymoseMagpieBloodTrail-VPnmTNSpS4rJpMWD",
+"url": "https://www.twitch.tv/peereira7/clip/TemperedLachrymoseMagpieBloodTrail-VPnmTNSpS4rJpMWD",
+"titulo": "pierden la final de las finales",
+"canal": "Peereira7",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/eb0d9ff8-03cd-4691-ae51-9e979f643778/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 211,
+"velocidad": 83.6,
+"fuente": "nuevo",
+"duracion": 39.6,
+"juego": "Rocket League",
+"creado_en": "2026-10-04T16:19:59Z",
+"anadido_en": "2026-10-04T18:51:22.374791+00:00",
+"actualizado_en": "2026-10-04T18:51:22.374791+00:00"
+}
+]
 }
