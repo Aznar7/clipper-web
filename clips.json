@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-04T22:02:19.735313+00:00",
+"actualizado_en": "2026-10-05T11:53:40.106690+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -229,6 +229,21 @@
 "creado_en": "2026-10-04T12:59:23Z",
 "anadido_en": "2026-10-04T22:02:19.735313+00:00",
 "actualizado_en": "2026-10-04T22:02:19.735313+00:00"
+},
+{
+"id": "FairBetterNeanderthalPeteZarollTie-PxxYcZjppY9DQ9Fb",
+"url": "https://www.twitch.tv/juansguarnizo/clip/FairBetterNeanderthalPeteZarollTie-PxxYcZjppY9DQ9Fb",
+"titulo": "no :(",
+"canal": "juansguarnizo",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/88a4f476-b804-43cd-832f-0f752a73b2b7/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1202,
+"velocidad": 107.4,
+"fuente": "nuevo",
+"duracion": 60.0,
+"juego": "Just Chatting",
+"creado_en": "2026-10-05T00:42:06Z",
+"anadido_en": "2026-10-05T11:53:40.106690+00:00",
+"actualizado_en": "2026-10-05T11:53:40.106690+00:00"
 },
 {
 "id": "TemperedLachrymoseMagpieBloodTrail-VPnmTNSpS4rJpMWD",
