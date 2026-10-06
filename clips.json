@@ -1,39 +1,8 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-06T17:29:14.985605+00:00",
+"actualizado_en": "2026-10-06T21:56:25.400974+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": [
-{
-"id": "BeautifulMoralWebPeteZarollTie-glZ5DMRoIKjfRHwD",
-"url": "https://www.twitch.tv/rubius/clip/BeautifulMoralWebPeteZarollTie-glZ5DMRoIKjfRHwD",
-"titulo": "lol",
-"canal": "Rubius",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/1c017e03-2529-4dc5-8bd7-be2e43016a2c/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 496,
-"velocidad": 598.2,
-"fuente": "nuevo",
-"duracion": 55.5,
-"juego": "Grand Theft Auto V",
-"creado_en": "2026-10-05T19:00:01Z",
-"anadido_en": "2026-10-05T19:49:45.874221+00:00",
-"actualizado_en": "2026-10-05T19:49:45.874221+00:00"
-},
-{
-"id": "TransparentVivaciousHerbsWTRuck-Hq8SjAoh8ni9ow4A",
-"url": "https://www.twitch.tv/auronplay/clip/TransparentVivaciousHerbsWTRuck-Hq8SjAoh8ni9ow4A",
-"titulo": "HDP",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6ddfc298-1236-44f9-b9ea-12ab371bb977/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 565,
-"velocidad": 463.8,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "Don't Play This",
-"creado_en": "2026-10-05T18:36:40Z",
-"anadido_en": "2026-10-05T19:49:45.874221+00:00",
-"actualizado_en": "2026-10-05T19:49:45.874221+00:00"
-}
-]
+"clips": []
 }
