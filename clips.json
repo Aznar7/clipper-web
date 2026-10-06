@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-06T11:34:06.524077+00:00",
+"actualizado_en": "2026-10-06T17:29:14.985605+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -32,21 +32,6 @@
 "duracion": 30.0,
 "juego": "Don't Play This",
 "creado_en": "2026-10-05T18:36:40Z",
-"anadido_en": "2026-10-05T19:49:45.874221+00:00",
-"actualizado_en": "2026-10-05T19:49:45.874221+00:00"
-},
-{
-"id": "CarelessTalentedDragonflyChocolateRain-BzcwACIHKJMeP6YW",
-"url": "https://www.twitch.tv/peereira7/clip/CarelessTalentedDragonflyChocolateRain-BzcwACIHKJMeP6YW",
-"titulo": "pepe habla de oache",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/561420ca-9d96-47b6-ba20-d10e98696e3e/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 230,
-"velocidad": 59.6,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "Just Chatting",
-"creado_en": "2026-10-05T15:58:03Z",
 "anadido_en": "2026-10-05T19:49:45.874221+00:00",
 "actualizado_en": "2026-10-05T19:49:45.874221+00:00"
 }
