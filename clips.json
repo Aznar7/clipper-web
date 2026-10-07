@@ -1,8 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-07T18:01:18.255384+00:00",
+"actualizado_en": "2026-10-07T23:21:53.492603+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": []
+"clips": [
+{
+"id": "YawningFancyCurlewBrainSlug-iHMgXDW1Ca4HWurC",
+"url": "https://www.twitch.tv/auronplay/clip/YawningFancyCurlewBrainSlug-iHMgXDW1Ca4HWurC",
+"titulo": "paye",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3c48002a-14a8-4fc0-b472-f8a6c202e47d/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 809,
+"velocidad": 155.1,
+"fuente": "nuevo",
+"duracion": 60.0,
+"juego": "Minecraft",
+"creado_en": "2026-10-07T18:09:01Z",
+"anadido_en": "2026-10-07T23:21:53.492603+00:00",
+"actualizado_en": "2026-10-07T23:21:53.492603+00:00"
+},
+{
+"id": "TangiblePreciousSproutBloodTrail-Vq0JIZrWNfw9JPqO",
+"url": "https://www.twitch.tv/sergicabrer3/clip/TangiblePreciousSproutBloodTrail-Vq0JIZrWNfw9JPqO",
+"titulo": "El Miki juguetón",
+"canal": "sergicabrer3",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/85ef3fd1-e36c-406c-a165-ca6a73dd21f5/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 213,
+"velocidad": 45.2,
+"fuente": "nuevo",
+"duracion": 12.9,
+"juego": "IRL",
+"creado_en": "2026-10-07T18:38:58Z",
+"anadido_en": "2026-10-07T23:21:53.492603+00:00",
+"actualizado_en": "2026-10-07T23:21:53.492603+00:00"
+}
+]
 }
