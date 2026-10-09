@@ -1,54 +1,8 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-09T17:36:36.614307+00:00",
+"actualizado_en": "2026-10-09T21:55:29.982503+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": [
-{
-"id": "GloriousRoughWormBloodTrail-eukRgKwxQU6kCRR5",
-"url": "https://www.twitch.tv/illojuan/clip/GloriousRoughWormBloodTrail-eukRgKwxQU6kCRR5",
-"titulo": "sustazo histórico",
-"canal": "IlloJuan",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9f7e1fab-4240-4b94-bd8f-653cfc89b45a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 773,
-"velocidad": 152.9,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "DayZ",
-"creado_en": "2026-10-08T18:31:55Z",
-"anadido_en": "2026-10-08T23:35:13.617130+00:00",
-"actualizado_en": "2026-10-08T23:35:13.617130+00:00"
-},
-{
-"id": "TardyBraveWalletPanicVis-JpwoipgxhoY9Apnn",
-"url": "https://www.twitch.tv/illojuan/clip/TardyBraveWalletPanicVis-JpwoipgxhoY9Apnn",
-"titulo": "rascada",
-"canal": "IlloJuan",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3e0e456a-e155-4f35-bd33-0069e9a4033d/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 249,
-"velocidad": 70.4,
-"fuente": "nuevo",
-"duracion": 41.1,
-"juego": "DayZ",
-"creado_en": "2026-10-08T20:02:55Z",
-"anadido_en": "2026-10-08T23:35:13.617130+00:00",
-"actualizado_en": "2026-10-08T23:35:13.617130+00:00"
-},
-{
-"id": "FlaccidOriginalLadiesTakeNRG-KqClOpIlH0XXDQ9q",
-"url": "https://www.twitch.tv/illojuan/clip/FlaccidOriginalLadiesTakeNRG-KqClOpIlH0XXDQ9q",
-"titulo": "LAMINE YAMAL",
-"canal": "IlloJuan",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2ea28677-a7c1-42a9-9507-30137dc71f74/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 203,
-"velocidad": 61.2,
-"fuente": "nuevo",
-"duracion": 10.2,
-"juego": "DayZ",
-"creado_en": "2026-10-08T20:16:18Z",
-"anadido_en": "2026-10-08T23:35:13.617130+00:00",
-"actualizado_en": "2026-10-08T23:35:13.617130+00:00"
-}
-]
+"clips": []
 }
