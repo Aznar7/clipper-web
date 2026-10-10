@@ -1,8 +1,24 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-10T15:58:21.775805+00:00",
+"actualizado_en": "2026-10-10T19:41:24.303216+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
-"clips": []
+"clips": [
+{
+"id": "CooperativeTardySushiCclamChamp-E74QNs0PyIN2G7Zo",
+"url": "https://www.twitch.tv/illojuan/clip/CooperativeTardySushiCclamChamp-E74QNs0PyIN2G7Zo",
+"titulo": "What???",
+"canal": "IlloJuan",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/edd962c7-6e7e-4775-b358-65f18b0d4fac/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 584,
+"velocidad": 232.9,
+"fuente": "nuevo",
+"duracion": 21.4,
+"juego": "Grand Theft Auto: San Andreas",
+"creado_en": "2026-10-10T17:10:58Z",
+"anadido_en": "2026-10-10T19:41:24.303216+00:00",
+"actualizado_en": "2026-10-10T19:41:24.303216+00:00"
+}
+]
 }
