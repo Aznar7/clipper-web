@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-10T19:41:24.303216+00:00",
+"actualizado_en": "2026-10-10T23:00:24.049278+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,14 +11,44 @@
 "titulo": "What???",
 "canal": "IlloJuan",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/edd962c7-6e7e-4775-b358-65f18b0d4fac/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 584,
-"velocidad": 232.9,
-"fuente": "nuevo",
+"vistas": 1119,
+"velocidad": 161.3,
+"fuente": "ventana",
 "duracion": 21.4,
 "juego": "Grand Theft Auto: San Andreas",
 "creado_en": "2026-10-10T17:10:58Z",
 "anadido_en": "2026-10-10T19:41:24.303216+00:00",
-"actualizado_en": "2026-10-10T19:41:24.303216+00:00"
+"actualizado_en": "2026-10-10T23:00:24.049278+00:00"
+},
+{
+"id": "DepressedMoistPterodactylHassaanChop-FCnZbtKgDAt10wap",
+"url": "https://www.twitch.tv/rubius/clip/DepressedMoistPterodactylHassaanChop-FCnZbtKgDAt10wap",
+"titulo": "50 mil horas de Minecraft",
+"canal": "Rubius",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/1017afd9-e037-43e6-9972-049943680162/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 226,
+"velocidad": 183.0,
+"fuente": "nuevo",
+"duracion": 16.9,
+"juego": "Minecraft",
+"creado_en": "2026-10-10T21:46:19Z",
+"anadido_en": "2026-10-10T23:00:24.049278+00:00",
+"actualizado_en": "2026-10-10T23:00:24.049278+00:00"
+},
+{
+"id": "RoughEnjoyableMangoNononoCat-2ynKeVp5fUn1yeU7",
+"url": "https://www.twitch.tv/elxokas/clip/RoughEnjoyableMangoNononoCat-2ynKeVp5fUn1yeU7",
+"titulo": "Xokas el diablillo JAJA XD",
+"canal": "elxokas",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/3400e319-9137-49b9-8b6c-31e412bda8d0/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 265,
+"velocidad": 87.4,
+"fuente": "nuevo",
+"duracion": 20.3,
+"juego": "World of Warcraft",
+"creado_en": "2026-10-10T19:58:24Z",
+"anadido_en": "2026-10-10T23:00:24.049278+00:00",
+"actualizado_en": "2026-10-10T23:00:24.049278+00:00"
 }
 ]
 }
