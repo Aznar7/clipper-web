@@ -1,24 +1,24 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-14T09:48:53.133179+00:00",
+"actualizado_en": "2026-10-14T14:44:40.685020+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
 {
-"id": "FamousFitLionPeteZarollTie-fEV_2XGxKFyujRaO",
-"url": "https://www.twitch.tv/auronplay/clip/FamousFitLionPeteZarollTie-fEV_2XGxKFyujRaO",
-"titulo": "pereira es gay?",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9827a77e-e47f-4ccc-bf7d-1159c1e79c26/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 2296,
-"velocidad": 205.7,
-"fuente": "ventana",
+"id": "GrossNaiveWasabiThunBeast-wVh1PWnWHUQPc2je",
+"url": "https://www.twitch.tv/elvirayuki/clip/GrossNaiveWasabiThunBeast-wVh1PWnWHUQPc2je",
+"titulo": "Sexo",
+"canal": "ElviraYuki",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/fd9771a2-561a-4fdb-b70f-0b01e723014c/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 251,
+"velocidad": 145.7,
+"fuente": "nuevo",
 "duracion": 30.0,
-"juego": "Minecraft",
-"creado_en": "2026-10-13T16:59:41Z",
-"anadido_en": "2026-10-13T19:35:33.916976+00:00",
-"actualizado_en": "2026-10-13T23:28:22.088271+00:00"
+"juego": "Just Chatting",
+"creado_en": "2026-10-14T13:01:21Z",
+"anadido_en": "2026-10-14T14:44:40.685020+00:00",
+"actualizado_en": "2026-10-14T14:44:40.685020+00:00"
 },
 {
 "id": "EncouragingSuperSquidSwiftRage-e-5XgMseJfN0VdBY",
@@ -26,29 +26,14 @@
 "titulo": "Agustin respeto",
 "canal": "agustin51",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/cfa5101d-9d9e-4588-8361-78f4445a3a76/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 2336,
-"velocidad": 146.1,
+"vistas": 2905,
+"velocidad": 55.6,
 "fuente": "ventana",
 "duracion": 16.3,
 "juego": "I Am Fish",
 "creado_en": "2026-10-13T16:18:39Z",
 "anadido_en": "2026-10-13T19:35:33.916976+00:00",
-"actualizado_en": "2026-10-13T23:28:22.088271+00:00"
-},
-{
-"id": "CovertEsteemedLadiesWholeWheat-kIg1TwdsD_0QpJak",
-"url": "https://www.twitch.tv/auronplay/clip/CovertEsteemedLadiesWholeWheat-kIg1TwdsD_0QpJak",
-"titulo": "GG NEXT PEPE",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2892762c-f12b-4444-aab1-5b37038c533d/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1523,
-"velocidad": 75.5,
-"fuente": "ventana",
-"duracion": 15.2,
-"juego": "Minecraft",
-"creado_en": "2026-10-13T16:43:48Z",
-"anadido_en": "2026-10-13T19:35:33.916976+00:00",
-"actualizado_en": "2026-10-13T23:28:22.088271+00:00"
+"actualizado_en": "2026-10-14T14:44:40.685020+00:00"
 },
 {
 "id": "AntsyMagnificentLadiesGOWSkull-QxghR7awfFgGQLzZ",
@@ -156,6 +141,21 @@
 "actualizado_en": "2026-10-13T23:28:22.088271+00:00"
 },
 {
+"id": "FamousFitLionPeteZarollTie-fEV_2XGxKFyujRaO",
+"url": "https://www.twitch.tv/auronplay/clip/FamousFitLionPeteZarollTie-fEV_2XGxKFyujRaO",
+"titulo": "pereira es gay?",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9827a77e-e47f-4ccc-bf7d-1159c1e79c26/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 2835,
+"velocidad": 29.8,
+"fuente": "ventana",
+"duracion": 30.0,
+"juego": "Minecraft",
+"creado_en": "2026-10-13T16:59:41Z",
+"anadido_en": "2026-10-13T19:35:33.916976+00:00",
+"actualizado_en": "2026-10-14T14:44:40.685020+00:00"
+},
+{
 "id": "NimbleKathishOstrichEagleEye-xJBbIpZ_te8gnaW7",
 "url": "https://www.twitch.tv/agustin51/clip/NimbleKathishOstrichEagleEye-xJBbIpZ_te8gnaW7",
 "titulo": "explicación Agustín",
@@ -199,6 +199,21 @@
 "creado_en": "2026-10-13T18:00:13Z",
 "anadido_en": "2026-10-13T23:28:22.088271+00:00",
 "actualizado_en": "2026-10-13T23:28:22.088271+00:00"
+},
+{
+"id": "CovertEsteemedLadiesWholeWheat-kIg1TwdsD_0QpJak",
+"url": "https://www.twitch.tv/auronplay/clip/CovertEsteemedLadiesWholeWheat-kIg1TwdsD_0QpJak",
+"titulo": "GG NEXT PEPE",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2892762c-f12b-4444-aab1-5b37038c533d/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 1802,
+"velocidad": 18.3,
+"fuente": "ventana",
+"duracion": 15.2,
+"juego": "Minecraft",
+"creado_en": "2026-10-13T16:43:48Z",
+"anadido_en": "2026-10-13T19:35:33.916976+00:00",
+"actualizado_en": "2026-10-14T14:44:40.685020+00:00"
 },
 {
 "id": "AbnegateCrazyHorseradishTwitchRaid-h5gaPmipb_N-fx7c",
