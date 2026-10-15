@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-15T21:51:34.645770+00:00",
+"actualizado_en": "2026-10-15T23:57:29.317331+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -11,14 +11,29 @@
 "titulo": "KOI AURONPLAY",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/1ad16024-c91b-411a-9121-c3c95c847a01/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 906,
-"velocidad": 228.1,
+"vistas": 1202,
+"velocidad": 141.1,
 "fuente": "ventana",
 "duracion": 14.2,
 "juego": "Just Chatting",
 "creado_en": "2026-10-15T17:37:21Z",
 "anadido_en": "2026-10-15T21:51:34.645770+00:00",
-"actualizado_en": "2026-10-15T21:51:34.645770+00:00"
+"actualizado_en": "2026-10-15T23:57:29.317331+00:00"
+},
+{
+"id": "PiliableHelplessNigiriDuDudu-oqPwGuu2cK5AgQul",
+"url": "https://www.twitch.tv/illojuan/clip/PiliableHelplessNigiriDuDudu-oqPwGuu2cK5AgQul",
+"titulo": "🪽",
+"canal": "IlloJuan",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ff2bd838-19a2-4c67-a248-a78ddc724985/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 204,
+"velocidad": 147.6,
+"fuente": "nuevo",
+"duracion": 30.0,
+"juego": "Grand Theft Auto: San Andreas",
+"creado_en": "2026-10-15T22:34:35Z",
+"anadido_en": "2026-10-15T23:57:29.317331+00:00",
+"actualizado_en": "2026-10-15T23:57:29.317331+00:00"
 },
 {
 "id": "BoxyRoundSparrowWoofer-xQcoaS_bupU8yBHp",
@@ -26,14 +41,14 @@
 "titulo": "a tomar por c..o jajajajaja",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/b173f2d2-c0f8-439f-92ff-b198ea3eeb50/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 268,
-"velocidad": 51.2,
+"vistas": 338,
+"velocidad": 33.4,
 "fuente": "ventana",
 "duracion": 24.9,
 "juego": "Just Chatting",
 "creado_en": "2026-10-15T16:54:01Z",
 "anadido_en": "2026-10-15T21:51:34.645770+00:00",
-"actualizado_en": "2026-10-15T21:51:34.645770+00:00"
+"actualizado_en": "2026-10-15T23:57:29.317331+00:00"
 },
 {
 "id": "BombasticDignifiedMonkeyDancingBaby-ZHLdAiM4XU2_WnBS",
@@ -49,6 +64,21 @@
 "creado_en": "2026-10-15T18:01:12Z",
 "anadido_en": "2026-10-15T21:51:34.645770+00:00",
 "actualizado_en": "2026-10-15T21:51:34.645770+00:00"
+},
+{
+"id": "GoldenConfidentCoyoteRuleFive-wFL8vKJ0eMUcNDsM",
+"url": "https://www.twitch.tv/illojuan/clip/GoldenConfidentCoyoteRuleFive-wFL8vKJ0eMUcNDsM",
+"titulo": "clip del milenio",
+"canal": "IlloJuan",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ea3ab954-c141-4cf9-85d8-63d4cde5d701/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 229,
+"velocidad": 21.9,
+"fuente": "ventana",
+"duracion": 10.2,
+"juego": "Grand Theft Auto: San Andreas",
+"creado_en": "2026-10-15T19:20:01Z",
+"anadido_en": "2026-10-15T23:57:29.317331+00:00",
+"actualizado_en": "2026-10-15T23:57:29.317331+00:00"
 }
 ]
 }
