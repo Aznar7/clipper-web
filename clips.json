@@ -1,24 +1,24 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-16T18:28:47.140856+00:00",
+"actualizado_en": "2026-10-16T21:48:00.892992+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
 {
-"id": "CarelessRelentlessSpiderRalpherZ-HqmHKKAoaABFHV_E",
-"url": "https://www.twitch.tv/elpelotasssss/clip/CarelessRelentlessSpiderRalpherZ-HqmHKKAoaABFHV_E",
-"titulo": "PELOTAS DROP TERRY TO PIVAS",
-"canal": "ElPelotasssss",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/377984af-abf5-4e60-badd-dcc30632f06d/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 548,
-"velocidad": 95.9,
-"fuente": "ventana",
-"duracion": 25.0,
-"juego": "Albion Online",
-"creado_en": "2026-10-16T13:32:12Z",
-"anadido_en": "2026-10-16T18:28:47.140856+00:00",
-"actualizado_en": "2026-10-16T18:28:47.140856+00:00"
+"id": "HelplessOnerousSnoodPeteZarollTie-3Frbpkfx_U20gGC1",
+"url": "https://www.twitch.tv/elxokas/clip/HelplessOnerousSnoodPeteZarollTie-3Frbpkfx_U20gGC1",
+"titulo": "BLIZZARD!",
+"canal": "elxokas",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e3214d7c-fd9e-4fb0-80cd-c24dd0268ddd/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 253,
+"velocidad": 186.1,
+"fuente": "nuevo",
+"duracion": 21.0,
+"juego": "World of Warcraft",
+"creado_en": "2026-10-16T20:26:27Z",
+"anadido_en": "2026-10-16T21:48:00.892992+00:00",
+"actualizado_en": "2026-10-16T21:48:00.892992+00:00"
 },
 {
 "id": "PiliableHelplessNigiriDuDudu-oqPwGuu2cK5AgQul",
@@ -36,19 +36,19 @@
 "actualizado_en": "2026-10-15T23:57:29.317331+00:00"
 },
 {
-"id": "GoldenConfidentCoyoteRuleFive-wFL8vKJ0eMUcNDsM",
-"url": "https://www.twitch.tv/illojuan/clip/GoldenConfidentCoyoteRuleFive-wFL8vKJ0eMUcNDsM",
-"titulo": "clip del milenio",
-"canal": "IlloJuan",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ea3ab954-c141-4cf9-85d8-63d4cde5d701/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 229,
-"velocidad": 21.9,
+"id": "CarelessRelentlessSpiderRalpherZ-HqmHKKAoaABFHV_E",
+"url": "https://www.twitch.tv/elpelotasssss/clip/CarelessRelentlessSpiderRalpherZ-HqmHKKAoaABFHV_E",
+"titulo": "PELOTAS DROP TERRY TO PIVAS",
+"canal": "ElPelotasssss",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/377984af-abf5-4e60-badd-dcc30632f06d/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 609,
+"velocidad": 18.4,
 "fuente": "ventana",
-"duracion": 10.2,
-"juego": "Grand Theft Auto: San Andreas",
-"creado_en": "2026-10-15T19:20:01Z",
-"anadido_en": "2026-10-15T23:57:29.317331+00:00",
-"actualizado_en": "2026-10-15T23:57:29.317331+00:00"
+"duracion": 25.0,
+"juego": "Albion Online",
+"creado_en": "2026-10-16T13:32:12Z",
+"anadido_en": "2026-10-16T18:28:47.140856+00:00",
+"actualizado_en": "2026-10-16T21:48:00.892992+00:00"
 }
 ]
 }
