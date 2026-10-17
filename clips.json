@@ -1,39 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-17T18:13:30.780365+00:00",
+"actualizado_en": "2026-10-17T21:05:39.964692+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "HelplessOnerousSnoodPeteZarollTie-3Frbpkfx_U20gGC1",
-"url": "https://www.twitch.tv/elxokas/clip/HelplessOnerousSnoodPeteZarollTie-3Frbpkfx_U20gGC1",
-"titulo": "BLIZZARD!",
-"canal": "elxokas",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/e3214d7c-fd9e-4fb0-80cd-c24dd0268ddd/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 253,
-"velocidad": 186.1,
-"fuente": "nuevo",
-"duracion": 21.0,
-"juego": "World of Warcraft",
-"creado_en": "2026-10-16T20:26:27Z",
-"anadido_en": "2026-10-16T21:48:00.892992+00:00",
-"actualizado_en": "2026-10-16T21:48:00.892992+00:00"
-},
 {
 "id": "TenderBoxyLampBIRB-C7UZqbEehRBbi2L0",
 "url": "https://www.twitch.tv/gerardromero/clip/TenderBoxyLampBIRB-C7UZqbEehRBbi2L0",
 "titulo": "MOU SI FUERA VINI",
 "canal": "gerardromero",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/14da27e8-361b-4096-9995-a9cb612a87b4/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1560,
-"velocidad": 89.0,
+"vistas": 1912,
+"velocidad": 122.7,
 "fuente": "ventana",
 "duracion": 60.0,
 "juego": "Sports",
 "creado_en": "2026-10-17T08:50:49Z",
 "anadido_en": "2026-10-17T16:00:05.530607+00:00",
-"actualizado_en": "2026-10-17T18:13:30.780365+00:00"
+"actualizado_en": "2026-10-17T21:05:39.964692+00:00"
+},
+{
+"id": "BumblingHardElephantImGlitch-xGOLgayH9WxFfP7y",
+"url": "https://www.twitch.tv/elxokas/clip/BumblingHardElephantImGlitch-xGOLgayH9WxFfP7y",
+"titulo": "el meo de la victoria",
+"canal": "elxokas",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9a84f3b0-8b5c-468b-bcf6-811985b6d759/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 326,
+"velocidad": 62.7,
+"fuente": "ventana",
+"duracion": 13.9,
+"juego": "World of Warcraft",
+"creado_en": "2026-10-17T17:33:25Z",
+"anadido_en": "2026-10-17T21:05:39.964692+00:00",
+"actualizado_en": "2026-10-17T21:05:39.964692+00:00"
 },
 {
 "id": "VictoriousSecretiveQuailTheTarFu-xdPJLuTR1Cw-wmoM",
@@ -41,14 +41,14 @@
 "titulo": "EL PROBLEMA",
 "canal": "elxokas",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ce48b89f-2d93-421c-8493-7b1a07ac3688/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 350,
-"velocidad": 11.7,
+"vistas": 408,
+"velocidad": 20.2,
 "fuente": "ventana",
 "duracion": 17.1,
 "juego": "World of Warcraft",
 "creado_en": "2026-10-17T15:22:36Z",
 "anadido_en": "2026-10-17T16:00:05.530607+00:00",
-"actualizado_en": "2026-10-17T18:13:30.780365+00:00"
+"actualizado_en": "2026-10-17T21:05:39.964692+00:00"
 }
 ]
 }
