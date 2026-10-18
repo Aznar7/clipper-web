@@ -1,10 +1,25 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-18T09:11:28.323390+00:00",
+"actualizado_en": "2026-10-18T13:38:28.579518+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
+"url": "https://www.twitch.tv/skain/clip/UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
+"titulo": "Skain: yo no hago planos curiosos",
+"canal": "skain",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0ecb3aa9-89cb-4c5b-99d3-385251e0e3f4/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 286,
+"velocidad": 1007.9,
+"fuente": "nuevo",
+"duracion": 21.9,
+"juego": "Just Chatting",
+"creado_en": "2026-10-18T13:21:27Z",
+"anadido_en": "2026-10-18T13:38:28.579518+00:00",
+"actualizado_en": "2026-10-18T13:38:28.579518+00:00"
+},
 {
 "id": "MoldySuccessfulMagpieDuDudu-xPCYTPBiO5BShYee",
 "url": "https://www.twitch.tv/ibai/clip/MoldySuccessfulMagpieDuDudu-xPCYTPBiO5BShYee",
@@ -19,21 +34,6 @@
 "creado_en": "2026-10-17T19:06:21Z",
 "anadido_en": "2026-10-17T23:33:39.390093+00:00",
 "actualizado_en": "2026-10-17T23:33:39.390093+00:00"
-},
-{
-"id": "RoughScaryBarracudaAsianGlow-tDmsZFyHJkFpzdsF",
-"url": "https://www.twitch.tv/mixwell/clip/RoughScaryBarracudaAsianGlow-tDmsZFyHJkFpzdsF",
-"titulo": "mixi",
-"canal": "Mixwell",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/42eac3ba-3804-4444-8ed6-3fbb2be39b1e/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 559,
-"velocidad": 194.4,
-"fuente": "nuevo",
-"duracion": 13.0,
-"juego": "VALORANT",
-"creado_en": "2026-10-18T06:18:56Z",
-"anadido_en": "2026-10-18T09:11:28.323390+00:00",
-"actualizado_en": "2026-10-18T09:11:28.323390+00:00"
 },
 {
 "id": "HeartlessInexpensiveArmadilloPeteZaroll-GdE1qoyGh0fV-e-U",
@@ -64,6 +64,21 @@
 "creado_en": "2026-10-17T17:33:25Z",
 "anadido_en": "2026-10-17T21:05:39.964692+00:00",
 "actualizado_en": "2026-10-17T23:33:39.390093+00:00"
+},
+{
+"id": "RoughScaryBarracudaAsianGlow-tDmsZFyHJkFpzdsF",
+"url": "https://www.twitch.tv/mixwell/clip/RoughScaryBarracudaAsianGlow-tDmsZFyHJkFpzdsF",
+"titulo": "mixi",
+"canal": "Mixwell",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/42eac3ba-3804-4444-8ed6-3fbb2be39b1e/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 643,
+"velocidad": 18.9,
+"fuente": "ventana",
+"duracion": 13.0,
+"juego": "VALORANT",
+"creado_en": "2026-10-18T06:18:56Z",
+"anadido_en": "2026-10-18T09:11:28.323390+00:00",
+"actualizado_en": "2026-10-18T13:38:28.579518+00:00"
 },
 {
 "id": "VictoriousSecretiveQuailTheTarFu-xdPJLuTR1Cw-wmoM",
