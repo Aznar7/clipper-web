@@ -1,10 +1,40 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-18T19:12:57.879228+00:00",
+"actualizado_en": "2026-10-18T21:58:54.291815+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "ColdbloodedSourHeronHoneyBadger-A28uP21X4UNvsOhJ",
+"url": "https://www.twitch.tv/ibai/clip/ColdbloodedSourHeronHoneyBadger-A28uP21X4UNvsOhJ",
+"titulo": "CAMPEONES DEL MUNDO",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ed090e78-301b-4fb8-bacd-e84590346e30/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 277,
+"velocidad": 248.8,
+"fuente": "nuevo",
+"duracion": 20.0,
+"juego": "League of Legends",
+"creado_en": "2026-10-18T20:52:06Z",
+"anadido_en": "2026-10-18T21:58:54.291815+00:00",
+"actualizado_en": "2026-10-18T21:58:54.291815+00:00"
+},
+{
+"id": "MagnificentFurtiveLobsterTinyFace-AqKGWh0SBneZ5Ehg",
+"url": "https://www.twitch.tv/carola/clip/MagnificentFurtiveLobsterTinyFace-AqKGWh0SBneZ5Ehg",
+"titulo": "Pero gente!!!",
+"canal": "Carola",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c1f82af1-3713-42c8-a195-069f5fe1b527/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 323,
+"velocidad": 94.5,
+"fuente": "nuevo",
+"duracion": 26.1,
+"juego": "Just Chatting",
+"creado_en": "2026-10-18T18:33:44Z",
+"anadido_en": "2026-10-18T21:58:54.291815+00:00",
+"actualizado_en": "2026-10-18T21:58:54.291815+00:00"
+},
 {
 "id": "UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
 "url": "https://www.twitch.tv/skain/clip/UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
