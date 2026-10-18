@@ -1,55 +1,10 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-18T16:58:47.798182+00:00",
+"actualizado_en": "2026-10-18T19:12:57.879228+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "MoldySuccessfulMagpieDuDudu-xPCYTPBiO5BShYee",
-"url": "https://www.twitch.tv/ibai/clip/MoldySuccessfulMagpieDuDudu-xPCYTPBiO5BShYee",
-"titulo": "clip de la sangre",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/505a0fce-579c-480b-8c0c-dcd4391ad2f6/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 348,
-"velocidad": 111.1,
-"fuente": "ventana",
-"duracion": 60.0,
-"juego": "League of Legends",
-"creado_en": "2026-10-17T19:06:21Z",
-"anadido_en": "2026-10-17T23:33:39.390093+00:00",
-"actualizado_en": "2026-10-17T23:33:39.390093+00:00"
-},
-{
-"id": "HeartlessInexpensiveArmadilloPeteZaroll-GdE1qoyGh0fV-e-U",
-"url": "https://www.twitch.tv/caresapo/clip/HeartlessInexpensiveArmadilloPeteZaroll-GdE1qoyGh0fV-e-U",
-"titulo": "????????????????????????",
-"canal": "caresapo",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c02e1370-2521-449f-9a4f-cfda2f5f7bfa/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 475,
-"velocidad": 83.2,
-"fuente": "nuevo",
-"duracion": 60.0,
-"juego": "League of Legends",
-"creado_en": "2026-10-17T17:51:18Z",
-"anadido_en": "2026-10-17T23:33:39.390093+00:00",
-"actualizado_en": "2026-10-17T23:33:39.390093+00:00"
-},
-{
-"id": "BumblingHardElephantImGlitch-xGOLgayH9WxFfP7y",
-"url": "https://www.twitch.tv/elxokas/clip/BumblingHardElephantImGlitch-xGOLgayH9WxFfP7y",
-"titulo": "el meo de la victoria",
-"canal": "elxokas",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9a84f3b0-8b5c-468b-bcf6-811985b6d759/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 393,
-"velocidad": 27.2,
-"fuente": "ventana",
-"duracion": 13.9,
-"juego": "World of Warcraft",
-"creado_en": "2026-10-17T17:33:25Z",
-"anadido_en": "2026-10-17T21:05:39.964692+00:00",
-"actualizado_en": "2026-10-17T23:33:39.390093+00:00"
-},
 {
 "id": "UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
 "url": "https://www.twitch.tv/skain/clip/UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
@@ -71,14 +26,14 @@
 "titulo": "mixi",
 "canal": "Mixwell",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/42eac3ba-3804-4444-8ed6-3fbb2be39b1e/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 715,
-"velocidad": 21.6,
+"vistas": 739,
+"velocidad": 10.7,
 "fuente": "ventana",
 "duracion": 13.0,
 "juego": "VALORANT",
 "creado_en": "2026-10-18T06:18:56Z",
 "anadido_en": "2026-10-18T09:11:28.323390+00:00",
-"actualizado_en": "2026-10-18T16:58:47.798182+00:00"
+"actualizado_en": "2026-10-18T19:12:57.879228+00:00"
 }
 ]
 }
