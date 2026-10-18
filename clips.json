@@ -1,24 +1,39 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-18T21:58:54.291815+00:00",
+"actualizado_en": "2026-10-18T23:54:09.823964+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "LaconicUgliestYogurtDoggo-PI2UQwUQEOt4kc4V",
+"url": "https://www.twitch.tv/sergicabrer3/clip/LaconicUgliestYogurtDoggo-PI2UQwUQEOt4kc4V",
+"titulo": "La rusa se cae",
+"canal": "sergicabrer3",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/09447606-241f-4eda-a0e5-e5835c9c9288/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 553,
+"velocidad": 258.7,
+"fuente": "ventana",
+"duracion": 19.5,
+"juego": "IRL",
+"creado_en": "2026-10-18T21:23:52Z",
+"anadido_en": "2026-10-18T23:54:09.823964+00:00",
+"actualizado_en": "2026-10-18T23:54:09.823964+00:00"
+},
 {
 "id": "ColdbloodedSourHeronHoneyBadger-A28uP21X4UNvsOhJ",
 "url": "https://www.twitch.tv/ibai/clip/ColdbloodedSourHeronHoneyBadger-A28uP21X4UNvsOhJ",
 "titulo": "CAMPEONES DEL MUNDO",
 "canal": "ibai",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ed090e78-301b-4fb8-bacd-e84590346e30/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 277,
-"velocidad": 248.8,
-"fuente": "nuevo",
+"vistas": 383,
+"velocidad": 55.2,
+"fuente": "ventana",
 "duracion": 20.0,
 "juego": "League of Legends",
 "creado_en": "2026-10-18T20:52:06Z",
 "anadido_en": "2026-10-18T21:58:54.291815+00:00",
-"actualizado_en": "2026-10-18T21:58:54.291815+00:00"
+"actualizado_en": "2026-10-18T23:54:09.823964+00:00"
 },
 {
 "id": "MagnificentFurtiveLobsterTinyFace-AqKGWh0SBneZ5Ehg",
