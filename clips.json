@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-19T10:21:52.725742+00:00",
+"actualizado_en": "2026-10-19T17:13:37.104888+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -19,6 +19,21 @@
 "creado_en": "2026-10-18T21:23:52Z",
 "anadido_en": "2026-10-18T23:54:09.823964+00:00",
 "actualizado_en": "2026-10-18T23:54:09.823964+00:00"
+},
+{
+"id": "WildRelentlessLadiesResidentSleeper-KHI3ZX7wnPQkQYEL",
+"url": "https://www.twitch.tv/peereira7/clip/WildRelentlessLadiesResidentSleeper-KHI3ZX7wnPQkQYEL",
+"titulo": "ggs castor",
+"canal": "Peereira7",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/576d814f-6f7c-40fe-ae70-1efc0f0e503a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 927,
+"velocidad": 473.6,
+"fuente": "nuevo",
+"duracion": 10.7,
+"juego": "Just Chatting",
+"creado_en": "2026-10-19T15:16:11Z",
+"anadido_en": "2026-10-19T17:13:37.104888+00:00",
+"actualizado_en": "2026-10-19T17:13:37.104888+00:00"
 },
 {
 "id": "ColdbloodedSourHeronHoneyBadger-A28uP21X4UNvsOhJ",
@@ -49,21 +64,6 @@
 "creado_en": "2026-10-18T18:33:44Z",
 "anadido_en": "2026-10-18T21:58:54.291815+00:00",
 "actualizado_en": "2026-10-18T21:58:54.291815+00:00"
-},
-{
-"id": "UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
-"url": "https://www.twitch.tv/skain/clip/UnsightlyTacitOrcaBrokeBack-zw-H4gYSNH02N73y",
-"titulo": "Skain: yo no hago planos curiosos",
-"canal": "skain",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/0ecb3aa9-89cb-4c5b-99d3-385251e0e3f4/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 368,
-"velocidad": 24.6,
-"fuente": "ventana",
-"duracion": 21.9,
-"juego": "Just Chatting",
-"creado_en": "2026-10-18T13:21:27Z",
-"anadido_en": "2026-10-18T13:38:28.579518+00:00",
-"actualizado_en": "2026-10-18T16:58:47.798182+00:00"
 }
 ]
 }
