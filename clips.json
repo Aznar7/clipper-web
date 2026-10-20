@@ -1,54 +1,54 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-20T18:47:25.848540+00:00",
+"actualizado_en": "2026-10-20T21:57:59.814539+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "HonorableLuckyJayThisIsSparta-_Z7tYrN87-RTeBlW",
-"url": "https://www.twitch.tv/peereira7/clip/HonorableLuckyJayThisIsSparta-_Z7tYrN87-RTeBlW",
-"titulo": "LEAK GAYOLA",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/5d07d5d9-9465-40e4-a353-1bef4a39dd3d/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 256,
-"velocidad": 227.0,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "Minecraft",
-"creado_en": "2026-10-19T20:39:23Z",
-"anadido_en": "2026-10-19T21:47:02.496548+00:00",
-"actualizado_en": "2026-10-19T21:47:02.496548+00:00"
-},
-{
-"id": "FantasticSpotlessCarrotFrankerZ-cx83xbwV--GNUDrE",
-"url": "https://www.twitch.tv/paache_/clip/FantasticSpotlessCarrotFrankerZ-cx83xbwV--GNUDrE",
-"titulo": "comooooooo",
-"canal": "paache_",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8438e8f5-f2ea-45fd-a191-d253bacf0432/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 369,
-"velocidad": 140.3,
-"fuente": "nuevo",
-"duracion": 16.0,
-"juego": "Among Us",
-"creado_en": "2026-10-20T16:09:35Z",
-"anadido_en": "2026-10-20T18:47:25.848540+00:00",
-"actualizado_en": "2026-10-20T18:47:25.848540+00:00"
-},
 {
 "id": "CarefulCarelessDragonHoneyBadger-XdHiUom3Hf9u0VeW",
 "url": "https://www.twitch.tv/auronplay/clip/CarefulCarelessDragonHoneyBadger-XdHiUom3Hf9u0VeW",
 "titulo": "Pache extremo?",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/952eb3e2-81ed-4e21-9260-3bbbee526377/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 288,
-"velocidad": 94.7,
-"fuente": "nuevo",
+"vistas": 959,
+"velocidad": 211.3,
+"fuente": "ventana",
 "duracion": 15.0,
 "juego": "Just Chatting",
 "creado_en": "2026-10-20T15:44:52Z",
 "anadido_en": "2026-10-20T18:47:25.848540+00:00",
-"actualizado_en": "2026-10-20T18:47:25.848540+00:00"
+"actualizado_en": "2026-10-20T21:57:59.814539+00:00"
+},
+{
+"id": "SpinelessTsunderePeafowlKeyboardCat-LN7raB4PgfRZGzHP",
+"url": "https://www.twitch.tv/rickyedit/clip/SpinelessTsunderePeafowlKeyboardCat-LN7raB4PgfRZGzHP",
+"titulo": "a jugar?",
+"canal": "rickyedit",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/d0efb908-8c85-4f77-bf70-f221c3a9fd59/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 416,
+"velocidad": 151.4,
+"fuente": "nuevo",
+"duracion": 7.1,
+"juego": "Just Chatting",
+"creado_en": "2026-10-20T19:13:09Z",
+"anadido_en": "2026-10-20T21:57:59.814539+00:00",
+"actualizado_en": "2026-10-20T21:57:59.814539+00:00"
+},
+{
+"id": "SnappyIronicElkRalpherZ-4TSHRMJcVXOT96Gi",
+"url": "https://www.twitch.tv/auronplay/clip/SnappyIronicElkRalpherZ-4TSHRMJcVXOT96Gi",
+"titulo": "pereira muertazo",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/44dbdaa7-737f-4880-8f79-c2520a22f98e/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 308,
+"velocidad": 46.6,
+"fuente": "ventana",
+"duracion": 10.5,
+"juego": "Among Us",
+"creado_en": "2026-10-20T16:20:36Z",
+"anadido_en": "2026-10-20T21:57:59.814539+00:00",
+"actualizado_en": "2026-10-20T21:57:59.814539+00:00"
 },
 {
 "id": "BloodyAgreeableBulgogiHumbleLife-PEFjKWETqIFjscjb",
@@ -64,6 +64,21 @@
 "creado_en": "2026-10-20T11:01:46Z",
 "anadido_en": "2026-10-20T18:47:25.848540+00:00",
 "actualizado_en": "2026-10-20T18:47:25.848540+00:00"
+},
+{
+"id": "FantasticSpotlessCarrotFrankerZ-cx83xbwV--GNUDrE",
+"url": "https://www.twitch.tv/paache_/clip/FantasticSpotlessCarrotFrankerZ-cx83xbwV--GNUDrE",
+"titulo": "comooooooo",
+"canal": "paache_",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8438e8f5-f2ea-45fd-a191-d253bacf0432/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 435,
+"velocidad": 20.8,
+"fuente": "ventana",
+"duracion": 16.0,
+"juego": "Among Us",
+"creado_en": "2026-10-20T16:09:35Z",
+"anadido_en": "2026-10-20T18:47:25.848540+00:00",
+"actualizado_en": "2026-10-20T21:57:59.814539+00:00"
 }
 ]
 }
