@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-20T09:41:41.741746+00:00",
+"actualizado_en": "2026-10-20T14:32:34.564141+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -19,21 +19,6 @@
 "creado_en": "2026-10-19T15:16:11Z",
 "anadido_en": "2026-10-19T17:13:37.104888+00:00",
 "actualizado_en": "2026-10-19T17:13:37.104888+00:00"
-},
-{
-"id": "CoySucculentPizzaGivePLZ-9alpqwqxiomiYN5f",
-"url": "https://www.twitch.tv/auronplay/clip/CoySucculentPizzaGivePLZ-9alpqwqxiomiYN5f",
-"titulo": "Fabiana sin que?",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/53c8f8ea-1ee2-4736-a859-2f30e120952a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1398,
-"velocidad": 266.5,
-"fuente": "nuevo",
-"duracion": 13.5,
-"juego": "Just Chatting",
-"creado_en": "2026-10-19T16:32:21Z",
-"anadido_en": "2026-10-19T21:47:02.496548+00:00",
-"actualizado_en": "2026-10-19T21:47:02.496548+00:00"
 },
 {
 "id": "HonorableLuckyJayThisIsSparta-_Z7tYrN87-RTeBlW",
@@ -64,6 +49,21 @@
 "creado_en": "2026-10-19T16:36:41Z",
 "anadido_en": "2026-10-19T21:47:02.496548+00:00",
 "actualizado_en": "2026-10-19T21:47:02.496548+00:00"
+},
+{
+"id": "CoySucculentPizzaGivePLZ-9alpqwqxiomiYN5f",
+"url": "https://www.twitch.tv/auronplay/clip/CoySucculentPizzaGivePLZ-9alpqwqxiomiYN5f",
+"titulo": "Fabiana sin que?",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/53c8f8ea-1ee2-4736-a859-2f30e120952a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 2170,
+"velocidad": 33.4,
+"fuente": "ventana",
+"duracion": 13.5,
+"juego": "Just Chatting",
+"creado_en": "2026-10-19T16:32:21Z",
+"anadido_en": "2026-10-19T21:47:02.496548+00:00",
+"actualizado_en": "2026-10-20T14:32:34.564141+00:00"
 },
 {
 "id": "GorgeousConcernedAlmondTBTacoLeft-9272_7ptLRunWPMD",
