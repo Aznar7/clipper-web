@@ -1,25 +1,10 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-23T14:29:52.317964+00:00",
+"actualizado_en": "2026-10-23T18:46:22.334977+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
-{
-"id": "CrepuscularPrettiestOxM4xHeh-DwjB06IzNTM5Dv_a",
-"url": "https://www.twitch.tv/peereira7/clip/CrepuscularPrettiestOxM4xHeh-DwjB06IzNTM5Dv_a",
-"titulo": "agustin??",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/8c3511f9-65f3-4558-b600-4bf9cbe23619/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 439,
-"velocidad": 111.2,
-"fuente": "ventana",
-"duracion": 56.0,
-"juego": "Among Us",
-"creado_en": "2026-10-22T16:21:46Z",
-"anadido_en": "2026-10-22T21:57:45.943913+00:00",
-"actualizado_en": "2026-10-22T21:57:45.943913+00:00"
-},
 {
 "id": "DistinctCulturedNuggetsJebaited-NrVmPKgsNCdv_Pe1",
 "url": "https://www.twitch.tv/peereira7/clip/DistinctCulturedNuggetsJebaited-NrVmPKgsNCdv_Pe1",
@@ -34,6 +19,21 @@
 "creado_en": "2026-10-22T21:01:41Z",
 "anadido_en": "2026-10-22T21:57:45.943913+00:00",
 "actualizado_en": "2026-10-22T21:57:45.943913+00:00"
+},
+{
+"id": "ArtsySpikyYakHassaanChop-hNZrcAMQ_ymZedjF",
+"url": "https://www.twitch.tv/auronplay/clip/ArtsySpikyYakHassaanChop-hNZrcAMQ_ymZedjF",
+"titulo": "cumple mi hermano",
+"canal": "auronplay",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/29639721-ca08-4578-8b05-f58b8a7abb44/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 568,
+"velocidad": 168.3,
+"fuente": "nuevo",
+"duracion": 19.4,
+"juego": "Just Chatting",
+"creado_en": "2026-10-23T15:23:56Z",
+"anadido_en": "2026-10-23T18:46:22.334977+00:00",
+"actualizado_en": "2026-10-23T18:46:22.334977+00:00"
 },
 {
 "id": "MoralPoisedPineapplePicoMause-g0ks3aREyNn-VJlc",
@@ -81,79 +81,19 @@
 "actualizado_en": "2026-10-22T21:57:45.943913+00:00"
 },
 {
-"id": "BoldAbstruseFishDansGame-1yKaO1tvhMb5KlSo",
-"url": "https://www.twitch.tv/auronplay/clip/BoldAbstruseFishDansGame-1yKaO1tvhMb5KlSo",
-"titulo": "escandaloso",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/cd4e1e46-2d27-4e71-a376-73e2d76d764c/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 228,
-"velocidad": 37.6,
-"fuente": "ventana",
-"duracion": 12.8,
-"juego": "Among Us",
-"creado_en": "2026-10-22T16:56:02Z",
-"anadido_en": "2026-10-22T21:57:45.943913+00:00",
-"actualizado_en": "2026-10-22T21:57:45.943913+00:00"
-},
-{
-"id": "EasyGrossDragonflyPoooound-23ai3VnAAqbUzkkn",
-"url": "https://www.twitch.tv/auronplay/clip/EasyGrossDragonflyPoooound-23ai3VnAAqbUzkkn",
-"titulo": "AURON VS PERE",
-"canal": "auronplay",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/412a4222-26c9-47e3-b25a-21efcd1bdd31/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 2299,
-"velocidad": 33.0,
-"fuente": "ventana",
-"duracion": 60.0,
-"juego": "Just Chatting",
-"creado_en": "2026-10-22T15:47:10Z",
-"anadido_en": "2026-10-22T18:54:21.247165+00:00",
-"actualizado_en": "2026-10-23T14:29:52.317964+00:00"
-},
-{
 "id": "CourteousGiantZebraPMSTwin-mMUntV7M4-z6Fxd_",
 "url": "https://www.twitch.tv/knekro/clip/CourteousGiantZebraPMSTwin-mMUntV7M4-z6Fxd_",
 "titulo": "Se queda cojo en directo",
 "canal": "knekro",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/47f72c1a-453f-4248-ac68-3d9e2be1e9f0/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1053,
-"velocidad": 18.8,
+"vistas": 1163,
+"velocidad": 25.7,
 "fuente": "ventana",
 "duracion": 50.9,
 "juego": "Just Chatting",
 "creado_en": "2026-10-22T19:30:10Z",
 "anadido_en": "2026-10-22T21:57:45.943913+00:00",
-"actualizado_en": "2026-10-23T14:29:52.317964+00:00"
-},
-{
-"id": "RichCredulousCockroachAliens-1Ncs6BSuOeYXYus3",
-"url": "https://www.twitch.tv/peereira7/clip/RichCredulousCockroachAliens-1Ncs6BSuOeYXYus3",
-"titulo": "tourettada",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/369dab63-de05-49de-a090-075517268ed6/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 281,
-"velocidad": 16.0,
-"fuente": "ventana",
-"duracion": 16.7,
-"juego": "Among Us",
-"creado_en": "2026-10-22T17:26:50Z",
-"anadido_en": "2026-10-22T18:54:21.247165+00:00",
-"actualizado_en": "2026-10-22T21:57:45.943913+00:00"
-},
-{
-"id": "HyperExuberantSwanBabyRage-1_yyFChfqY9nm2Yy",
-"url": "https://www.twitch.tv/peereira7/clip/HyperExuberantSwanBabyRage-1_yyFChfqY9nm2Yy",
-"titulo": "Castor llorón",
-"canal": "Peereira7",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/98686ba1-f659-4776-bee3-753e49947680/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 444,
-"velocidad": 14.4,
-"fuente": "ventana",
-"duracion": 18.0,
-"juego": "Among Us",
-"creado_en": "2026-10-22T17:39:36Z",
-"anadido_en": "2026-10-22T18:54:21.247165+00:00",
-"actualizado_en": "2026-10-22T21:57:45.943913+00:00"
+"actualizado_en": "2026-10-23T18:46:22.334977+00:00"
 }
 ]
 }
