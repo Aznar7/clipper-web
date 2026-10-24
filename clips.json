@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-24T17:02:58.532458+00:00",
+"actualizado_en": "2026-10-24T19:53:29.056433+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -21,49 +21,19 @@
 "actualizado_en": "2026-10-24T17:02:58.532458+00:00"
 },
 {
-"id": "LovelyDignifiedPepperoniRedCoat-VTDjalZpJVT-KfUC",
-"url": "https://www.twitch.tv/ibai/clip/LovelyDignifiedPepperoniRedCoat-VTDjalZpJVT-KfUC",
-"titulo": "IBAI WIN REACTION",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/bfb0de20-99a5-4b6d-b032-e31468d000aa/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 352,
-"velocidad": 188.4,
-"fuente": "nuevo",
-"duracion": 59.0,
-"juego": "League of Legends",
-"creado_en": "2026-10-23T19:52:28Z",
-"anadido_en": "2026-10-23T21:44:35.447567+00:00",
-"actualizado_en": "2026-10-23T21:44:35.447567+00:00"
-},
-{
-"id": "SquareCrowdedVelociraptorKappaClaus-x_UQSvWulcuvqpeO",
-"url": "https://www.twitch.tv/ibai/clip/SquareCrowdedVelociraptorKappaClaus-x_UQSvWulcuvqpeO",
-"titulo": "Die Spanier drehen durch",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/a8a66ee1-7beb-4960-aca3-8da577bd0c55/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 216,
-"velocidad": 102.2,
-"fuente": "nuevo",
-"duracion": 29.1,
-"juego": "League of Legends",
-"creado_en": "2026-10-23T19:37:48Z",
-"anadido_en": "2026-10-23T21:44:35.447567+00:00",
-"actualizado_en": "2026-10-23T21:44:35.447567+00:00"
-},
-{
 "id": "FairDeliciousCroissantTBTacoLeft-2zN67D8zHVgxa6-D",
 "url": "https://www.twitch.tv/ibai/clip/FairDeliciousCroissantTBTacoLeft-2zN67D8zHVgxa6-D",
 "titulo": "De Ibai para Mfreak",
 "canal": "ibai",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6887e229-38d7-476c-99d9-2f374c41385a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 913,
-"velocidad": 21.8,
+"vistas": 967,
+"velocidad": 19.0,
 "fuente": "ventana",
 "duracion": 14.1,
 "juego": "League of Legends",
 "creado_en": "2026-10-23T21:51:30Z",
 "anadido_en": "2026-10-24T09:11:16.362077+00:00",
-"actualizado_en": "2026-10-24T17:02:58.532458+00:00"
+"actualizado_en": "2026-10-24T19:53:29.056433+00:00"
 }
 ]
 }
