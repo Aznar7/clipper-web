@@ -1,10 +1,25 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-24T16:08:02.038248+00:00",
+"actualizado_en": "2026-10-24T17:02:58.532458+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
 "clips": [
+{
+"id": "AgileDignifiedFrogFUNgineer-eEVcK3rzhbegXo_K",
+"url": "https://www.twitch.tv/peereira7/clip/AgileDignifiedFrogFUNgineer-eEVcK3rzhbegXo_K",
+"titulo": "pepe se sale del papel",
+"canal": "Peereira7",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/47ca58fb-7c0b-4f28-b3a4-18ef4401e3ed/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 339,
+"velocidad": 169.3,
+"fuente": "ventana",
+"duracion": 27.0,
+"juego": "Rocket League",
+"creado_en": "2026-10-24T15:54:41Z",
+"anadido_en": "2026-10-24T17:02:58.532458+00:00",
+"actualizado_en": "2026-10-24T17:02:58.532458+00:00"
+},
 {
 "id": "LovelyDignifiedPepperoniRedCoat-VTDjalZpJVT-KfUC",
 "url": "https://www.twitch.tv/ibai/clip/LovelyDignifiedPepperoniRedCoat-VTDjalZpJVT-KfUC",
@@ -41,14 +56,14 @@
 "titulo": "De Ibai para Mfreak",
 "canal": "ibai",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6887e229-38d7-476c-99d9-2f374c41385a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 893,
-"velocidad": 13.3,
+"vistas": 913,
+"velocidad": 21.8,
 "fuente": "ventana",
 "duracion": 14.1,
 "juego": "League of Legends",
 "creado_en": "2026-10-23T21:51:30Z",
 "anadido_en": "2026-10-24T09:11:16.362077+00:00",
-"actualizado_en": "2026-10-24T16:08:02.038248+00:00"
+"actualizado_en": "2026-10-24T17:02:58.532458+00:00"
 }
 ]
 }
