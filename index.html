@@ -36,6 +36,8 @@
     }
   }
   * { box-sizing: border-box; }
+  /* Sin esto, cualquier display: flex de una clase gana al atributo hidden. */
+  [hidden] { display: none !important; }
   /* Sin esto, Safari en iOS agranda las fuentes al girar a horizontal. */
   html { -webkit-text-size-adjust: 100%; }
   body {
@@ -161,6 +163,46 @@
   .borrar:active { color: var(--peligro); border-color: var(--peligro); }
   .lienzo:active img { opacity: .88; }
 
+  /* --- Vertical --------------------------------------------------------
+     Todo esto solo existe si el navegador tiene guardado el token de GitHub.
+     Un visitante sin token no ve ni el boton ni el panel. */
+  .vertical { border-top: 1px dashed var(--borde); padding-top: 10px; margin-top: 2px; }
+  .vertical > button, .lanzar, .panel button {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    border-radius: 8px; min-height: 40px; padding: 8px 12px;
+    border: 1px solid var(--acento); background: var(--acento-suave); color: var(--acento);
+    touch-action: manipulation;
+  }
+  .vertical > button { width: 100%; }
+  .formulario { display: flex; flex-direction: column; gap: 8px; }
+  .formulario .fila { display: flex; gap: 8px; }
+  .formulario .fila > * { flex: 1; }
+  .panel input, .panel select, .formulario input, .formulario select {
+    font: inherit; font-size: 14px; min-height: 40px; padding: 8px 10px; width: 100%;
+    border: 1px solid var(--borde); border-radius: 8px;
+    background: var(--fondo); color: var(--texto);
+  }
+  .lanzar { background: var(--acento); color: #fff; }
+  .secundario { background: transparent !important; color: var(--tenue) !important; border-color: var(--borde) !important; }
+  .estado { font-size: 13px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+  .estado a { color: var(--acento); }
+  .estado.bien { color: var(--hecho); }
+  .estado.mal { color: var(--peligro); }
+  .estado.curso { color: var(--acento); }
+
+  .panel {
+    background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px;
+    box-shadow: var(--sombra); padding: 14px; margin-bottom: 18px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .panel h2 { font-size: 15px; margin: 0; }
+  .panel p { margin: 0; font-size: 13px; color: var(--tenue); }
+  .panel .fila { display: flex; gap: 8px; flex-wrap: wrap; }
+  .panel .fila > input { flex: 1 1 220px; width: auto; }
+  .trabajos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .trabajos li { font-size: 13px; display: flex; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
+  .trabajos .nombre { color: var(--tenue); overflow-wrap: anywhere; }
+
   .aviso { text-align: center; padding: 72px 20px; color: var(--tenue); }
   .aviso h2 { color: var(--texto); font-size: 17px; margin: 0 0 8px; }
   .aviso code { background: var(--acento-suave); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
@@ -204,6 +246,11 @@
     <h1>Radar de clips</h1>
     <div class="sub" id="sub"><span>Cargando...</span></div>
   </header>
+  <!-- Se rellenan desde el script, y solo con el token guardado (o con
+       #ajustes en la URL para meterlo). Fuera de pintar() a proposito: si se
+       repintaran cada minuto, se borraria lo que estes escribiendo. -->
+  <section id="ajustes" class="panel" hidden></section>
+  <section id="lanzador" class="panel" hidden></section>
   <main id="salida"><div class="aviso">Cargando...</div></main>
 </div>
 
@@ -365,6 +412,14 @@
       guardar(CLAVE_PUB, p);
       pintar();
     });
+
+    if (gh()) {
+      const v = document.createElement("div");
+      v.className = "vertical";
+      v.dataset.id = c.id;
+      el.querySelector(".cuerpo").appendChild(v);
+      rellenarVertical(v, c);
+    }
     return el;
   }
 
@@ -446,6 +501,7 @@
         "descargar registro (" + enRegistro + ")", descargarRegistro
       ));
     }
+    if (gh()) sub.appendChild(enlaceSub("ajustes", pintarAjustes));
 
     salida.innerHTML = "";
     if (!visibles.length) {
@@ -459,6 +515,296 @@
     visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1, publicados)));
     salida.appendChild(rejilla);
   }
+
+  // --- Vertical: lanzar el workflow de GitHub Actions ---------------------
+  // La web es publica, pero lanzar el workflow exige un token de GitHub que
+  // solo existe en el localStorage de tus navegadores. Sin el, ni se pinta el
+  // boton; y aunque alguien llamara a la API a mano, GitHub lo rechazaria.
+  const CLAVE_GH = "clipper.github";          // { token, repo }
+  const CLAVE_TRABAJOS = "clipper.trabajos";  // { peticion: { ... } }
+  const REPO_DEFECTO = "Aznar7/clipper-lite";
+  const WORKFLOW = "vertical.yml";
+  const LAYOUTS = [
+    ["auto", "Layout automático"], ["stacked", "Cam + juego"], ["fullcam", "Cámara completa"],
+    ["grid", "Cuadrícula"], ["gameplay", "Solo juego"],
+  ];
+  const SONDEO = 15 * 1000;
+
+  const gh = () => {
+    const g = leer(CLAVE_GH);
+    return g.token ? { token: g.token, repo: g.repo || REPO_DEFECTO } : null;
+  };
+
+  // Lo que estas escribiendo en el formulario de cada tarjeta. Vive en memoria
+  // para que el repintado de cada minuto no te lo borre.
+  const abiertos = {};
+
+  const ERRORES_API = {
+    401: "El token no vale o ha caducado.",
+    403: "El token no tiene permiso de Actions (lectura y escritura) sobre el repo.",
+    404: "No encuentro el repo o el workflow vertical.yml. ¿Está bien el repo y subido el workflow?",
+    422: "GitHub ha rechazado los datos (¿el workflow está en la rama main?).",
+  };
+
+  async function api(ruta, opciones = {}) {
+    const g = gh();
+    if (!g) throw new Error("Falta el token de GitHub.");
+    const r = await fetch("https://api.github.com/repos/" + g.repo + ruta, {
+      ...opciones,
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: "Bearer " + g.token,
+        "X-GitHub-Api-Version": "2022-11-28",
+        ...(opciones.body ? { "Content-Type": "application/json" } : {}),
+      },
+    });
+    if (!r.ok) throw new Error(ERRORES_API[r.status] || "GitHub ha respondido " + r.status + ".");
+    return r.status === 204 ? null : r.json();
+  }
+
+  const podarTrabajos = () => {
+    const t = leer(CLAVE_TRABAJOS), corte = Date.now() - 24 * 3600e3;
+    for (const p of Object.keys(t)) {
+      if (!(t[p] && Date.parse(t[p].lanzado_en) >= corte)) delete t[p];
+    }
+    guardar(CLAVE_TRABAJOS, t);
+    return t;
+  };
+
+  async function lanzar({ url, texto, layout, clip, etiqueta }) {
+    // La API de dispatch no devuelve el id de la ejecucion. Esta "peticion" va
+    // en el titulo de la ejecucion (run-name del workflow) y es lo que usa
+    // vigilar() para encontrarla.
+    const peticion = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    await api("/actions/workflows/" + WORKFLOW + "/dispatches", {
+      method: "POST",
+      body: JSON.stringify({ ref: "main", inputs: { url, texto: texto || "", layout: layout || "auto", peticion } }),
+    });
+    const t = podarTrabajos();
+    t[peticion] = { clip: clip || null, etiqueta, url, lanzado_en: new Date().toISOString(), estado: "enviado" };
+    guardar(CLAVE_TRABAJOS, t);
+    refrescarTrabajos();
+    vigilar();
+  }
+
+  const terminado = (j) => j.estado === "completed";
+
+  let temporizador = null;
+  async function vigilar() {
+    clearTimeout(temporizador);
+    const t = podarTrabajos();
+    const activos = Object.keys(t).filter((p) => !terminado(t[p]));
+    if (!activos.length || !gh()) return;
+    try {
+      const d = await api("/actions/workflows/" + WORKFLOW + "/runs?event=workflow_dispatch&per_page=30");
+      for (const p of activos) {
+        const j = t[p];
+        const run = (d.workflow_runs || []).find((r) => r.display_title === "vertical " + p);
+        if (run) {
+          j.estado = run.status;
+          j.conclusion = run.conclusion;
+          j.url_run = run.html_url;
+          j.empezado_en = run.run_started_at;
+        } else if (Date.now() - Date.parse(j.lanzado_en) > 10 * 60e3) {
+          // GitHub tarda unos segundos en dar de alta la ejecucion, pero no 10 min.
+          j.estado = "completed";
+          j.conclusion = "perdido";
+        }
+      }
+      guardar(CLAVE_TRABAJOS, t);
+    } catch (e) {
+      // Un fallo de red puntual no es motivo para dejar de mirar.
+    }
+    refrescarTrabajos();
+    if (Object.values(t).some((j) => !terminado(j))) temporizador = setTimeout(vigilar, SONDEO);
+  }
+
+  function estadoTrabajo(j) {
+    const ver = j.url_run ? ' <a href="' + esc(j.url_run) + '" target="_blank" rel="noopener noreferrer">ver</a>' : "";
+    let clase, texto;
+    if (!terminado(j)) {
+      clase = "curso";
+      texto = j.estado === "in_progress"
+        ? "Editando… " + duracion(Date.now() - Date.parse(j.empezado_en || j.lanzado_en))
+        : "En cola…";
+    } else if (j.conclusion === "success") {
+      clase = "bien"; texto = "Enviado a Telegram ✓";
+    } else if (j.conclusion === "skipped") {
+      clase = "mal"; texto = "Rechazado: solo puede lanzarlo el dueño del repo";
+    } else if (j.conclusion === "perdido") {
+      clase = "mal"; texto = "No encuentro la ejecución en GitHub";
+    } else {
+      clase = "mal"; texto = "Ha fallado";
+    }
+    return '<span class="estado ' + clase + '">' + texto + ver + '</span>';
+  }
+
+  const ultimoDe = (t, clip) => Object.values(t)
+    .filter((j) => j.clip === clip)
+    .sort((a, b) => Date.parse(b.lanzado_en) - Date.parse(a.lanzado_en))[0];
+
+  const opcionesLayout = (elegido) => LAYOUTS
+    .map(([v, n]) => '<option value="' + v + '"' + (v === elegido ? " selected" : "") + ">" + n + "</option>")
+    .join("");
+
+  // El bloque "Vertical" de una tarjeta: o el formulario, o el boton con el
+  // estado de la ultima vez que se lanzo ese clip.
+  function rellenarVertical(div, c) {
+    const f = abiertos[c.id];
+    if (f) {
+      div.innerHTML =
+        '<div class="formulario">' +
+          '<input class="v-texto" maxlength="120" placeholder="Texto gancho (opcional)" value="' + esc(f.texto) + '">' +
+          '<div class="fila"><select class="v-layout">' + opcionesLayout(f.layout) + '</select></div>' +
+          '<div class="fila"><button class="lanzar">Montar vertical</button>' +
+          '<button class="secundario v-cancelar">Cancelar</button></div>' +
+          (f.error ? '<span class="estado mal">' + esc(f.error) + '</span>' : '') +
+        '</div>';
+      const texto = div.querySelector(".v-texto"), layout = div.querySelector(".v-layout");
+      texto.addEventListener("input", () => { f.texto = texto.value; });
+      layout.addEventListener("change", () => { f.layout = layout.value; });
+      div.querySelector(".v-cancelar").addEventListener("click", () => {
+        delete abiertos[c.id];
+        rellenarVertical(div, c);
+      });
+      const boton = div.querySelector(".lanzar");
+      boton.addEventListener("click", async () => {
+        boton.disabled = true;
+        boton.textContent = "Lanzando…";
+        try {
+          await lanzar({ url: c.url, texto: f.texto, layout: f.layout, clip: c.id, etiqueta: c.canal });
+          delete abiertos[c.id];
+        } catch (e) {
+          f.error = e.message;
+        }
+        rellenarVertical(div, c);
+      });
+      return;
+    }
+    const j = ultimoDe(leer(CLAVE_TRABAJOS), c.id);
+    div.innerHTML = (j ? '<div style="margin-bottom:8px">' + estadoTrabajo(j) + '</div>' : '') +
+      (j && !terminado(j) ? '' : '<button>' + (j ? 'Montar otra vez' : 'Editar en vertical') + '</button>');
+    const boton = div.querySelector("button");
+    if (boton) boton.addEventListener("click", () => {
+      abiertos[c.id] = { texto: "", layout: "auto" };
+      rellenarVertical(div, c);
+      div.querySelector(".v-texto").focus();
+    });
+  }
+
+  // Actualiza estados sin repintar las tarjetas (y sin perder lo escrito).
+  function refrescarTrabajos() {
+    const t = leer(CLAVE_TRABAJOS);
+    document.querySelectorAll(".vertical[data-id]").forEach((div) => {
+      const c = feed.clips.find((x) => x.id === div.dataset.id);
+      if (c && !abiertos[c.id]) rellenarVertical(div, c);
+    });
+    const lista = document.getElementById("trabajos");
+    if (!lista) return;
+    const todos = Object.values(t).sort((a, b) => Date.parse(b.lanzado_en) - Date.parse(a.lanzado_en));
+    lista.innerHTML = todos.map((j) =>
+      '<li><span class="nombre">' + esc(j.etiqueta || j.url) + ' · hace ' +
+      duracion(Date.now() - Date.parse(j.lanzado_en)) + '</span>' + estadoTrabajo(j) + '</li>'
+    ).join("");
+  }
+
+  function pintarAjustes() {
+    const panel = document.getElementById("ajustes");
+    const g = leer(CLAVE_GH);
+    panel.hidden = false;
+    panel.innerHTML =
+      '<h2>Ajustes: editar en vertical</h2>' +
+      '<p>Pega un token de GitHub <i>fine-grained</i> con acceso solo al repo del radar y el permiso ' +
+      '<b>Actions: Read and write</b>. Se guarda únicamente en este navegador.</p>' +
+      '<div class="fila"><input id="aj-token" type="password" autocomplete="off" placeholder="github_pat_…" value="' + esc(g.token) + '">' +
+      '<input id="aj-repo" placeholder="usuario/repo" value="' + esc(g.repo || REPO_DEFECTO) + '"></div>' +
+      '<div class="fila"><button id="aj-guardar">Guardar y probar</button>' +
+      '<button id="aj-olvidar" class="secundario">Olvidar token</button>' +
+      '<button id="aj-cerrar" class="secundario">Cerrar</button></div>' +
+      '<span id="aj-estado" class="estado"></span>';
+    const estado = document.getElementById("aj-estado");
+    const avisar = (clase, texto) => { estado.className = "estado " + clase; estado.textContent = texto; };
+
+    document.getElementById("aj-guardar").addEventListener("click", async () => {
+      const token = document.getElementById("aj-token").value.trim();
+      const repo = document.getElementById("aj-repo").value.trim() || REPO_DEFECTO;
+      if (!token) return avisar("mal", "Falta el token.");
+      guardar(CLAVE_GH, { token, repo });
+      avisar("curso", "Probando…");
+      try {
+        await api("/actions/workflows/" + WORKFLOW);
+        avisar("bien", "Conectado ✓");
+        activarVertical();
+      } catch (e) {
+        avisar("mal", e.message);
+      }
+    });
+    document.getElementById("aj-olvidar").addEventListener("click", () => {
+      guardar(CLAVE_GH, {});
+      cerrarAjustes();
+      activarVertical();
+    });
+    document.getElementById("aj-cerrar").addEventListener("click", cerrarAjustes);
+  }
+
+  function cerrarAjustes() {
+    document.getElementById("ajustes").hidden = true;
+    if (location.hash === "#ajustes") history.replaceState(null, "", location.pathname + location.search);
+  }
+
+  function pintarLanzador() {
+    const panel = document.getElementById("lanzador");
+    panel.innerHTML =
+      '<h2>Vertical desde un enlace</h2>' +
+      '<div class="fila"><input id="la-url" type="url" placeholder="https://clips.twitch.tv/…">' +
+      '<input id="la-texto" maxlength="120" placeholder="Texto gancho (opcional)"></div>' +
+      '<div class="fila"><select id="la-layout" style="flex:1 1 160px;width:auto">' + opcionesLayout("auto") + '</select>' +
+      '<button id="la-lanzar" class="lanzar">Montar vertical</button></div>' +
+      '<span id="la-error" class="estado mal"></span>' +
+      '<ul id="trabajos" class="trabajos"></ul>';
+    const boton = document.getElementById("la-lanzar");
+    boton.addEventListener("click", async () => {
+      const campo = document.getElementById("la-url");
+      const error = document.getElementById("la-error");
+      const url = campo.value.trim();
+      error.textContent = "";
+      if (!/^https?:\/\//.test(url)) { error.textContent = "Pega el enlace completo del clip."; return; }
+      boton.disabled = true;
+      try {
+        await lanzar({
+          url, etiqueta: url.replace(/^https?:\/\/(www\.)?/, ""),
+          texto: document.getElementById("la-texto").value,
+          layout: document.getElementById("la-layout").value,
+        });
+        campo.value = "";
+        document.getElementById("la-texto").value = "";
+      } catch (e) {
+        error.textContent = e.message;
+      }
+      boton.disabled = false;
+    });
+  }
+
+  // Enseña u oculta todo lo de vertical segun haya token, y repinta.
+  function activarVertical() {
+    const panel = document.getElementById("lanzador");
+    if (gh()) {
+      if (panel.hidden) { pintarLanzador(); panel.hidden = false; }
+      vigilar();
+    } else {
+      panel.hidden = true;
+      panel.innerHTML = "";
+    }
+    if (feed.actualizado_en) pintar();  // antes de la primera carga no hay nada que pintar
+    refrescarTrabajos();
+  }
+
+  // pintar() reconstruye las tarjetas. Si estas escribiendo en una, se espera.
+  const repintar = () => {
+    const foco = document.activeElement;
+    if (foco && foco.closest && foco.closest(".formulario, .panel")) return;
+    pintar();
+  };
 
   // --- Datos -------------------------------------------------------------
   async function cargar() {
@@ -474,7 +820,7 @@
         edad_max_horas: d.edad_max_horas || EDAD_MAX_DEFECTO,
         penalizacion: d.penalizacion_estimada || PENALIZACION_DEFECTO,
       };
-      pintar();
+      repintar();
     } catch (e) {
       document.getElementById("sub").innerHTML = "";
       document.getElementById("salida").innerHTML =
@@ -483,12 +829,22 @@
     }
   }
 
+  // #ajustes en la URL abre el panel del token. Es la unica puerta de entrada
+  // cuando aun no hay token, y a proposito no hay ningun enlace visible a ella.
+  const mirarAjustes = () => { if (location.hash === "#ajustes") pintarAjustes(); };
+  window.addEventListener("hashchange", mirarAjustes);
+  mirarAjustes();
+  activarVertical();
+
   cargar();
   setInterval(cargar, REFRESCO_DATOS);
-  setInterval(pintar, REFRESCO_RELOJ);
+  setInterval(repintar, REFRESCO_RELOJ);
   // Al volver a la pestana se recarga: en el movil es el caso normal, porque
-  // el navegador congela la pagina en cuanto te vas a otra app.
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
+  // el navegador congela la pagina en cuanto te vas a otra app. Y se vuelve a
+  // mirar como van los verticales, que el sondeo se congela con ella.
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) { cargar(); vigilar(); }
+  });
 })();
 </script>
 </body>

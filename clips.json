@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-24T13:40:48.809072+00:00",
+"actualizado_en": "2026-10-24T14:15:31.273433+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -41,14 +41,14 @@
 "titulo": "cumple mi hermano",
 "canal": "auronplay",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/29639721-ca08-4578-8b05-f58b8a7abb44/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 1699,
-"velocidad": 24.7,
+"vistas": 1711,
+"velocidad": 20.7,
 "fuente": "ventana",
 "duracion": 19.4,
 "juego": "Just Chatting",
 "creado_en": "2026-10-23T15:23:56Z",
 "anadido_en": "2026-10-23T18:46:22.334977+00:00",
-"actualizado_en": "2026-10-24T13:40:48.809072+00:00"
+"actualizado_en": "2026-10-24T14:15:31.273433+00:00"
 },
 {
 "id": "FairDeliciousCroissantTBTacoLeft-2zN67D8zHVgxa6-D",
@@ -56,14 +56,14 @@
 "titulo": "De Ibai para Mfreak",
 "canal": "ibai",
 "miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6887e229-38d7-476c-99d9-2f374c41385a/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 861,
-"velocidad": 21.8,
+"vistas": 868,
+"velocidad": 12.1,
 "fuente": "ventana",
 "duracion": 14.1,
 "juego": "League of Legends",
 "creado_en": "2026-10-23T21:51:30Z",
 "anadido_en": "2026-10-24T09:11:16.362077+00:00",
-"actualizado_en": "2026-10-24T13:40:48.809072+00:00"
+"actualizado_en": "2026-10-24T14:15:31.273433+00:00"
 }
 ]
 }
