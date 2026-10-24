@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-23T21:44:35.447567+00:00",
+"actualizado_en": "2026-10-24T09:11:16.362077+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -49,6 +49,21 @@
 "creado_en": "2026-10-23T19:37:48Z",
 "anadido_en": "2026-10-23T21:44:35.447567+00:00",
 "actualizado_en": "2026-10-23T21:44:35.447567+00:00"
+},
+{
+"id": "FairDeliciousCroissantTBTacoLeft-2zN67D8zHVgxa6-D",
+"url": "https://www.twitch.tv/ibai/clip/FairDeliciousCroissantTBTacoLeft-2zN67D8zHVgxa6-D",
+"titulo": "De Ibai para Mfreak",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/6887e229-38d7-476c-99d9-2f374c41385a/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 763,
+"velocidad": 67.3,
+"fuente": "nuevo",
+"duracion": 14.1,
+"juego": "League of Legends",
+"creado_en": "2026-10-23T21:51:30Z",
+"anadido_en": "2026-10-24T09:11:16.362077+00:00",
+"actualizado_en": "2026-10-24T09:11:16.362077+00:00"
 }
 ]
 }
