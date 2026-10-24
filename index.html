@@ -199,6 +199,15 @@
   .panel p { margin: 0; font-size: 13px; color: var(--tenue); }
   .panel .fila { display: flex; gap: 8px; flex-wrap: wrap; }
   .panel .fila > input { flex: 1 1 220px; width: auto; }
+  .cabecera-panel { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  /* Azul de Telegram: es un enlace a otra app, no una accion de la web. */
+  .telegram {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    padding: 8px 12px; min-height: 40px; border-radius: 8px;
+    background: #229ed9; color: #fff; touch-action: manipulation;
+  }
+  .telegram:active { filter: brightness(.93); }
   .trabajos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
   .trabajos li { font-size: 13px; display: flex; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
   .trabajos .nombre { color: var(--tenue); overflow-wrap: anywhere; }
@@ -524,6 +533,9 @@
   const CLAVE_TRABAJOS = "clipper.trabajos";  // { peticion: { ... } }
   const REPO_DEFECTO = "Aznar7/clipper-lite";
   const WORKFLOW = "vertical.yml";
+  // https y no tg://: en el movil abre la app igual, y en el PC cae en
+  // Telegram Desktop o en la web en vez de no hacer nada.
+  const TELEGRAM = "https://t.me/aznar_clipper_bot";
   const LAYOUTS = [
     ["auto", "Layout automático"], ["stacked", "Cam + juego"], ["fullcam", "Cámara completa"],
     ["grid", "Cuadrícula"], ["gameplay", "Solo juego"],
@@ -628,7 +640,8 @@
         ? "Editando… " + duracion(Date.now() - Date.parse(j.empezado_en || j.lanzado_en))
         : "En cola…";
     } else if (j.conclusion === "success") {
-      clase = "bien"; texto = "Enviado a Telegram ✓";
+      clase = "bien";
+      texto = 'Enviado a Telegram ✓ <a href="' + TELEGRAM + '" target="_blank" rel="noopener noreferrer">abrir</a>';
     } else if (j.conclusion === "skipped") {
       clase = "mal"; texto = "Rechazado: solo puede lanzarlo el dueño del repo";
     } else if (j.conclusion === "perdido") {
@@ -755,7 +768,8 @@
   function pintarLanzador() {
     const panel = document.getElementById("lanzador");
     panel.innerHTML =
-      '<h2>Vertical desde un enlace</h2>' +
+      '<div class="cabecera-panel"><h2>Vertical desde un enlace</h2>' +
+      '<a class="telegram" href="' + TELEGRAM + '" target="_blank" rel="noopener noreferrer">Abrir Telegram</a></div>' +
       '<div class="fila"><input id="la-url" type="url" placeholder="https://clips.twitch.tv/…">' +
       '<input id="la-texto" maxlength="120" placeholder="Texto gancho (opcional)"></div>' +
       '<div class="fila"><select id="la-layout" style="flex:1 1 160px;width:auto">' + opcionesLayout("auto") + '</select>' +
