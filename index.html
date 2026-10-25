@@ -536,10 +536,6 @@
   // https y no tg://: en el movil abre la app igual, y en el PC cae en
   // Telegram Desktop o en la web en vez de no hacer nada.
   const TELEGRAM = "https://t.me/aznar_clipper_bot";
-  const LAYOUTS = [
-    ["auto", "Layout automático"], ["stacked", "Cam + juego"], ["fullcam", "Cámara completa"],
-    ["grid", "Cuadrícula"], ["gameplay", "Solo juego"],
-  ];
   const SONDEO = 15 * 1000;
 
   const gh = () => {
@@ -583,14 +579,15 @@
     return t;
   };
 
-  async function lanzar({ url, texto, layout, clip, etiqueta }) {
+  // El layout no se elige aqui: el workflow lo decide solo segun las caras.
+  async function lanzar({ url, texto, clip, etiqueta }) {
     // La API de dispatch no devuelve el id de la ejecucion. Esta "peticion" va
     // en el titulo de la ejecucion (run-name del workflow) y es lo que usa
     // vigilar() para encontrarla.
     const peticion = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
     await api("/actions/workflows/" + WORKFLOW + "/dispatches", {
       method: "POST",
-      body: JSON.stringify({ ref: "main", inputs: { url, texto: texto || "", layout: layout || "auto", peticion } }),
+      body: JSON.stringify({ ref: "main", inputs: { url, texto: texto || "", peticion } }),
     });
     const t = podarTrabajos();
     t[peticion] = { clip: clip || null, etiqueta, url, lanzado_en: new Date().toISOString(), estado: "enviado" };
@@ -656,10 +653,6 @@
     .filter((j) => j.clip === clip)
     .sort((a, b) => Date.parse(b.lanzado_en) - Date.parse(a.lanzado_en))[0];
 
-  const opcionesLayout = (elegido) => LAYOUTS
-    .map(([v, n]) => '<option value="' + v + '"' + (v === elegido ? " selected" : "") + ">" + n + "</option>")
-    .join("");
-
   // El bloque "Vertical" de una tarjeta: o el formulario, o el boton con el
   // estado de la ultima vez que se lanzo ese clip.
   function rellenarVertical(div, c) {
@@ -667,15 +660,13 @@
     if (f) {
       div.innerHTML =
         '<div class="formulario">' +
-          '<input class="v-texto" maxlength="120" placeholder="Texto gancho (opcional)" value="' + esc(f.texto) + '">' +
-          '<div class="fila"><select class="v-layout">' + opcionesLayout(f.layout) + '</select></div>' +
+          '<input class="v-texto" maxlength="120" placeholder="Texto gancho (vacío: el título del clip)" value="' + esc(f.texto) + '">' +
           '<div class="fila"><button class="lanzar">Montar vertical</button>' +
           '<button class="secundario v-cancelar">Cancelar</button></div>' +
           (f.error ? '<span class="estado mal">' + esc(f.error) + '</span>' : '') +
         '</div>';
-      const texto = div.querySelector(".v-texto"), layout = div.querySelector(".v-layout");
+      const texto = div.querySelector(".v-texto");
       texto.addEventListener("input", () => { f.texto = texto.value; });
-      layout.addEventListener("change", () => { f.layout = layout.value; });
       div.querySelector(".v-cancelar").addEventListener("click", () => {
         delete abiertos[c.id];
         rellenarVertical(div, c);
@@ -685,7 +676,7 @@
         boton.disabled = true;
         boton.textContent = "Lanzando…";
         try {
-          await lanzar({ url: c.url, texto: f.texto, layout: f.layout, clip: c.id, etiqueta: c.canal });
+          await lanzar({ url: c.url, texto: f.texto, clip: c.id, etiqueta: c.canal });
           delete abiertos[c.id];
         } catch (e) {
           f.error = e.message;
@@ -699,7 +690,7 @@
       (j && !terminado(j) ? '' : '<button>' + (j ? 'Montar otra vez' : 'Editar en vertical') + '</button>');
     const boton = div.querySelector("button");
     if (boton) boton.addEventListener("click", () => {
-      abiertos[c.id] = { texto: "", layout: "auto" };
+      abiertos[c.id] = { texto: "" };
       rellenarVertical(div, c);
       div.querySelector(".v-texto").focus();
     });
@@ -771,9 +762,8 @@
       '<div class="cabecera-panel"><h2>Vertical desde un enlace</h2>' +
       '<a class="telegram" href="' + TELEGRAM + '" target="_blank" rel="noopener noreferrer">Abrir Telegram</a></div>' +
       '<div class="fila"><input id="la-url" type="url" placeholder="https://clips.twitch.tv/…">' +
-      '<input id="la-texto" maxlength="120" placeholder="Texto gancho (opcional)"></div>' +
-      '<div class="fila"><select id="la-layout" style="flex:1 1 160px;width:auto">' + opcionesLayout("auto") + '</select>' +
-      '<button id="la-lanzar" class="lanzar">Montar vertical</button></div>' +
+      '<input id="la-texto" maxlength="120" placeholder="Texto gancho (vacío: el título del clip)"></div>' +
+      '<div class="fila"><button id="la-lanzar" class="lanzar">Montar vertical</button></div>' +
       '<span id="la-error" class="estado mal"></span>' +
       '<ul id="trabajos" class="trabajos"></ul>';
     const boton = document.getElementById("la-lanzar");
@@ -788,7 +778,6 @@
         await lanzar({
           url, etiqueta: url.replace(/^https?:\/\/(www\.)?/, ""),
           texto: document.getElementById("la-texto").value,
-          layout: document.getElementById("la-layout").value,
         });
         campo.value = "";
         document.getElementById("la-texto").value = "";
