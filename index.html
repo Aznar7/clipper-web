@@ -134,6 +134,9 @@
     overflow-wrap: anywhere;
   }
   .meta { font-size: 12px; color: var(--tenue); display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: auto; }
+  /* Clips que no pasan el suelo de velocidad y estan solo para que la web no
+     baje de WEB_MIN_CLIPS (settings.py). Salen en cuanto hay de verdad. */
+  .meta .relleno { color: var(--acento); font-weight: 600; }
 
   .acciones { display: flex; gap: 8px; padding-top: 4px; }
   .acciones a, .acciones button {
@@ -385,6 +388,7 @@
           '<span>' + miles(c.vistas) + ' vistas</span>',
           '<span>clip de hace ' + duracion(edad) + '</span>',
           '<span>caduca en ' + duracion(caducaEn) + '</span>',
+          c.relleno ? '<span class="relleno" title="No pasa el suelo de velocidad: esta para que la web no se quede vacia">relleno</span>' : '',
         '</div>',
         '<div class="acciones">',
           '<a class="abrir" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Abrir clip</a>',
@@ -484,10 +488,12 @@
     // una pestana abierta desde ayer tiene que caducarlos por su cuenta.
     const vivos = feed.clips
       .filter((c) => caduca(c) > ahora)
-      // Los ya subidos al final, y dentro de cada grupo por velocidad.
+      // Los ya subidos al final, luego el relleno, y dentro de cada grupo
+      // por velocidad (el mismo orden que el JSON).
       .sort((a, b) => {
         const pa = publicados[a.id] ? 1 : 0, pb = publicados[b.id] ? 1 : 0;
-        return pa - pb || puntuacion(b) - puntuacion(a);
+        const ra = a.relleno ? 1 : 0, rb = b.relleno ? 1 : 0;
+        return pa - pb || ra - rb || puntuacion(b) - puntuacion(a);
       });
     const visibles = vivos.filter((c) => !borrados[c.id]);
     const ocultos = vivos.length - visibles.length;
