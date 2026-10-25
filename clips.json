@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-24T22:02:10.628078+00:00",
+"actualizado_en": "2026-10-25T09:28:24.910420+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -19,6 +19,36 @@
 "creado_en": "2026-10-24T15:54:41Z",
 "anadido_en": "2026-10-24T17:02:58.532458+00:00",
 "actualizado_en": "2026-10-24T17:02:58.532458+00:00"
+},
+{
+"id": "LittleGlutenFreeShieldCurseLit-ZXFSaTxZGu-6C3jh",
+"url": "https://www.twitch.tv/ibai/clip/LittleGlutenFreeShieldCurseLit-ZXFSaTxZGu-6C3jh",
+"titulo": "kuentin anotop at",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/369a7056-5c85-494a-bb2d-1c96490434d9/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 865,
+"velocidad": 79.1,
+"fuente": "nuevo",
+"duracion": 10.2,
+"juego": "League of Legends",
+"creado_en": "2026-10-24T22:31:57Z",
+"anadido_en": "2026-10-25T09:28:24.910420+00:00",
+"actualizado_en": "2026-10-25T09:28:24.910420+00:00"
+},
+{
+"id": "SmilingSpoopyRuffGrammarKing-f71DzykbNySAszJr",
+"url": "https://www.twitch.tv/ibai/clip/SmilingSpoopyRuffGrammarKing-f71DzykbNySAszJr",
+"titulo": "debajo del agua",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/09e57080-c84b-4f48-9dba-ebeace68de9f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 474,
+"velocidad": 43.3,
+"fuente": "nuevo",
+"duracion": 28.6,
+"juego": "League of Legends",
+"creado_en": "2026-10-24T22:31:43Z",
+"anadido_en": "2026-10-25T09:28:24.910420+00:00",
+"actualizado_en": "2026-10-25T09:28:24.910420+00:00"
 }
 ]
 }
