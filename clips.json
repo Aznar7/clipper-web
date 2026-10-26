@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-26T00:47:49.517995+00:00",
+"actualizado_en": "2026-10-26T06:55:37.657195+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -19,22 +19,6 @@
 "creado_en": "2026-10-25T22:25:44Z",
 "anadido_en": "2026-10-26T00:47:49.517995+00:00",
 "actualizado_en": "2026-10-26T00:47:49.517995+00:00"
-},
-{
-"id": "FriendlyTriumphantCamelSaltBae-LlZpwJWFa7BDYNCf",
-"url": "https://www.twitch.tv/ibai/clip/FriendlyTriumphantCamelSaltBae-LlZpwJWFa7BDYNCf",
-"titulo": "COMO?",
-"canal": "ibai",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9065e31d-97cb-4152-aa9b-92c541bb2613/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 178,
-"velocidad": 52.0,
-"fuente": "ventana",
-"duracion": 20.1,
-"juego": "League of Legends",
-"creado_en": "2026-10-25T21:29:17Z",
-"anadido_en": "2026-10-25T22:52:19.969235+00:00",
-"actualizado_en": "2026-10-26T00:47:49.517995+00:00",
-"relleno": true
 },
 {
 "id": "InspiringAmazingButterflyRitzMitz-X1Bsw9jzp_RosB7Q",
@@ -69,6 +53,22 @@
 "relleno": true
 },
 {
+"id": "IntelligentFlirtyMarrowOSkomodo-gkTZBw718Pybj_Hw",
+"url": "https://www.twitch.tv/mumusiraneitor/clip/IntelligentFlirtyMarrowOSkomodo-gkTZBw718Pybj_Hw",
+"titulo": "ingatu",
+"canal": "mumusiraneitor",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/1d9ca422-40f2-43ef-b331-cf4414c9c602/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 30,
+"velocidad": 37.5,
+"fuente": "nuevo",
+"duracion": 13.6,
+"juego": "Just Chatting",
+"creado_en": "2026-10-26T06:07:39Z",
+"anadido_en": "2026-10-26T06:55:37.657195+00:00",
+"actualizado_en": "2026-10-26T06:55:37.657195+00:00",
+"relleno": true
+},
+{
 "id": "BloodyGleamingPuppyArsonNoSexy-CjG5JO_6Z7lLqSjC",
 "url": "https://www.twitch.tv/marinaifx/clip/BloodyGleamingPuppyArsonNoSexy-CjG5JO_6Z7lLqSjC",
 "titulo": "horario de deshechos humanos. no se habla de futbol ni de lol.",
@@ -85,6 +85,38 @@
 "relleno": true
 },
 {
+"id": "VivaciousScaryTruffleImGlitch-Wm9z_rBb5q_PTeKF",
+"url": "https://www.twitch.tv/mumusiraneitor/clip/VivaciousScaryTruffleImGlitch-Wm9z_rBb5q_PTeKF",
+"titulo": "musi",
+"canal": "mumusiraneitor",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/334083e4-9b9f-43b9-bf77-456dc5dd3a8f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 29,
+"velocidad": 34.8,
+"fuente": "nuevo",
+"duracion": 60.0,
+"juego": "Just Chatting",
+"creado_en": "2026-10-26T06:05:39Z",
+"anadido_en": "2026-10-26T06:55:37.657195+00:00",
+"actualizado_en": "2026-10-26T06:55:37.657195+00:00",
+"relleno": true
+},
+{
+"id": "FriendlyTriumphantCamelSaltBae-LlZpwJWFa7BDYNCf",
+"url": "https://www.twitch.tv/ibai/clip/FriendlyTriumphantCamelSaltBae-LlZpwJWFa7BDYNCf",
+"titulo": "COMO?",
+"canal": "ibai",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9065e31d-97cb-4152-aa9b-92c541bb2613/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 296,
+"velocidad": 31.4,
+"fuente": "nuevo",
+"duracion": 20.1,
+"juego": "League of Legends",
+"creado_en": "2026-10-25T21:29:17Z",
+"anadido_en": "2026-10-25T22:52:19.969235+00:00",
+"actualizado_en": "2026-10-26T06:55:37.657195+00:00",
+"relleno": true
+},
+{
 "id": "HedonisticStylishDotterelImGlitch-9Mi8t4feJ5yLsc8P",
 "url": "https://www.twitch.tv/staryuuki/clip/HedonisticStylishDotterelImGlitch-9Mi8t4feJ5yLsc8P",
 "titulo": "Primera comidita del 12 hrs",
@@ -98,38 +130,6 @@
 "creado_en": "2026-10-25T18:43:00Z",
 "anadido_en": "2026-10-26T00:47:49.517995+00:00",
 "actualizado_en": "2026-10-26T00:47:49.517995+00:00",
-"relleno": true
-},
-{
-"id": "FunnyRoundRatGivePLZ-9x6-E_uyZbQyI2zi",
-"url": "https://www.twitch.tv/rubius/clip/FunnyRoundRatGivePLZ-9x6-E_uyZbQyI2zi",
-"titulo": "BROOOO",
-"canal": "Rubius",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/c2c4a71b-09ee-4c6d-8484-8f031979081c/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 13,
-"velocidad": 27.6,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "$cam With Your Friends",
-"creado_en": "2026-10-25T19:35:49Z",
-"anadido_en": "2026-10-25T20:04:05.617946+00:00",
-"actualizado_en": "2026-10-25T20:04:05.617946+00:00",
-"relleno": true
-},
-{
-"id": "ModernObliviousScallionBibleThump--leaVrv8LfWSxRJ5",
-"url": "https://www.twitch.tv/paache_/clip/ModernObliviousScallionBibleThump--leaVrv8LfWSxRJ5",
-"titulo": "sujetador",
-"canal": "paache_",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/245e54d6-3d78-4189-a4c6-610478a9d921/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 53,
-"velocidad": 25.8,
-"fuente": "nuevo",
-"duracion": 16.8,
-"juego": "Referee Simulator",
-"creado_en": "2026-10-25T18:00:55Z",
-"anadido_en": "2026-10-25T19:49:45.699182+00:00",
-"actualizado_en": "2026-10-25T20:04:05.617946+00:00",
 "relleno": true
 }
 ]
