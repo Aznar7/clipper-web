@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-26T17:02:39.420899+00:00",
+"actualizado_en": "2026-10-26T19:43:24.436171+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -85,6 +85,22 @@
 "relleno": true
 },
 {
+"id": "ObliviousTrustworthyTrayBrainSlug-7OOwRBZMAPCOPOdr",
+"url": "https://www.twitch.tv/juniorhealy/clip/ObliviousTrustworthyTrayBrainSlug-7OOwRBZMAPCOPOdr",
+"titulo": "tula de novio",
+"canal": "JuniorHealy",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/839237ad-d68b-4ff4-a425-b3293aed960f/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 10,
+"velocidad": 39.6,
+"fuente": "nuevo",
+"duracion": 30.0,
+"juego": "Just Chatting",
+"creado_en": "2026-10-26T19:28:15Z",
+"anadido_en": "2026-10-26T19:43:24.436171+00:00",
+"actualizado_en": "2026-10-26T19:43:24.436171+00:00",
+"relleno": true
+},
+{
 "id": "IntelligentFlirtyMarrowOSkomodo-gkTZBw718Pybj_Hw",
 "url": "https://www.twitch.tv/mumusiraneitor/clip/IntelligentFlirtyMarrowOSkomodo-gkTZBw718Pybj_Hw",
 "titulo": "ingatu",
@@ -114,22 +130,6 @@
 "creado_en": "2026-10-26T07:45:17Z",
 "anadido_en": "2026-10-26T13:30:53.946035+00:00",
 "actualizado_en": "2026-10-26T13:30:53.946035+00:00",
-"relleno": true
-},
-{
-"id": "BloodyGleamingPuppyArsonNoSexy-CjG5JO_6Z7lLqSjC",
-"url": "https://www.twitch.tv/marinaifx/clip/BloodyGleamingPuppyArsonNoSexy-CjG5JO_6Z7lLqSjC",
-"titulo": "horario de deshechos humanos. no se habla de futbol ni de lol.",
-"canal": "marinaifx",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/2cdb2dd8-5669-45f3-abf9-13b2895e44c1/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 48,
-"velocidad": 35.2,
-"fuente": "nuevo",
-"duracion": 30.0,
-"juego": "Just Chatting",
-"creado_en": "2026-10-25T23:25:59Z",
-"anadido_en": "2026-10-26T00:47:49.517995+00:00",
-"actualizado_en": "2026-10-26T00:47:49.517995+00:00",
 "relleno": true
 }
 ]
