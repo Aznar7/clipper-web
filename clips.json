@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-26T13:30:53.946035+00:00",
+"actualizado_en": "2026-10-26T15:53:46.732213+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -50,6 +50,22 @@
 "creado_en": "2026-10-26T07:42:43Z",
 "anadido_en": "2026-10-26T13:30:53.946035+00:00",
 "actualizado_en": "2026-10-26T13:30:53.946035+00:00",
+"relleno": true
+},
+{
+"id": "HyperDistinctChinchillaItsBoshyTime-EIj_s1ftrt51cPt9",
+"url": "https://www.twitch.tv/llunaclark/clip/HyperDistinctChinchillaItsBoshyTime-EIj_s1ftrt51cPt9",
+"titulo": "123",
+"canal": "llunaclark",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/41a46892-f82c-4cc0-bc77-fea18612fb0c/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 59,
+"velocidad": 51.7,
+"fuente": "nuevo",
+"duracion": 53.3,
+"juego": "IRL",
+"creado_en": "2026-10-26T14:45:22Z",
+"anadido_en": "2026-10-26T15:53:46.732213+00:00",
+"actualizado_en": "2026-10-26T15:53:46.732213+00:00",
 "relleno": true
 },
 {
@@ -114,22 +130,6 @@
 "creado_en": "2026-10-25T23:25:59Z",
 "anadido_en": "2026-10-26T00:47:49.517995+00:00",
 "actualizado_en": "2026-10-26T00:47:49.517995+00:00",
-"relleno": true
-},
-{
-"id": "VivaciousScaryTruffleImGlitch-Wm9z_rBb5q_PTeKF",
-"url": "https://www.twitch.tv/mumusiraneitor/clip/VivaciousScaryTruffleImGlitch-Wm9z_rBb5q_PTeKF",
-"titulo": "musi",
-"canal": "mumusiraneitor",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/334083e4-9b9f-43b9-bf77-456dc5dd3a8f/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 29,
-"velocidad": 34.8,
-"fuente": "nuevo",
-"duracion": 60.0,
-"juego": "Just Chatting",
-"creado_en": "2026-10-26T06:05:39Z",
-"anadido_en": "2026-10-26T06:55:37.657195+00:00",
-"actualizado_en": "2026-10-26T06:55:37.657195+00:00",
 "relleno": true
 }
 ]
