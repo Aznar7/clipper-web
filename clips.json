@@ -1,6 +1,6 @@
 {
 "version": 1,
-"actualizado_en": "2026-10-27T21:01:30.384886+00:00",
+"actualizado_en": "2026-10-28T00:47:36.347632+00:00",
 "ttl_horas": 24,
 "edad_max_horas": 24,
 "penalizacion_estimada": 0.5,
@@ -115,19 +115,19 @@
 "relleno": true
 },
 {
-"id": "BillowingCuteDunlinDatBoi-aMkH0kG7wFJdI9GF",
-"url": "https://www.twitch.tv/elcalvolol/clip/BillowingCuteDunlinDatBoi-aMkH0kG7wFJdI9GF",
-"titulo": "raul becas",
-"canal": "elcalvolol",
-"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9f8b0236-e71b-40c7-91a5-8a3e2309bc48/landscape/thumb/thumb-0000000000-480x272.jpg",
-"vistas": 125,
-"velocidad": 77.0,
+"id": "BelovedStormyKimchiNononoCat-q7_ZMMzaQagR3iFd",
+"url": "https://www.twitch.tv/marinaifx/clip/BelovedStormyKimchiNononoCat-q7_ZMMzaQagR3iFd",
+"titulo": "simplemente condiciones ifx",
+"canal": "marinaifx",
+"miniatura": "https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/4ec45b7c-49ee-4860-929e-be79f7f0d8f5/landscape/thumb/thumb-0000000000-480x272.jpg",
+"vistas": 39,
+"velocidad": 77.6,
 "fuente": "nuevo",
-"duracion": 42.8,
-"juego": "IRL",
-"creado_en": "2026-10-27T19:24:10Z",
-"anadido_en": "2026-10-27T21:01:30.384886+00:00",
-"actualizado_en": "2026-10-27T21:01:30.384886+00:00",
+"duracion": 30.0,
+"juego": "Minecraft",
+"creado_en": "2026-10-28T00:17:27Z",
+"anadido_en": "2026-10-28T00:47:36.347632+00:00",
+"actualizado_en": "2026-10-28T00:47:36.347632+00:00",
 "relleno": true
 }
 ]
