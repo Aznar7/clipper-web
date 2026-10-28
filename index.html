@@ -100,7 +100,7 @@
     background: var(--hecho); color: #fff;
     font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
   }
-  .velocidad {
+  .fuerza {
     position: absolute; bottom: 10px; left: 10px;
     background: rgba(0,0,0,.72); color: #fff;
     -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
@@ -108,10 +108,15 @@
     font-size: 14px; font-weight: 700; letter-spacing: -.01em;
     display: flex; align-items: center; gap: 6px;
   }
-  /* La velocidad estimada es mas ruidosa que la medida entre dos rondas.
-     Se marca en la web igual que se marca en el aviso de Telegram. */
-  .velocidad .matiz { font-size: 10.5px; font-weight: 500; opacity: .8; text-transform: uppercase; letter-spacing: .04em; }
-  .velocidad.estimada { background: rgba(0,0,0,.55); }
+  /* Cuantas veces lo normal de su canal: lo que hace que un clip sea un
+     momento y no un clip mas. Solo sale cuando dice algo (x1.5 o mas). */
+  .fuerza .matiz { font-size: 11px; font-weight: 600; opacity: .85; }
+  /* Lo que ha entrado en la ultima ronda. */
+  .nuevo {
+    position: absolute; top: 10px; left: 52px;
+    background: var(--acento); color: #fff;
+    font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+  }
   /* La duracion es la que decide si el clip cabe en un Short/Reel/TikTok, asi
      que va en la miniatura y no enterrada entre la letra pequena. */
   .duracion {
@@ -134,9 +139,6 @@
     overflow-wrap: anywhere;
   }
   .meta { font-size: 12px; color: var(--tenue); display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: auto; }
-  /* Clips que no pasan el suelo de velocidad y estan solo para que la web no
-     baje de WEB_MIN_CLIPS (settings.py). Salen en cuanto hay de verdad. */
-  .meta .relleno { color: var(--acento); font-weight: 600; }
 
   .acciones { display: flex; gap: 8px; padding-top: 4px; }
   .acciones a, .acciones button {
@@ -272,27 +274,17 @@
 
   const CLAVE = "clipper.borrados";
   const CLAVE_PUB = "clipper.publicados";
-  const TTL_POR_DEFECTO = 24;           // solo si el JSON no trae ttl_horas
-  const EDAD_MAX_DEFECTO = 24;          // idem con edad_max_horas
-  const PENALIZACION_DEFECTO = 0.5;     // idem con penalizacion_estimada
+  const EDAD_MAX_DEFECTO = 72;          // solo si el JSON no trae edad_max_horas
   const REFRESCO_DATOS = 5 * 60 * 1000; // el radar publica una vez por ronda
   const REFRESCO_RELOJ = 60 * 1000;     // para que caduquen sin recargar
   const DIAS_REGISTRO = 90;             // cuanto se guarda lo que ya subiste
 
-  let feed = {
-    clips: [], actualizado_en: null,
-    ttl_horas: TTL_POR_DEFECTO, edad_max_horas: EDAD_MAX_DEFECTO,
-    penalizacion: PENALIZACION_DEFECTO,
-  };
+  let feed = { clips: [], actualizado_en: null, edad_max_horas: EDAD_MAX_DEFECTO };
 
-  // Los dos relojes de un clip, en milisegundos: cuando se le acaba el rato en
-  // la web y cuando cumple la edad maxima. Manda el que venza antes, igual que
-  // en web_feed._vigente. El de la edad es el que evita que un clip que entro
-  // con 20 h de vida siga aqui con casi dos dias encima.
-  const caduca = (c) => Math.min(
-    Date.parse(c.anadido_en) + feed.ttl_horas * 3600e3,
-    Date.parse(c.creado_en) + feed.edad_max_horas * 3600e3
-  );
+  // Un clip caduca cuando sale de la ventana del radar (VENTANA_HORAS en
+  // settings.py, que viaja en el JSON). El radar ya los quita en cada ronda;
+  // esto es para una pestana que lleva horas abierta.
+  const caduca = (c) => Date.parse(c.creado_en) + feed.edad_max_horas * 3600e3;
 
   // --- Almacen local -----------------------------------------------------
   // No hay servidor donde guardar nada: la web es estatica. Todo esto vive en
@@ -305,10 +297,10 @@
     try { localStorage.setItem(clave, JSON.stringify(v)); } catch (e) {}
   };
 
-  // Los borrados se podan a las 48h: pasado el TTL del feed el clip ya no
-  // existe, y recordar que lo borraste deja de servir para nada.
+  // Los borrados se podan cuando el clip ya no puede estar en el feed (su
+  // ventana mas un dia de margen): recordarlo despues no sirve para nada.
   const podarBorrados = () => {
-    const b = leer(CLAVE), corte = Date.now() - 48 * 3600e3;
+    const b = leer(CLAVE), corte = Date.now() - (feed.edad_max_horas + 24) * 3600e3;
     let cambio = false;
     for (const id of Object.keys(b)) {
       if (!(Date.parse(b[id]) >= corte)) { delete b[id]; cambio = true; }
@@ -318,8 +310,8 @@
   };
 
   // El registro de publicados es distinto: no guarda solo el id, guarda la
-  // FILA ENTERA. Tiene que sobrevivir a que el clip caduque del feed a las
-  // 24h, porque si no el CSV se quedaria siempre vacio.
+  // FILA ENTERA. Tiene que sobrevivir a que el clip caduque del feed, porque
+  // si no el CSV se quedaria siempre vacio.
   const podarPublicados = () => {
     const p = leer(CLAVE_PUB), corte = Date.now() - DIAS_REGISTRO * 24 * 3600e3;
     let cambio = false;
@@ -348,17 +340,16 @@
     d.textContent = s == null ? "" : String(s);
     return d.innerHTML;
   };
-  // Mismo criterio que digest.puntuacion en el radar: la velocidad estimada
-  // no es comparable con la medida, asi que para ORDENAR va penalizada. El
-  // numero que se enseña sigue siendo el de verdad.
-  const puntuacion = (c) =>
-    (c.velocidad || 0) * (c.fuente === "nuevo" ? feed.penalizacion : 1);
+  // La nota viral del radar (viral.nota): vistas, cuanto destaca sobre su
+  // canal y edad. Es el orden en que llegan, pero se reordena por si acaso.
+  const puntuacion = (c) => c.nota || 0;
+  const veces = (x) => "×" + Number(x).toLocaleString("es-ES", { maximumFractionDigits: 1 });
 
   // --- Pintado -----------------------------------------------------------
   function tarjeta(c, puesto, publicados) {
     const ahora = Date.now();
-    const estimada = c.fuente === "nuevo";
     const publicada = !!publicados[c.id];
+    const nuevo = feed.actualizado_en && Date.parse(c.visto_desde) >= Date.parse(feed.actualizado_en) - 1000;
     const caducaEn = caduca(c) - ahora;
     const edad = ahora - Date.parse(c.creado_en);
 
@@ -372,10 +363,11 @@
         ' aria-label="Abrir el clip de ' + esc(c.canal) + '">',
         c.miniatura ? '<img src="' + esc(c.miniatura) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '',
         '<span class="puesto">#' + puesto + '</span>',
+        nuevo && !publicada ? '<span class="nuevo">nuevo</span>' : '',
         publicada ? '<span class="sello">subido</span>' : '',
-        '<span class="velocidad ' + (estimada ? 'estimada' : '') + '">',
-          (estimada ? '~' : '') + miles(Math.round(c.velocidad)) + ' v/h',
-          '<span class="matiz">' + (estimada ? 'estimada' : 'medida') + '</span>',
+        '<span class="fuerza">',
+          miles(c.vistas) + ' vistas',
+          c.destaca >= 1.5 ? '<span class="matiz" title="Veces lo normal de su canal">' + veces(c.destaca) + '</span>' : '',
         '</span>',
         c.duracion ? '<span class="duracion">' + Math.round(c.duracion) + 's</span>' : '',
       '</a>',
@@ -385,10 +377,9 @@
         '</div>',
         '<p class="titulo">' + esc(c.titulo) + '</p>',
         '<div class="meta">',
-          '<span>' + miles(c.vistas) + ' vistas</span>',
           '<span>clip de hace ' + duracion(edad) + '</span>',
+          c.clips_momento > 1 ? '<span title="Clips que hizo la gente del mismo momento">' + c.clips_momento + ' clips del momento</span>' : '',
           '<span>caduca en ' + duracion(caducaEn) + '</span>',
-          c.relleno ? '<span class="relleno" title="No pasa el suelo de velocidad: esta para que la web no se quede vacia">relleno</span>' : '',
         '</div>',
         '<div class="acciones">',
           '<a class="abrir" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">Abrir clip</a>',
@@ -419,7 +410,7 @@
           publicado_en: new Date().toISOString(),
           canal: c.canal, juego: c.juego || "", titulo: c.titulo, url: c.url,
           duracion: c.duracion || 0, vistas: c.vistas,
-          velocidad: c.velocidad, fuente: c.fuente, creado_en: c.creado_en,
+          nota: c.nota, destaca: c.destaca, creado_en: c.creado_en,
         };
       }
       guardar(CLAVE_PUB, p);
@@ -437,13 +428,13 @@
   }
 
   // --- El registro, en CSV -----------------------------------------------
-  // El radar elige los clips por vistas/hora EN TWITCH. Que eso prediga algo
+  // El radar elige los clips por su nota EN TWITCH. Que eso prediga algo
   // en TikTok o en X no lo sabe nadie todavia. Las cuatro columnas vacias del
   // final son justo para eso: rellenalas a mano y en un mes sabras si la
   // metrica es la correcta o si lo que funciona es otra cosa.
   const COLUMNAS = [
     "publicado_en", "canal", "juego", "duracion_s", "titulo", "url",
-    "vistas_twitch", "velocidad_vh", "fuente", "creado_en",
+    "vistas_twitch", "nota", "destaca", "creado_en",
     "views_tiktok", "views_reels", "views_shorts", "views_x",
   ];
 
@@ -453,7 +444,7 @@
       .sort((a, b) => Date.parse(b.publicado_en) - Date.parse(a.publicado_en))
       .map((r) => [
         r.publicado_en, r.canal, r.juego, r.duracion, r.titulo, r.url,
-        r.vistas, r.velocidad, r.fuente, r.creado_en, "", "", "", "",
+        r.vistas, r.nota, r.destaca, r.creado_en, "", "", "", "",
       ]);
     const celda = (v) => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
     const csv = [COLUMNAS, ...filas].map((f) => f.map(celda).join(",")).join("\r\n");
@@ -488,12 +479,11 @@
     // una pestana abierta desde ayer tiene que caducarlos por su cuenta.
     const vivos = feed.clips
       .filter((c) => caduca(c) > ahora)
-      // Los ya subidos al final, luego el relleno, y dentro de cada grupo
-      // por velocidad (el mismo orden que el JSON).
+      // Los ya subidos al final, y dentro de cada grupo por nota (el mismo
+      // orden que el JSON).
       .sort((a, b) => {
         const pa = publicados[a.id] ? 1 : 0, pb = publicados[b.id] ? 1 : 0;
-        const ra = a.relleno ? 1 : 0, rb = b.relleno ? 1 : 0;
-        return pa - pb || ra - rb || puntuacion(b) - puntuacion(a);
+        return pa - pb || puntuacion(b) - puntuacion(a);
       });
     const visibles = vivos.filter((c) => !borrados[c.id]);
     const ocultos = vivos.length - visibles.length;
@@ -825,9 +815,7 @@
       feed = {
         clips: Array.isArray(d.clips) ? d.clips : [],
         actualizado_en: d.actualizado_en || null,
-        ttl_horas: d.ttl_horas || TTL_POR_DEFECTO,
         edad_max_horas: d.edad_max_horas || EDAD_MAX_DEFECTO,
-        penalizacion: d.penalizacion_estimada || PENALIZACION_DEFECTO,
       };
       repintar();
     } catch (e) {
