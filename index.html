@@ -195,7 +195,7 @@
   .estado.mal { color: var(--peligro); }
   .estado.curso { color: var(--acento); }
 
-  .panel {
+  .panel, .horario {
     background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px;
     box-shadow: var(--sombra); padding: 14px; margin-bottom: 18px;
     display: flex; flex-direction: column; gap: 10px;
@@ -216,6 +216,48 @@
   .trabajos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
   .trabajos li { font-size: 13px; display: flex; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
   .trabajos .nombre { color: var(--tenue); overflow-wrap: anywhere; }
+
+  /* --- Horarios de publicacion -----------------------------------------
+     La guia de ClipperoTV (guia-publicacion-clipperotv.html) metida en la
+     pagina: plegada no ocupa mas que una linea, y esa linea ya dice que
+     plataforma esta en franja ahora mismo. No lleva la clase .panel a
+     proposito: repintar() se espera si el foco esta en un .panel, y aqui el
+     foco se queda en el boton del dia que tocaste. */
+  .horario { padding: 0; gap: 0; }
+  .horario > summary {
+    padding: 12px 14px; cursor: pointer; list-style: none;
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+    touch-action: manipulation;
+  }
+  .horario > summary::-webkit-details-marker { display: none; }
+  .horario > summary::before { content: "▸"; color: var(--tenue); font-size: 12px; }
+  .horario[open] > summary::before { content: "▾"; }
+  .horario > summary b { font-size: 15px; }
+  .horario .resumen { font-size: 13px; color: var(--tenue); }
+  .horario .resumen.ahora { color: var(--hecho); font-weight: 600; }
+  .horario .dentro { padding: 0 14px 14px; display: flex; flex-direction: column; gap: 12px; }
+  .dias { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dias button {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    min-height: 34px; min-width: 46px; padding: 4px 8px; border-radius: 8px;
+    border: 1px solid var(--borde); background: transparent; color: var(--tenue);
+    touch-action: manipulation;
+  }
+  .dias button.hoy { color: var(--acento); }
+  .dias button[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); color: #fff; }
+  .plataformas { display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; align-items: center; }
+  .plataformas .nombre { font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .plataformas .nombre small { display: block; font-weight: 500; color: var(--tenue); font-size: 11.5px; }
+  .franjas { display: flex; flex-wrap: wrap; gap: 6px; }
+  .franja {
+    font-size: 12.5px; padding: 3px 8px; border-radius: 6px; white-space: nowrap;
+    border: 1px solid var(--borde); color: var(--tenue);
+    font-variant-numeric: tabular-nums;
+  }
+  .franja.prio { background: var(--acento-suave); border-color: var(--acento); color: var(--acento); font-weight: 700; }
+  .franja.ahora { background: var(--hecho); border-color: var(--hecho); color: #fff; font-weight: 700; }
+  .franja.pasada { opacity: .45; }
+  .horario .leyenda { margin: 0; font-size: 12px; color: var(--tenue); }
 
   .aviso { text-align: center; padding: 72px 20px; color: var(--tenue); }
   .aviso h2 { color: var(--texto); font-size: 17px; margin: 0 0 8px; }
@@ -264,6 +306,7 @@
        #ajustes en la URL para meterlo). Fuera de pintar() a proposito: si se
        repintaran cada minuto, se borraria lo que estes escribiendo. -->
   <section id="ajustes" class="panel" hidden></section>
+  <details id="horario" class="horario" hidden></details>
   <section id="lanzador" class="panel" hidden></section>
   <main id="salida"><div class="aviso">Cargando...</div></main>
 </div>
@@ -279,7 +322,10 @@
   const REFRESCO_RELOJ = 60 * 1000;     // para que caduquen sin recargar
   const DIAS_REGISTRO = 90;             // cuanto se guarda lo que ya subiste
 
-  let feed = { clips: [], actualizado_en: null, edad_max_horas: EDAD_MAX_DEFECTO };
+  const FEED_VACIO = { clips: [], actualizado_en: null, edad_max_horas: EDAD_MAX_DEFECTO };
+  let feed = FEED_VACIO;
+  // Solo se pinta algo cuando el feed se ha leido con el token. Ver cargar().
+  let abierta = false;
 
   // Un clip caduca cuando sale de la ventana del radar (VENTANA_HORAS en
   // settings.py, que viaja en el JSON). El radar ya los quita en cada ronda;
@@ -469,6 +515,8 @@
   }
 
   function pintar() {
+    if (!abierta) return;
+    pintarHorario();
     const salida = document.getElementById("salida");
     const sub = document.getElementById("sub");
     const borrados = podarBorrados();
@@ -521,10 +569,113 @@
     salida.appendChild(rejilla);
   }
 
+  // --- Horarios de publicacion --------------------------------------------
+  // Copiados de la guia de ClipperoTV, en hora de Madrid. Una franja por
+  // hueco, "*" delante = la prioritaria del dia, y 24 = medianoche. Siete
+  // por plataforma, de lunes a domingo.
+  const PLATAFORMAS = [
+    { nombre: "TikTok", al_dia: 3, nota: "Baja a 2 si algún día no llegas; 5 o más al día ya rinde menos.",
+      dias: ["7-9 12-14 *19-22", "7-9 12-14 *19-22", "7-9 12-14 *19-22", "7-9 12-14 *19-22",
+             "7-9 12-14 *19-22", "10-13 14-16 *18-21", "10-13 14-16 *17-20"] },
+    { nombre: "Instagram", al_dia: 2, nota: "Un tercer Reel el mismo día ya diluye: mejor guardarlo para mañana.",
+      dias: ["10-12 *19-21", "14-16 *20-22", "10-12 *19-21", "14-16 *20-22",
+             "10-12 *19-21", "11-14 *19-21", "14-16 *19-22"] },
+    { nombre: "YT Shorts", al_dia: 3, nota: "Pasar de 3 suele diluir el alcance por notificación.",
+      dias: ["10-12 14-18 *21-24", "10-12 14-18 *21-24", "10-12 14-18 *21-24", "10-12 14-18 *21-24",
+             "12-14 *16-19 20-23", "9-11 *16-19 21-24", "9-11 *16-19 21-24"] },
+    { nombre: "X", al_dia: 3, nota: "Un post vive 15-20 minutos: el gancho de las primeras palabras lo es todo.",
+      dias: ["*9-11 13-15 18-20", "*9-11 13-15 18-20", "*9-11 13-15 18-20", "*9-11 13-15 18-20",
+             "*9-11 12-14 17-19", "11-13 15-17 *19-21", "11-13 15-17 *19-21"] },
+  ];
+  const DIAS = ["LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB", "DOM"];
+  const CLAVE_HORARIO = "clipper.horario";  // { abierto }
+
+  const franjas = (texto) => texto.split(" ").map((f) => {
+    const [desde, hasta] = f.replace("*", "").split("-").map(Number);
+    return { desde, hasta, prio: f.startsWith("*") };
+  });
+  const hh = (h) => String(h % 24).padStart(2, "0");
+
+  // El dia y la hora en Madrid, mires desde donde mires: el horario es de
+  // Espana aunque el movil este en otra zona horaria.
+  const relojMadrid = () => {
+    const p = {};
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/Madrid", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+    }).formatToParts(new Date()).forEach((x) => { p[x.type] = x.value; });
+    return {
+      dia: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].indexOf(p.weekday),
+      hora: Number(p.hour) + Number(p.minute) / 60,
+    };
+  };
+
+  // El dia que estas mirando. null = hoy, y asi sigue siendo "hoy" aunque la
+  // pestana pase la medianoche abierta.
+  let diaVisto = null;
+
+  function pintarHorario() {
+    const panel = document.getElementById("horario");
+    const { dia: hoy, hora } = relojMadrid();
+    const dia = diaVisto == null ? hoy : diaVisto;
+
+    // La linea de arriba, que es lo que se ve con el panel plegado: que
+    // plataformas estan en franja ahora, o cual es la siguiente de hoy.
+    const ahora = [], siguientes = [];
+    PLATAFORMAS.forEach((p) => franjas(p.dias[hoy]).forEach((f) => {
+      if (f.desde <= hora && hora < f.hasta) ahora.push(p.nombre + (f.prio ? " ★" : ""));
+      else if (f.desde > hora) siguientes.push({ p, f });
+    }));
+    siguientes.sort((a, b) => a.f.desde - b.f.desde);
+    const resumen = ahora.length
+      ? '<span class="resumen ahora">ahora: ' + ahora.join(", ") + '</span>'
+      : '<span class="resumen">' + (siguientes.length
+          ? "siguiente: " + siguientes[0].p.nombre + " a las " + hh(siguientes[0].f.desde) + ":00"
+          : "hoy ya no quedan franjas") + '</span>';
+
+    const filas = PLATAFORMAS.map((p) => {
+      const chips = franjas(p.dias[dia]).map((f) => {
+        let clase = "franja" + (f.prio ? " prio" : "");
+        if (dia === hoy) {
+          if (f.desde <= hora && hora < f.hasta) clase += " ahora";
+          else if (hora >= f.hasta) clase += " pasada";
+        }
+        return '<span class="' + clase + '">' + f.desde + '–' + hh(f.hasta) + '</span>';
+      }).join("");
+      return '<div class="nombre" title="' + esc(p.nota) + '">' + p.nombre +
+        '<small>' + p.al_dia + ' al día</small></div><div class="franjas">' + chips + '</div>';
+    }).join("");
+
+    panel.innerHTML =
+      '<summary><b>Horarios de publicación</b>' + resumen + '</summary>' +
+      '<div class="dentro">' +
+        '<div class="dias">' + DIAS.map((d, i) =>
+          '<button data-dia="' + i + '" class="' + (i === hoy ? "hoy" : "") + '" aria-pressed="' + (i === dia) + '">' +
+          d + '</button>').join("") + '</div>' +
+        '<div class="plataformas">' + filas + '</div>' +
+        '<p class="leyenda">Hora de España. En morado, la franja prioritaria del día; en verde, la de ahora. ' +
+        'Si parte del público es de Latam, resta 6-7 h.</p>' +
+      '</div>';
+    panel.hidden = false;
+  }
+
+  // Una sola vez: el panel se repinta cada minuto, sus listeners no.
+  (() => {
+    const panel = document.getElementById("horario");
+    panel.open = !!leer(CLAVE_HORARIO).abierto;
+    panel.addEventListener("toggle", () => guardar(CLAVE_HORARIO, { abierto: panel.open }));
+    panel.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-dia]");
+      if (!b) return;
+      const i = Number(b.dataset.dia);
+      diaVisto = i === relojMadrid().dia ? null : i;
+      pintarHorario();
+    });
+  })();
+
   // --- Vertical: lanzar el workflow de GitHub Actions ---------------------
-  // La web es publica, pero lanzar el workflow exige un token de GitHub que
-  // solo existe en el localStorage de tus navegadores. Sin el, ni se pinta el
-  // boton; y aunque alguien llamara a la API a mano, GitHub lo rechazaria.
+  // Lanzar el workflow exige el mismo token de GitHub que abre la pagina, y
+  // solo existe en el localStorage de tus navegadores. Aunque alguien llamara
+  // a la API a mano, GitHub lo rechazaria.
   const CLAVE_GH = "clipper.github";          // { token, repo }
   const CLAVE_TRABAJOS = "clipper.trabajos";  // { peticion: { ... } }
   const REPO_DEFECTO = "Aznar7/clipper-lite";
@@ -550,19 +701,19 @@
     422: "GitHub ha rechazado los datos (¿el workflow está en la rama main?).",
   };
 
-  async function api(ruta, opciones = {}) {
+  async function api(ruta, { accept, errores = ERRORES_API, ...opciones } = {}) {
     const g = gh();
     if (!g) throw new Error("Falta el token de GitHub.");
     const r = await fetch("https://api.github.com/repos/" + g.repo + ruta, {
       ...opciones,
       headers: {
-        Accept: "application/vnd.github+json",
+        Accept: accept || "application/vnd.github+json",
         Authorization: "Bearer " + g.token,
         "X-GitHub-Api-Version": "2022-11-28",
         ...(opciones.body ? { "Content-Type": "application/json" } : {}),
       },
     });
-    if (!r.ok) throw new Error(ERRORES_API[r.status] || "GitHub ha respondido " + r.status + ".");
+    if (!r.ok) throw new Error(errores[r.status] || "GitHub ha respondido " + r.status + ".");
     return r.status === 204 ? null : r.json();
   }
 
@@ -713,9 +864,10 @@
     const g = leer(CLAVE_GH);
     panel.hidden = false;
     panel.innerHTML =
-      '<h2>Ajustes: editar en vertical</h2>' +
-      '<p>Pega un token de GitHub <i>fine-grained</i> con acceso solo al repo del radar y el permiso ' +
-      '<b>Actions: Read and write</b>. Se guarda únicamente en este navegador.</p>' +
+      '<h2>Ajustes: acceso</h2>' +
+      '<p>Pega un token de GitHub <i>fine-grained</i> con acceso solo al repo del radar y los permisos ' +
+      '<b>Contents: Read-only</b> (para ver los clips) y <b>Actions: Read and write</b> (para editar en vertical). ' +
+      'Se guarda únicamente en este navegador.</p>' +
       '<div class="fila"><input id="aj-token" type="password" autocomplete="off" placeholder="github_pat_…" value="' + esc(g.token) + '">' +
       '<input id="aj-repo" placeholder="usuario/repo" value="' + esc(g.repo || REPO_DEFECTO) + '"></div>' +
       '<div class="fila"><button id="aj-guardar">Guardar y probar</button>' +
@@ -731,18 +883,21 @@
       if (!token) return avisar("mal", "Falta el token.");
       guardar(CLAVE_GH, { token, repo });
       avisar("curso", "Probando…");
+      const fallo = await cargar();
+      if (fallo) return avisar("mal", fallo);
       try {
         await api("/actions/workflows/" + WORKFLOW);
         avisar("bien", "Conectado ✓");
-        activarVertical();
       } catch (e) {
-        avisar("mal", e.message);
+        avisar("mal", "Los clips se ven, pero editar en vertical no: " + e.message);
       }
+      activarVertical();
     });
     document.getElementById("aj-olvidar").addEventListener("click", () => {
       guardar(CLAVE_GH, {});
       cerrarAjustes();
       activarVertical();
+      cargar();
     });
     document.getElementById("aj-cerrar").addEventListener("click", cerrarAjustes);
   }
@@ -806,23 +961,59 @@
   };
 
   // --- Datos -------------------------------------------------------------
+  // La pagina esta en un repo publico, pero los clips no: se leen de
+  // web_feed.json en el repo privado del radar, por la API de GitHub y con el
+  // token de #ajustes. Sin token no hay nada que esconder, porque nada llega
+  // al navegador. Esconder con CSS unos clips publicados en abierto no
+  // serviria: bastaria con abrir el JSON a mano.
+  const ERRORES_FEED = {
+    401: "El token no vale o ha caducado.",
+    403: "El token no tiene permiso de Contents (lectura) sobre el repo.",
+    404: "No encuentro web_feed.json. ¿Es el repo correcto y el token tiene acceso a él?",
+  };
+
+  // Lo que ve quien no tiene token: el titulo y nada mas. Ni un enlace a
+  // #ajustes, igual que antes. Con un token que falla, el motivo y la puerta.
+  function cerrar(motivo) {
+    abierta = false;
+    feed = FEED_VACIO;
+    document.getElementById("horario").hidden = true;
+    const sub = document.getElementById("sub");
+    sub.innerHTML = "";
+    if (gh()) sub.appendChild(enlaceSub("ajustes", pintarAjustes));
+    document.getElementById("salida").innerHTML = motivo
+      ? '<div class="aviso"><h2>No se pudieron leer los clips</h2><p>' + esc(motivo) + '</p></div>'
+      : '<div class="aviso"><h2>Página privada</h2></div>';
+  }
+
+  // Devuelve el motivo si falla, para que #ajustes pueda enseñarlo.
   async function cargar() {
+    if (!gh()) { cerrar(); return "Falta el token."; }
     try {
-      // Pages cachea con ganas; sin romper la cache verias la ronda de ayer.
-      const r = await fetch("clips.json?t=" + Date.now(), { cache: "no-store" });
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      const d = await r.json();
+      const d = await api("/contents/web_feed.json", {
+        accept: "application/vnd.github.raw+json",
+        errores: ERRORES_FEED,
+        // La API responde con cache de 60 s; sin esto verias la ronda anterior
+        // un rato despues de que llegue la nueva.
+        cache: "no-store",
+      });
       feed = {
         clips: Array.isArray(d.clips) ? d.clips : [],
         actualizado_en: d.actualizado_en || null,
         edad_max_horas: d.edad_max_horas || EDAD_MAX_DEFECTO,
       };
-      repintar();
+      // La primera vez se pinta sin esperar al foco: al abrir desde #ajustes,
+      // el foco esta en el boton de Guardar y repintar() no haria nada.
+      const yaAbierta = abierta;
+      abierta = true;
+      yaAbierta ? repintar() : pintar();
+      return null;
     } catch (e) {
-      document.getElementById("sub").innerHTML = "";
-      document.getElementById("salida").innerHTML =
-        '<div class="aviso"><h2>No se pudo leer <code>clips.json</code></h2>' +
-        '<p>Si el radar aun no ha publicado ninguna ronda, es lo esperado.</p></div>';
+      // Un fallo de red con la pagina ya abierta no la cierra: se queda lo
+      // que habia y se reintenta en el siguiente refresco.
+      const red = e instanceof TypeError;
+      if (!(red && abierta)) cerrar(red ? "Sin conexión con GitHub." : e.message);
+      return red ? "Sin conexión con GitHub." : e.message;
     }
   }
 
