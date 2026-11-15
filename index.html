@@ -962,14 +962,14 @@
 
   // --- Datos -------------------------------------------------------------
   // La pagina esta en un repo publico, pero los clips no: se leen de
-  // web_feed.json en el repo privado del radar, por la API de GitHub y con el
+  // data/web_feed.json en el repo privado del radar, por la API de GitHub y con el
   // token de #ajustes. Sin token no hay nada que esconder, porque nada llega
   // al navegador. Esconder con CSS unos clips publicados en abierto no
   // serviria: bastaria con abrir el JSON a mano.
   const ERRORES_FEED = {
     401: "El token no vale o ha caducado.",
     403: "El token no tiene permiso de Contents (lectura) sobre el repo.",
-    404: "No encuentro web_feed.json. ¿Es el repo correcto y el token tiene acceso a él?",
+    404: "No encuentro data/web_feed.json. ¿Es el repo correcto y el token tiene acceso a él?",
   };
 
   // Lo que ve quien no tiene token: el titulo y nada mas. Ni un enlace a
@@ -990,7 +990,7 @@
   async function cargar() {
     if (!gh()) { cerrar(); return "Falta el token."; }
     try {
-      const d = await api("/contents/web_feed.json", {
+      const d = await api("/contents/data/web_feed.json", {
         accept: "application/vnd.github.raw+json",
         errores: ERRORES_FEED,
         // La API responde con cache de 60 s; sin esto verias la ronda anterior
