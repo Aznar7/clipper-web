@@ -188,6 +188,21 @@
     background: var(--fondo); color: var(--texto);
   }
   .lanzar { background: var(--acento); color: #fff; }
+  /* Opciones del montaje: layout y los tres opcionales */
+  .opciones { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: 13px; color: var(--tenue); }
+  .opciones label { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; cursor: pointer; }
+  .opciones input[type=checkbox] {
+    width: 18px; height: 18px; min-height: 0; margin: 0; padding: 0; accent-color: var(--acento);
+  }
+  /* Ganchos que propone la IA: solo propuestas, se eligen a mano */
+  .propuestas { display: flex; flex-direction: column; gap: 6px; }
+  .propuestas small { font-size: 12px; color: var(--tenue); }
+  .propuesta {
+    font: inherit; font-size: 13px; font-weight: 600; text-align: left; cursor: pointer;
+    min-height: 36px; padding: 7px 10px; border-radius: 8px; touch-action: manipulation;
+    border: 1px dashed var(--acento); background: transparent; color: var(--texto);
+  }
+  .propuesta[aria-pressed="true"] { border-style: solid; background: var(--acento-suave); color: var(--acento); }
   .secundario { background: transparent !important; color: var(--tenue) !important; border-color: var(--borde) !important; }
   .estado { font-size: 13px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
   .estado a { color: var(--acento); }
@@ -363,7 +378,7 @@
   let feed = FEED_VACIO;
   // Lo que publica el agente desde el PC (clipper/agente_web.py). Puede no
   // existir: entonces la web es la de siempre.
-  const AGENTE_VACIO = { predicciones: [], etiquetas: {}, actualizado_en: null, regla: null };
+  const AGENTE_VACIO = { predicciones: [], etiquetas: {}, ganchos: {}, actualizado_en: null, regla: null };
   let agente = AGENTE_VACIO;
   // Solo se pinta algo cuando el feed se ha leido con el token. Ver cargar().
   let abierta = false;
@@ -858,15 +873,55 @@
     return t;
   };
 
-  // El layout no se elige aqui: el workflow lo decide solo segun las caras.
-  async function lanzar({ url, texto, clip, etiqueta }) {
+  // Opciones del montaje. El layout, por defecto automatico (el workflow lo
+  // decide segun las caras); los tres opcionales, desmarcados: a veces una
+  // pausa es el chiste, y los efectos y el bucle no le pegan a todo.
+  const LAYOUTS = [
+    ["auto", "Layout automático"], ["gameplay", "Solo juego"], ["gameplay_big", "Juego grande"],
+    ["stacked", "Cam + juego"], ["stacked_big", "Cam grande + juego"], ["pip", "Cam flotante"],
+    ["multicam", "Varias cams + juego"], ["fullcam", "Cámara completa"], ["fullcam_framed", "Cámara enmarcada"],
+    ["grid", "Cuadrícula"], ["grid_framed", "Cuadrícula con marco"],
+  ];
+  const OPCIONES = [["recortar", "Quitar pausas"], ["sonidos", "Efectos de sonido"], ["bucle", "Final en bucle"]];
+  const formularioNuevo = () => ({ texto: "", layout: "auto", recortar: false, sonidos: false, bucle: false });
+
+  function opcionesHtml(f) {
+    return '<select class="v-layout" aria-label="Layout">' +
+        LAYOUTS.map(([v, n]) => '<option value="' + v + '"' + (f.layout === v ? " selected" : "") + ">" + n + "</option>").join("") +
+      "</select>" +
+      '<div class="opciones">' +
+        OPCIONES.map(([k, n]) => '<label><input type="checkbox" data-op="' + k + '"' + (f[k] ? " checked" : "") + ">" + n + "</label>").join("") +
+      "</div>";
+  }
+
+  function enlazarOpciones(raiz, f) {
+    raiz.querySelector(".v-layout").addEventListener("change", (e) => { f.layout = e.target.value; });
+    raiz.querySelectorAll("[data-op]").forEach((cb) => cb.addEventListener("change", () => { f[cb.dataset.op] = cb.checked; }));
+  }
+
+  // Los ganchos que propone el LLM del agente para este clip. Solo se
+  // enseñan: no se usa ninguno si no lo pinchas.
+  function propuestasHtml(id, f) {
+    const g = (agente.ganchos || {})[id] || [];
+    if (!g.length) return "";
+    return '<div class="propuestas"><small>Ganchos que propone la IA (pincha uno para usarlo)</small>' +
+      g.map((t, i) => '<button type="button" class="propuesta" data-i="' + i + '" aria-pressed="' + (f.texto === t) + '">' +
+        esc(t) + "</button>").join("") +
+      "</div>";
+  }
+
+  async function lanzar({ url, texto, clip, etiqueta, opciones }) {
     // La API de dispatch no devuelve el id de la ejecucion. Esta "peticion" va
     // en el titulo de la ejecucion (run-name del workflow) y es lo que usa
     // vigilar() para encontrarla.
     const peticion = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    const o = opciones || formularioNuevo();
     await api("/actions/workflows/" + WORKFLOW + "/dispatches", {
       method: "POST",
-      body: JSON.stringify({ ref: "main", inputs: { url, texto: texto || "", peticion } }),
+      body: JSON.stringify({ ref: "main", inputs: {
+        url, texto: texto || "", peticion, layout: o.layout || "auto",
+        recortar: String(!!o.recortar), sonidos: String(!!o.sonidos), bucle: String(!!o.bucle),
+      } }),
     });
     const t = podarTrabajos();
     t[peticion] = { clip: clip || null, etiqueta, url, lanzado_en: new Date().toISOString(), estado: "enviado" };
@@ -939,13 +994,24 @@
     if (f) {
       div.innerHTML =
         '<div class="formulario">' +
+          propuestasHtml(c.id, f) +
           '<input class="v-texto" maxlength="120" placeholder="Texto gancho (vacío: el título del clip)" value="' + esc(f.texto) + '">' +
+          opcionesHtml(f) +
           '<div class="fila"><button class="lanzar">Montar vertical</button>' +
           '<button class="secundario v-cancelar">Cancelar</button></div>' +
           (f.error ? '<span class="estado mal">' + esc(f.error) + '</span>' : '') +
         '</div>';
       const texto = div.querySelector(".v-texto");
-      texto.addEventListener("input", () => { f.texto = texto.value; });
+      const marcar = () => div.querySelectorAll(".propuesta").forEach((b) => {
+        b.setAttribute("aria-pressed", String(b.textContent === f.texto));
+      });
+      texto.addEventListener("input", () => { f.texto = texto.value; marcar(); });
+      div.querySelectorAll(".propuesta").forEach((b) => b.addEventListener("click", () => {
+        f.texto = b.textContent;
+        texto.value = f.texto;
+        marcar();
+      }));
+      enlazarOpciones(div, f);
       div.querySelector(".v-cancelar").addEventListener("click", () => {
         delete abiertos[c.id];
         rellenarVertical(div, c);
@@ -955,7 +1021,7 @@
         boton.disabled = true;
         boton.textContent = "Lanzando…";
         try {
-          await lanzar({ url: c.url, texto: f.texto, clip: c.id, etiqueta: c.canal });
+          await lanzar({ url: c.url, texto: f.texto, clip: c.id, etiqueta: c.canal, opciones: f });
           delete abiertos[c.id];
         } catch (e) {
           f.error = e.message;
@@ -969,7 +1035,7 @@
       (j && !terminado(j) ? '' : '<button>' + (j ? 'Montar otra vez' : 'Editar en vertical') + '</button>');
     const boton = div.querySelector("button");
     if (boton) boton.addEventListener("click", () => {
-      abiertos[c.id] = { texto: "" };
+      abiertos[c.id] = formularioNuevo();
       rellenarVertical(div, c);
       div.querySelector(".v-texto").focus();
     });
@@ -1039,6 +1105,8 @@
     if (location.hash === "#ajustes") history.replaceState(null, "", location.pathname + location.search);
   }
 
+  const lanzador = formularioNuevo();
+
   function pintarLanzador() {
     const panel = document.getElementById("lanzador");
     panel.innerHTML =
@@ -1046,6 +1114,7 @@
       '<a class="telegram" href="' + TELEGRAM + '" target="_blank" rel="noopener noreferrer">Abrir Telegram</a></div>' +
       '<div class="fila"><input id="la-url" type="url" placeholder="https://clips.twitch.tv/…">' +
       '<input id="la-texto" maxlength="120" placeholder="Texto gancho (vacío: el título del clip)"></div>' +
+      '<div class="formulario" id="la-opciones">' + opcionesHtml(lanzador) + '</div>' +
       '<div class="fila"><button id="la-lanzar" class="lanzar">Montar vertical</button></div>' +
       '<span id="la-error" class="estado mal"></span>' +
       '<ul id="trabajos" class="trabajos"></ul>';
@@ -1060,7 +1129,7 @@
       try {
         await lanzar({
           url, etiqueta: url.replace(/^https?:\/\/(www\.)?/, ""),
-          texto: document.getElementById("la-texto").value,
+          texto: document.getElementById("la-texto").value, opciones: lanzador,
         });
         campo.value = "";
         document.getElementById("la-texto").value = "";
@@ -1069,6 +1138,7 @@
       }
       boton.disabled = false;
     });
+    enlazarOpciones(document.getElementById("la-opciones"), lanzador);
   }
 
   // Enseña u oculta todo lo de vertical segun haya token, y repinta.
@@ -1129,6 +1199,7 @@
       return {
         predicciones: Array.isArray(a.predicciones) ? a.predicciones : [],
         etiquetas: a.etiquetas && typeof a.etiquetas === "object" ? a.etiquetas : {},
+        ganchos: a.ganchos && typeof a.ganchos === "object" ? a.ganchos : {},
         actualizado_en: a.actualizado_en || null,
         regla: a.regla || null,
       };
