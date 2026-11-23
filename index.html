@@ -874,16 +874,16 @@
   };
 
   // Opciones del montaje. El layout, por defecto automatico (el workflow lo
-  // decide segun las caras); los tres opcionales, desmarcados: a veces una
-  // pausa es el chiste, y los efectos y el bucle no le pegan a todo.
+  // decide segun las caras); los opcionales, desmarcados: los efectos, el
+  // bucle y la animacion no le pegan a todo.
   const LAYOUTS = [
     ["auto", "Layout automático"], ["gameplay", "Solo juego"], ["gameplay_big", "Juego grande"],
     ["stacked", "Cam + juego"], ["stacked_big", "Cam grande + juego"], ["pip", "Cam flotante"],
     ["multicam", "Varias cams + juego"], ["fullcam", "Cámara completa"], ["fullcam_framed", "Cámara enmarcada"],
     ["grid", "Cuadrícula"], ["grid_framed", "Cuadrícula con marco"],
   ];
-  const OPCIONES = [["recortar", "Quitar pausas"], ["sonidos", "Efectos de sonido"], ["bucle", "Final en bucle"]];
-  const formularioNuevo = () => ({ texto: "", layout: "auto", recortar: false, sonidos: false, bucle: false });
+  const OPCIONES = [["sonidos", "Efectos de sonido"], ["bucle", "Final en bucle"], ["animacion", "Animación hipnótica"]];
+  const formularioNuevo = () => ({ texto: "", layout: "auto", sonidos: false, bucle: false, animacion: false });
 
   function opcionesHtml(f) {
     return '<select class="v-layout" aria-label="Layout">' +
@@ -920,7 +920,7 @@
       method: "POST",
       body: JSON.stringify({ ref: "main", inputs: {
         url, texto: texto || "", peticion, layout: o.layout || "auto",
-        recortar: String(!!o.recortar), sonidos: String(!!o.sonidos), bucle: String(!!o.bucle),
+        sonidos: String(!!o.sonidos), bucle: String(!!o.bucle), animacion: String(!!o.animacion),
       } }),
     });
     const t = podarTrabajos();
