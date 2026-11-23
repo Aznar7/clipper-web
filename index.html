@@ -259,6 +259,43 @@
   .franja.pasada { opacity: .45; }
   .horario .leyenda { margin: 0; font-size: 12px; color: var(--tenue); }
 
+  /* --- Lo que aporta el agente (data/agente_feed.json) ------------------
+     Predicciones arriba, con su porque y su resultado, y en cada tarjeta lo
+     que dice la IA del clip. Si el agente no ha publicado nada, no se ve. */
+  .bloque { margin-bottom: 26px; }
+  .bloque > h2 {
+    font-size: 16px; margin: 0 0 4px; display: flex; flex-wrap: wrap;
+    align-items: baseline; gap: 4px 12px;
+  }
+  .bloque > h2 small { font-size: 13px; font-weight: 500; color: var(--tenue); }
+  .bloque > p { margin: 0 0 12px; font-size: 13px; color: var(--tenue); }
+  .bloque > p b { color: var(--texto); }
+  .resultado {
+    position: absolute; top: 10px; right: 10px;
+    font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px; color: #fff;
+  }
+  .resultado.si { background: var(--hecho); }
+  .resultado.no { background: #6b6b73; }
+  .resultado.pendiente { background: rgba(0,0,0,.72); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .porque {
+    font-size: 12.5px; line-height: 1.4; color: var(--texto);
+    background: var(--acento-suave); border-radius: 8px; padding: 8px 10px;
+  }
+  .porque b { color: var(--acento); }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip {
+    font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+    border: 1px solid var(--borde); color: var(--tenue); white-space: nowrap;
+  }
+  .chip.tipo { border-color: var(--acento); color: var(--acento); }
+  .chip.sensible { border-color: var(--peligro); color: var(--peligro); }
+  .chip.predicho { background: var(--acento); border-color: var(--acento); color: #fff; }
+  .resumen-ia {
+    font-size: 12.5px; color: var(--tenue); margin: 0; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+
   .aviso { text-align: center; padding: 72px 20px; color: var(--tenue); }
   .aviso h2 { color: var(--texto); font-size: 17px; margin: 0 0 8px; }
   .aviso code { background: var(--acento-suave); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
@@ -324,6 +361,10 @@
 
   const FEED_VACIO = { clips: [], actualizado_en: null, edad_max_horas: EDAD_MAX_DEFECTO };
   let feed = FEED_VACIO;
+  // Lo que publica el agente desde el PC (clipper/agente_web.py). Puede no
+  // existir: entonces la web es la de siempre.
+  const AGENTE_VACIO = { predicciones: [], etiquetas: {}, actualizado_en: null, regla: null };
+  let agente = AGENTE_VACIO;
   // Solo se pinta algo cuando el feed se ha leido con el token. Ver cargar().
   let abierta = false;
 
@@ -391,11 +432,53 @@
   const puntuacion = (c) => c.nota || 0;
   const veces = (x) => "×" + Number(x).toLocaleString("es-ES", { maximumFractionDigits: 1 });
 
+  const pct = (x) => Math.round(x * 100) + " %";
+  const horas = (h) => h < 1 ? Math.round(h * 60) + " min"
+    : h.toLocaleString("es-ES", { maximumFractionDigits: 1 }) + " h";
+
+  // Lo que dice la IA del clip: tipo, tono, intensidad, si es sensible y un
+  // resumen. Sale del LLM local (Fase 4), no de Twitch.
+  function bloqueIA(id, prediccion) {
+    const et = agente.etiquetas[id];
+    const chips = [];
+    if (prediccion === true) chips.push('<span class="chip predicho" title="El agente lo marcó cuando era nuevo">🔮 predicho</span>');
+    if (et) {
+      chips.push('<span class="chip tipo">' + esc(et.tipo) + '</span>');
+      chips.push('<span class="chip">' + esc(et.tono) + '</span>');
+      if (et.intensidad) chips.push('<span class="chip" title="Intensidad según el LLM">intensidad ' + esc(et.intensidad) + '/5</span>');
+      if (et.sensible && et.sensible !== "ninguno") {
+        chips.push('<span class="chip sensible" title="Revísalo antes de subirlo">⚠ ' + esc(et.sensible) + '</span>');
+      }
+    }
+    return (chips.length ? '<div class="chips">' + chips.join('') + '</div>' : '') +
+      (et && et.resumen ? '<p class="resumen-ia">' + esc(et.resumen) + '</p>' : '');
+  }
+
+  // El porque de una prediccion, en una frase que se puede comprobar.
+  function bloquePorque(p) {
+    let t = 'A las <b>' + horas(p.edad_al_avisar_h) + '</b> tenía <b>' + miles(p.vistas_al_avisar) +
+      ' vistas</b> (ritmo ' + Math.round(p.ritmo) + ').';
+    if (p.n_est && p.precision_est != null) {
+      t += ' De los ' + p.n_est + ' clips que arrancaron así de rápido, despuntó el <b>' + pct(p.precision_est) + '</b>.';
+    }
+    return '<div class="porque">' + t + '</div>';
+  }
+
+  function etiquetaResultado(p) {
+    const r = agente.regla || { umbral_vistas: 1000, horizonte_h: 48 };
+    if (p.despunto === true) return '<span class="resultado si" title="Llegó a ' + miles(r.umbral_vistas) + ' vistas antes de ' + r.horizonte_h + ' h">✓ despuntó</span>';
+    if (p.despunto === false) return '<span class="resultado no">✗ no llegó</span>';
+    return '<span class="resultado pendiente" title="Se sabe a las ' + r.horizonte_h + ' h">⏳ en juego</span>';
+  }
+
   // --- Pintado -----------------------------------------------------------
-  function tarjeta(c, puesto, publicados) {
+  // `prediccion`: la entrada de agente.predicciones si la tarjeta es una
+  // prediccion; true si es un clip de la web que el agente ya predijo.
+  function tarjeta(c, puesto, publicados, prediccion) {
     const ahora = Date.now();
     const publicada = !!publicados[c.id];
-    const nuevo = feed.actualizado_en && Date.parse(c.visto_desde) >= Date.parse(feed.actualizado_en) - 1000;
+    const esPred = prediccion && prediccion !== true;
+    const nuevo = !esPred && feed.actualizado_en && Date.parse(c.visto_desde) >= Date.parse(feed.actualizado_en) - 1000;
     const caducaEn = caduca(c) - ahora;
     const edad = ahora - Date.parse(c.creado_en);
 
@@ -408,9 +491,9 @@
       '<a class="lienzo" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer"',
         ' aria-label="Abrir el clip de ' + esc(c.canal) + '">',
         c.miniatura ? '<img src="' + esc(c.miniatura) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '',
-        '<span class="puesto">#' + puesto + '</span>',
+        '<span class="puesto">' + (esPred ? '🔮' : '#' + puesto) + '</span>',
         nuevo && !publicada ? '<span class="nuevo">nuevo</span>' : '',
-        publicada ? '<span class="sello">subido</span>' : '',
+        publicada ? '<span class="sello">subido</span>' : (esPred ? etiquetaResultado(prediccion) : ''),
         '<span class="fuerza">',
           miles(c.vistas) + ' vistas',
           c.destaca >= 1.5 ? '<span class="matiz" title="Veces lo normal de su canal">' + veces(c.destaca) + '</span>' : '',
@@ -422,6 +505,8 @@
           c.juego ? '<span class="juego">' + esc(c.juego) + '</span>' : '',
         '</div>',
         '<p class="titulo">' + esc(c.titulo) + '</p>',
+        esPred ? bloquePorque(prediccion) : '',
+        bloqueIA(c.id, prediccion),
         '<div class="meta">',
           '<span>clip de hace ' + duracion(edad) + '</span>',
           c.clips_momento > 1 ? '<span title="Clips que hizo la gente del mismo momento">' + c.clips_momento + ' clips del momento</span>' : '',
@@ -556,17 +641,64 @@
     }
     if (gh()) sub.appendChild(enlaceSub("ajustes", pintarAjustes));
 
+    if (agente.actualizado_en) {
+      const s = document.createElement("span");
+      s.textContent = "agente hace " + duracion(ahora - Date.parse(agente.actualizado_en));
+      sub.appendChild(s);
+    }
+
     salida.innerHTML = "";
+    const preds = pintarPredicciones(salida, borrados, publicados, ahora);
+
     if (!visibles.length) {
-      salida.innerHTML = vivos.length
+      salida.insertAdjacentHTML("beforeend", vivos.length
         ? '<div class="aviso"><h2>Los has borrado todos</h2><p>Vuelve tras la proxima ronda, o restaura los borrados ahi arriba.</p></div>'
-        : '<div class="aviso"><h2>Todavia no hay clips</h2><p>La web se llena cuando el radar termina una ronda.</p></div>';
+        : '<div class="aviso"><h2>Todavia no hay clips</h2><p>La web se llena cuando el radar termina una ronda.</p></div>');
       return;
     }
+    const bloque = document.createElement("section");
+    bloque.className = "bloque";
+    if (preds) bloque.innerHTML = '<h2>Los más virales <small>últimas ' + feed.edad_max_horas + ' h, por nota del radar</small></h2>';
     const rejilla = document.createElement("div");
     rejilla.className = "rejilla";
-    visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1, publicados)));
-    salida.appendChild(rejilla);
+    const predichos = new Set(agente.predicciones.map((p) => p.id));
+    visibles.forEach((c, i) => rejilla.appendChild(tarjeta(c, i + 1, publicados, predichos.has(c.id) || null)));
+    bloque.appendChild(rejilla);
+    salida.appendChild(bloque);
+  }
+
+  // Las predicciones del agente: clips que, cuando eran nuevos, arrancaron
+  // tan rápido que suelen acabar despuntando. Arriba del todo porque es lo
+  // que no ves en Twitch: lo que va a ser viral antes de serlo. Devuelve
+  // cuantas se han pintado.
+  function pintarPredicciones(salida, borrados, publicados, ahora) {
+    const vivas = agente.predicciones.filter((p) => caduca(p) > ahora && !borrados[p.id]);
+    if (!vivas.length) return 0;
+    const resueltas = agente.predicciones.filter((p) => p.despunto != null);
+    const aciertos = resueltas.filter((p) => p.despunto).length;
+    const r = agente.regla || { ritmo_min: 150, umbral_vistas: 1000, horizonte_h: 48 };
+
+    const bloque = document.createElement("section");
+    bloque.className = "bloque";
+    bloque.innerHTML =
+      '<h2>🔮 Pueden despuntar <small>el agente los marca en sus primeras horas</small></h2>' +
+      '<p>Clips con menos de 12 h que arrancan a ritmo ≥ ' + r.ritmo_min +
+      ' (vistas ÷ √(horas + 2)). «Despuntar» es llegar a ' +
+      miles(r.umbral_vistas) + ' vistas a las ' + r.horizonte_h + ' h.' +
+      (resueltas.length ? ' De las ya resueltas, <b>acertó ' + aciertos + ' de ' + resueltas.length + '</b>.' : '') +
+      '</p>';
+    const rejilla = document.createElement("div");
+    rejilla.className = "rejilla";
+    // Primero las que siguen en juego (las mas utiles ahora), y dentro de
+    // cada grupo, la mas reciente primero.
+    vivas
+      .slice()
+      .sort((a, b) => (a.despunto == null ? 0 : 1) - (b.despunto == null ? 0 : 1)
+        || Date.parse(b.avisado_en) - Date.parse(a.avisado_en))
+      .forEach((p) => rejilla.appendChild(tarjeta(p, null, publicados, p)));
+    bloque.appendChild(rejilla);
+    salida.appendChild(bloque);
+    return vivas.length;
   }
 
   // --- Horarios de publicacion --------------------------------------------
@@ -977,6 +1109,7 @@
   function cerrar(motivo) {
     abierta = false;
     feed = FEED_VACIO;
+    agente = AGENTE_VACIO;
     document.getElementById("horario").hidden = true;
     const sub = document.getElementById("sub");
     sub.innerHTML = "";
@@ -984,6 +1117,24 @@
     document.getElementById("salida").innerHTML = motivo
       ? '<div class="aviso"><h2>No se pudieron leer los clips</h2><p>' + esc(motivo) + '</p></div>'
       : '<div class="aviso"><h2>Página privada</h2></div>';
+  }
+
+  // El feed del agente es opcional: si no existe (404) o falla, la web sigue
+  // con lo del radar y se queda lo que hubiera del agente.
+  async function cargarAgente() {
+    try {
+      const a = await api("/contents/data/agente_feed.json", {
+        accept: "application/vnd.github.raw+json", errores: {}, cache: "no-store",
+      });
+      return {
+        predicciones: Array.isArray(a.predicciones) ? a.predicciones : [],
+        etiquetas: a.etiquetas && typeof a.etiquetas === "object" ? a.etiquetas : {},
+        actualizado_en: a.actualizado_en || null,
+        regla: a.regla || null,
+      };
+    } catch (e) {
+      return e instanceof TypeError ? agente : AGENTE_VACIO;
+    }
   }
 
   // Devuelve el motivo si falla, para que #ajustes pueda enseñarlo.
@@ -1002,6 +1153,7 @@
         actualizado_en: d.actualizado_en || null,
         edad_max_horas: d.edad_max_horas || EDAD_MAX_DEFECTO,
       };
+      agente = await cargarAgente();
       // La primera vez se pinta sin esperar al foco: al abrir desde #ajustes,
       // el foco esta en el boton de Guardar y repintar() no haria nada.
       const yaAbierta = abierta;
